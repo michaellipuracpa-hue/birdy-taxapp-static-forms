@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1604-F — Annual Information Return of Final Withholding Taxes</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1604-F">
+
+<div class="sheet">
+
+  <div class="small" style="display:flex;justify-content:space-between;">
+    <span>For BIR BCS/<br>Use Only Item:</span>
+    <span>1604-F 01/18 P1</span>
+  </div>
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Annual Information Return of Income Payments Subjected to Final Withholding Taxes</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1604-F</span><span class="ver">January 2018</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">1</span> For the Year (YYYY)</span>
+        <input class="short" type="text" name="year" placeholder="YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">2</span> Amended Return?</span>
+        <span>
+          <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+          <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+        </span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> No. of Sheet/s Attached</span>
+        <input class="short" type="text" name="sheets_attached">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:3">
+        <span class="no">4</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell">
+        <span class="no">5</span><span class="lbl">RDO Code</span>
+        <input class="short" type="text" name="rdo_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">6</span> Withholding Agent&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="agent_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">7</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span>
+        <input type="text" name="reg_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">7A</span> ZIP Code</span>
+        <input class="short" type="text" name="zip_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.4">
+        <span class="no">8</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="agent_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="agent_category" value="government"> Government</label>
+      </div>
+      <div class="cell">
+        <span class="no">8A</span><span class="lbl">If private, top withholding agent?</span>
+        <label class="opt"><input type="radio" name="top_agent" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="top_agent" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">9</span><span class="lbl">Contact Number</span>
+        <input type="text" name="contact_no">
+      </div>
+      <div class="cell" style="flex:1.4">
+        <span class="no">10</span><span class="lbl">Email Address</span>
+        <input type="text" name="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.4">
+        <span class="no">11</span><span class="lbl">Are there payees availing of tax relief under Special Law or International Tax Treaty?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+      </div>
+      <div class="cell">
+        <span class="no">11A</span><span class="lbl">If yes, specify</span>
+        <input type="text" name="tax_relief_specify">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Summary of Remittances</div>
+
+  <div class="sub-title">Schedule 1 &ndash; Remittance per BIR Form No. 1601-FQ on Final Taxes Withheld</div>
+  <table class="sched">
+    <tr>
+      <th style="width:14%">Quarter</th>
+      <th style="width:17%">Date of Remittance (MM/DD/YYYY)</th>
+      <th style="width:17%">TRA/eROR/eAR Number</th>
+      <th>Taxes Withheld</th>
+      <th>Penalties</th>
+      <th>Total Amount Remitted</th>
+    </tr>
+    <tr>
+      <td>1st Quarter</td>
+      <td><input type="text" name="s1_q1_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s1_q1_number"></td>
+      <td><input class="num" type="text" name="s1_q1_taxes"></td>
+      <td><input class="num" type="text" name="s1_q1_penalties"></td>
+      <td><input class="num calc" type="text" name="s1_q1_total" data-calc="n('s1_q1_taxes')+n('s1_q1_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>2nd Quarter</td>
+      <td><input type="text" name="s1_q2_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s1_q2_number"></td>
+      <td><input class="num" type="text" name="s1_q2_taxes"></td>
+      <td><input class="num" type="text" name="s1_q2_penalties"></td>
+      <td><input class="num calc" type="text" name="s1_q2_total" data-calc="n('s1_q2_taxes')+n('s1_q2_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>3rd Quarter</td>
+      <td><input type="text" name="s1_q3_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s1_q3_number"></td>
+      <td><input class="num" type="text" name="s1_q3_taxes"></td>
+      <td><input class="num" type="text" name="s1_q3_penalties"></td>
+      <td><input class="num calc" type="text" name="s1_q3_total" data-calc="n('s1_q3_taxes')+n('s1_q3_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>4th Quarter</td>
+      <td><input type="text" name="s1_q4_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s1_q4_number"></td>
+      <td><input class="num" type="text" name="s1_q4_taxes"></td>
+      <td><input class="num" type="text" name="s1_q4_penalties"></td>
+      <td><input class="num calc" type="text" name="s1_q4_total" data-calc="n('s1_q4_taxes')+n('s1_q4_penalties')" readonly></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">TOTAL</td>
+        <td><input class="num calc" type="text" name="s1_total_taxes" data-calc="n('s1_q1_taxes')+n('s1_q2_taxes')+n('s1_q3_taxes')+n('s1_q4_taxes')" readonly></td>
+        <td><input class="num calc" type="text" name="s1_total_penalties" data-calc="n('s1_q1_penalties')+n('s1_q2_penalties')+n('s1_q3_penalties')+n('s1_q4_penalties')" readonly></td>
+        <td><input class="num calc" type="text" name="s1_total_remitted" data-calc="n('s1_q1_total')+n('s1_q2_total')+n('s1_q3_total')+n('s1_q4_total')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule 2 &ndash; Remittance per BIR Form No. 1602Q on Interest Payments</div>
+  <table class="sched">
+    <tr>
+      <th style="width:14%">Quarter</th>
+      <th style="width:17%">Date of Remittance (MM/DD/YYYY)</th>
+      <th style="width:17%">TRA/eROR/eAR Number</th>
+      <th>Taxes Withheld</th>
+      <th>Penalties</th>
+      <th>Total Amount Remitted</th>
+    </tr>
+    <tr>
+      <td>1st Quarter</td>
+      <td><input type="text" name="s2_q1_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s2_q1_number"></td>
+      <td><input class="num" type="text" name="s2_q1_taxes"></td>
+      <td><input class="num" type="text" name="s2_q1_penalties"></td>
+      <td><input class="num calc" type="text" name="s2_q1_total" data-calc="n('s2_q1_taxes')+n('s2_q1_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>2nd Quarter</td>
+      <td><input type="text" name="s2_q2_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s2_q2_number"></td>
+      <td><input class="num" type="text" name="s2_q2_taxes"></td>
+      <td><input class="num" type="text" name="s2_q2_penalties"></td>
+      <td><input class="num calc" type="text" name="s2_q2_total" data-calc="n('s2_q2_taxes')+n('s2_q2_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>3rd Quarter</td>
+      <td><input type="text" name="s2_q3_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s2_q3_number"></td>
+      <td><input class="num" type="text" name="s2_q3_taxes"></td>
+      <td><input class="num" type="text" name="s2_q3_penalties"></td>
+      <td><input class="num calc" type="text" name="s2_q3_total" data-calc="n('s2_q3_taxes')+n('s2_q3_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>4th Quarter</td>
+      <td><input type="text" name="s2_q4_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s2_q4_number"></td>
+      <td><input class="num" type="text" name="s2_q4_taxes"></td>
+      <td><input class="num" type="text" name="s2_q4_penalties"></td>
+      <td><input class="num calc" type="text" name="s2_q4_total" data-calc="n('s2_q4_taxes')+n('s2_q4_penalties')" readonly></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">TOTAL</td>
+        <td><input class="num calc" type="text" name="s2_total_taxes" data-calc="n('s2_q1_taxes')+n('s2_q2_taxes')+n('s2_q3_taxes')+n('s2_q4_taxes')" readonly></td>
+        <td><input class="num calc" type="text" name="s2_total_penalties" data-calc="n('s2_q1_penalties')+n('s2_q2_penalties')+n('s2_q3_penalties')+n('s2_q4_penalties')" readonly></td>
+        <td><input class="num calc" type="text" name="s2_total_remitted" data-calc="n('s2_q1_total')+n('s2_q2_total')+n('s2_q3_total')+n('s2_q4_total')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule 3 &ndash; Remittance per BIR Form No. 1603Q on Fringe Benefits</div>
+  <table class="sched">
+    <tr>
+      <th style="width:14%">Quarter</th>
+      <th style="width:17%">Date of Remittance (MM/DD/YYYY)</th>
+      <th style="width:17%">TRA/eROR/eAR Number</th>
+      <th>Taxes Withheld</th>
+      <th>Penalties</th>
+      <th>Total Amount Remitted</th>
+    </tr>
+    <tr>
+      <td>1st Quarter</td>
+      <td><input type="text" name="s3_q1_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s3_q1_number"></td>
+      <td><input class="num" type="text" name="s3_q1_taxes"></td>
+      <td><input class="num" type="text" name="s3_q1_penalties"></td>
+      <td><input class="num calc" type="text" name="s3_q1_total" data-calc="n('s3_q1_taxes')+n('s3_q1_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>2nd Quarter</td>
+      <td><input type="text" name="s3_q2_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s3_q2_number"></td>
+      <td><input class="num" type="text" name="s3_q2_taxes"></td>
+      <td><input class="num" type="text" name="s3_q2_penalties"></td>
+      <td><input class="num calc" type="text" name="s3_q2_total" data-calc="n('s3_q2_taxes')+n('s3_q2_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>3rd Quarter</td>
+      <td><input type="text" name="s3_q3_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s3_q3_number"></td>
+      <td><input class="num" type="text" name="s3_q3_taxes"></td>
+      <td><input class="num" type="text" name="s3_q3_penalties"></td>
+      <td><input class="num calc" type="text" name="s3_q3_total" data-calc="n('s3_q3_taxes')+n('s3_q3_penalties')" readonly></td>
+    </tr>
+    <tr>
+      <td>4th Quarter</td>
+      <td><input type="text" name="s3_q4_date" placeholder="MM/DD/YYYY"></td>
+      <td><input type="text" name="s3_q4_number"></td>
+      <td><input class="num" type="text" name="s3_q4_taxes"></td>
+      <td><input class="num" type="text" name="s3_q4_penalties"></td>
+      <td><input class="num calc" type="text" name="s3_q4_total" data-calc="n('s3_q4_taxes')+n('s3_q4_penalties')" readonly></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3">TOTAL</td>
+        <td><input class="num calc" type="text" name="s3_total_taxes" data-calc="n('s3_q1_taxes')+n('s3_q2_taxes')+n('s3_q3_taxes')+n('s3_q4_taxes')" readonly></td>
+        <td><input class="num calc" type="text" name="s3_total_penalties" data-calc="n('s3_q1_penalties')+n('s3_q2_penalties')+n('s3_q3_penalties')+n('s3_q4_penalties')" readonly></td>
+        <td><input class="num calc" type="text" name="s3_total_remitted" data-calc="n('s3_q1_total')+n('s3_q2_total')+n('s3_q3_total')+n('s3_q4_total')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="grid mt">
+    <div class="row">
+      <div class="cell small">
+        I/We declare under the penalties of perjury that this return, and all its attachments, has been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.
+      </div>
+    </div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input type="text" name="sig_individual"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input type="text" name="sig_nonindividual"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent (Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.6">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="tax_agent_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="accred_date_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="accred_date_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+  <p class="small">*NOTE: The BIR Data Privacy is in the BIR website (www.bir.gov.ph)</p>
+
+</div>
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-title">Annual Information Return of Income Payments Subjected to Final Withholding Taxes</div>
+      <div class="fh-sub">1604-F 01/18 P2</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1604-F</span><span class="ver">January 2018<br>Page 2</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="lbl">TIN</span>
+        <input class="mid" type="text" name="p2_tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell" style="flex:2">
+        <span class="lbl">Withholding Agent&rsquo;s Name (Last Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p2_agent_name">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Alphabetical List of Payees from whom Taxes were Withheld (Format only)</div>
+
+  <div class="sub-title">Schedule 4 &ndash; Alphalist of Payees Subjected to Final Withholding Tax (Declared and certified using BIR Form No. 2306)</div>
+  <table class="sched small">
+    <tr>
+      <th style="width:5%">Seq. No<br>(1)</th>
+      <th style="width:12%">TIN<br>(2)</th>
+      <th style="width:19%">Name of Payees (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)<br>(3)</th>
+      <th style="width:16%">Address of Payees<br>(4)</th>
+      <th style="width:7%">*Status (As to Residence/ Nationality)<br>(5)</th>
+      <th style="width:7%">ATC<br>(6)</th>
+      <th style="width:10%">Nature of Income Payment (Refer to BIR Form No. 1601-FQ)<br>(7)</th>
+      <th style="width:10%">Amount of Income Payment<br>(8)</th>
+      <th style="width:5%">Tax Rate<br>(9)</th>
+      <th>Amount of Tax Withheld (Not Creditable)<br>(10) = (8x9)</th>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">1</span></td>
+      <td><input type="text" name="s4_r1_tin"></td>
+      <td><input type="text" name="s4_r1_name"></td>
+      <td><input type="text" name="s4_r1_address"></td>
+      <td><input type="text" name="s4_r1_status"></td>
+      <td><input type="text" name="s4_r1_atc"></td>
+      <td><input type="text" name="s4_r1_nature"></td>
+      <td><input class="num" type="text" name="s4_r1_income"></td>
+      <td><input class="num" type="text" name="s4_r1_rate"></td>
+      <td><input class="num calc" type="text" name="s4_r1_tax" data-calc="n('s4_r1_income')*n('s4_r1_rate')/100" readonly></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">2</span></td>
+      <td><input type="text" name="s4_r2_tin"></td>
+      <td><input type="text" name="s4_r2_name"></td>
+      <td><input type="text" name="s4_r2_address"></td>
+      <td><input type="text" name="s4_r2_status"></td>
+      <td><input type="text" name="s4_r2_atc"></td>
+      <td><input type="text" name="s4_r2_nature"></td>
+      <td><input class="num" type="text" name="s4_r2_income"></td>
+      <td><input class="num" type="text" name="s4_r2_rate"></td>
+      <td><input class="num calc" type="text" name="s4_r2_tax" data-calc="n('s4_r2_income')*n('s4_r2_rate')/100" readonly></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">3</span></td>
+      <td><input type="text" name="s4_r3_tin"></td>
+      <td><input type="text" name="s4_r3_name"></td>
+      <td><input type="text" name="s4_r3_address"></td>
+      <td><input type="text" name="s4_r3_status"></td>
+      <td><input type="text" name="s4_r3_atc"></td>
+      <td><input type="text" name="s4_r3_nature"></td>
+      <td><input class="num" type="text" name="s4_r3_income"></td>
+      <td><input class="num" type="text" name="s4_r3_rate"></td>
+      <td><input class="num calc" type="text" name="s4_r3_tax" data-calc="n('s4_r3_income')*n('s4_r3_rate')/100" readonly></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">4</span></td>
+      <td><input type="text" name="s4_r4_tin"></td>
+      <td><input type="text" name="s4_r4_name"></td>
+      <td><input type="text" name="s4_r4_address"></td>
+      <td><input type="text" name="s4_r4_status"></td>
+      <td><input type="text" name="s4_r4_atc"></td>
+      <td><input type="text" name="s4_r4_nature"></td>
+      <td><input class="num" type="text" name="s4_r4_income"></td>
+      <td><input class="num" type="text" name="s4_r4_rate"></td>
+      <td><input class="num calc" type="text" name="s4_r4_tax" data-calc="n('s4_r4_income')*n('s4_r4_rate')/100" readonly></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">5</span></td>
+      <td><input type="text" name="s4_r5_tin"></td>
+      <td><input type="text" name="s4_r5_name"></td>
+      <td><input type="text" name="s4_r5_address"></td>
+      <td><input type="text" name="s4_r5_status"></td>
+      <td><input type="text" name="s4_r5_atc"></td>
+      <td><input type="text" name="s4_r5_nature"></td>
+      <td><input class="num" type="text" name="s4_r5_income"></td>
+      <td><input class="num" type="text" name="s4_r5_rate"></td>
+      <td><input class="num calc" type="text" name="s4_r5_tax" data-calc="n('s4_r5_income')*n('s4_r5_rate')/100" readonly></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="9">Total Final Withholding Tax</td>
+        <td><input class="num calc" type="text" name="s4_total_tax" data-calc="n('s4_r1_tax')+n('s4_r2_tax')+n('s4_r3_tax')+n('s4_r4_tax')+n('s4_r5_tax')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule 5 &ndash; Alphalist of Employees Other than Rank and File Who were Given Fringe Benefits During the Year (Declared and certified using BIR Form No. 2306)</div>
+  <table class="sched small">
+    <tr>
+      <th style="width:5%">Seq. No.<br>(1)</th>
+      <th style="width:13%">TIN<br>(2)</th>
+      <th style="width:22%">Name of Employees (Last Name, First Name, Middle Name)<br>(3)</th>
+      <th style="width:8%">ATC<br>(4)</th>
+      <th style="width:16%">Nature of Fringe Benefit<br>(5)</th>
+      <th style="width:12%">Amount of Fringe Benefit<br>(6)</th>
+      <th style="width:12%">Grossed-Up Monetary Value<br>(7)</th>
+      <th>Tax Rate / Amount of Tax Withheld (Not Creditable)<br>(8)</th>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">1</span></td>
+      <td><input type="text" name="s5_r1_tin"></td>
+      <td><input type="text" name="s5_r1_name"></td>
+      <td><input type="text" name="s5_r1_atc"></td>
+      <td><input type="text" name="s5_r1_nature"></td>
+      <td><input class="num" type="text" name="s5_r1_benefit"></td>
+      <td><input class="num" type="text" name="s5_r1_grossedup"></td>
+      <td><input class="num" type="text" name="s5_r1_tax"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">2</span></td>
+      <td><input type="text" name="s5_r2_tin"></td>
+      <td><input type="text" name="s5_r2_name"></td>
+      <td><input type="text" name="s5_r2_atc"></td>
+      <td><input type="text" name="s5_r2_nature"></td>
+      <td><input class="num" type="text" name="s5_r2_benefit"></td>
+      <td><input class="num" type="text" name="s5_r2_grossedup"></td>
+      <td><input class="num" type="text" name="s5_r2_tax"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">3</span></td>
+      <td><input type="text" name="s5_r3_tin"></td>
+      <td><input type="text" name="s5_r3_name"></td>
+      <td><input type="text" name="s5_r3_atc"></td>
+      <td><input type="text" name="s5_r3_nature"></td>
+      <td><input class="num" type="text" name="s5_r3_benefit"></td>
+      <td><input class="num" type="text" name="s5_r3_grossedup"></td>
+      <td><input class="num" type="text" name="s5_r3_tax"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">4</span></td>
+      <td><input type="text" name="s5_r4_tin"></td>
+      <td><input type="text" name="s5_r4_name"></td>
+      <td><input type="text" name="s5_r4_atc"></td>
+      <td><input type="text" name="s5_r4_nature"></td>
+      <td><input class="num" type="text" name="s5_r4_benefit"></td>
+      <td><input class="num" type="text" name="s5_r4_grossedup"></td>
+      <td><input class="num" type="text" name="s5_r4_tax"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">5</span></td>
+      <td><input type="text" name="s5_r5_tin"></td>
+      <td><input type="text" name="s5_r5_name"></td>
+      <td><input type="text" name="s5_r5_atc"></td>
+      <td><input type="text" name="s5_r5_nature"></td>
+      <td><input class="num" type="text" name="s5_r5_benefit"></td>
+      <td><input class="num" type="text" name="s5_r5_grossedup"></td>
+      <td><input class="num" type="text" name="s5_r5_tax"></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="7">Total Fringe Benefits Tax</td>
+        <td><input class="num calc" type="text" name="s5_total_tax" data-calc="n('s5_r1_tax')+n('s5_r2_tax')+n('s5_r3_tax')+n('s5_r4_tax')+n('s5_r5_tax')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule 6 &ndash; Alphalist of Other Payees Whose Income Payments are Exempt from Withholding Tax but Subject to Income Tax (Declared and certified using BIR Form No. 2304)</div>
+  <table class="sched small">
+    <tr>
+      <th style="width:5%">Seq. No<br>(1)</th>
+      <th style="width:13%">TIN<br>(2)</th>
+      <th style="width:24%">Name of Payees (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)<br>(3)</th>
+      <th style="width:20%">Address of Payees<br>(4)</th>
+      <th style="width:9%">*Status (As to Residence/ Nationality)<br>(5)</th>
+      <th style="width:8%">ATC<br>(6)</th>
+      <th style="width:11%">Nature of Income Payment<br>(7)</th>
+      <th>Amount of Income Payment<br>(8)</th>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">1</span></td>
+      <td><input type="text" name="s6_r1_tin"></td>
+      <td><input type="text" name="s6_r1_name"></td>
+      <td><input type="text" name="s6_r1_address"></td>
+      <td><input type="text" name="s6_r1_status"></td>
+      <td><input type="text" name="s6_r1_atc"></td>
+      <td><input type="text" name="s6_r1_nature"></td>
+      <td><input class="num" type="text" name="s6_r1_income"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">2</span></td>
+      <td><input type="text" name="s6_r2_tin"></td>
+      <td><input type="text" name="s6_r2_name"></td>
+      <td><input type="text" name="s6_r2_address"></td>
+      <td><input type="text" name="s6_r2_status"></td>
+      <td><input type="text" name="s6_r2_atc"></td>
+      <td><input type="text" name="s6_r2_nature"></td>
+      <td><input class="num" type="text" name="s6_r2_income"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">3</span></td>
+      <td><input type="text" name="s6_r3_tin"></td>
+      <td><input type="text" name="s6_r3_name"></td>
+      <td><input type="text" name="s6_r3_address"></td>
+      <td><input type="text" name="s6_r3_status"></td>
+      <td><input type="text" name="s6_r3_atc"></td>
+      <td><input type="text" name="s6_r3_nature"></td>
+      <td><input class="num" type="text" name="s6_r3_income"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">4</span></td>
+      <td><input type="text" name="s6_r4_tin"></td>
+      <td><input type="text" name="s6_r4_name"></td>
+      <td><input type="text" name="s6_r4_address"></td>
+      <td><input type="text" name="s6_r4_status"></td>
+      <td><input type="text" name="s6_r4_atc"></td>
+      <td><input type="text" name="s6_r4_nature"></td>
+      <td><input class="num" type="text" name="s6_r4_income"></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">5</span></td>
+      <td><input type="text" name="s6_r5_tin"></td>
+      <td><input type="text" name="s6_r5_name"></td>
+      <td><input type="text" name="s6_r5_address"></td>
+      <td><input type="text" name="s6_r5_status"></td>
+      <td><input type="text" name="s6_r5_atc"></td>
+      <td><input type="text" name="s6_r5_nature"></td>
+      <td><input class="num" type="text" name="s6_r5_income"></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="7">Total Income Payments Exempt from Withholding Tax</td>
+        <td><input class="num calc" type="text" name="s6_total_income" data-calc="n('s6_r1_income')+n('s6_r2_income')+n('s6_r3_income')+n('s6_r4_income')+n('s6_r5_income')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <p class="small">* A &ndash; Citizens of the Philippines &nbsp; B &ndash; Resident Alien Individuals &nbsp; C &ndash; Non-Resident Alien Engaged in Business &nbsp; D &ndash; Non-Resident Alien Not Engaged in Business &nbsp; E &ndash; Domestic Corporation &nbsp; F &ndash; Resident Foreign Corp. &nbsp; G &ndash; Non-Resident Foreign Corp.</p>
+
+</div>
+
+</body>
+</html>

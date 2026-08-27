@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1603Q — Quarterly Remittance Return of Final Taxes Withheld on Fringe Benefits</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1603Q">
+
+<div class="sheet">
+
+  <div class="small" style="display:flex;justify-content:space-between;">
+    <span>For BIR BCS/<br>Use Only Item:</span>
+    <span>1603Q 01/18ENCS P1</span>
+  </div>
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Remittance Return of Final Income Taxes Withheld on Fringe Benefits Paid to Employees Other Than Rank and File</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1603Q</span><span class="ver">January 2018 (ENCS)</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:.8">
+        <span class="lbl"><span class="no">1</span> For the Year</span>
+        <input class="short" type="text" name="year" placeholder="YYYY">
+      </div>
+      <div class="cell stack" style="flex:1.6">
+        <span class="lbl"><span class="no">2</span> Quarter</span>
+        <span>
+          <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+          <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+          <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+          <label class="opt"><input type="radio" name="quarter" value="4"> 4th</label>
+        </span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> Amended Return?</span>
+        <span>
+          <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+          <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+        </span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4</span> Any Taxes Withheld?</span>
+        <span>
+          <label class="opt"><input type="radio" name="taxes_withheld" value="yes"> Yes</label>
+          <label class="opt"><input type="radio" name="taxes_withheld" value="no"> No</label>
+        </span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">5</span> No. of Sheet/s Attached</span>
+        <input class="short" type="text" name="sheets_attached">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:3">
+        <span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell">
+        <span class="no">7</span><span class="lbl">RDO Code</span>
+        <input class="short" type="text" name="rdo_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">8</span> Withholding Agent&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="agent_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">9</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span>
+        <input type="text" name="reg_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">9A</span> ZIP Code</span>
+        <input class="short" type="text" name="zip_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.2">
+        <span class="no">10</span><span class="lbl">Contact Number</span>
+        <input type="text" name="contact_no">
+      </div>
+      <div class="cell" style="flex:1.6">
+        <span class="no">11</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="agent_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="agent_category" value="government"> Government</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">12</span><span class="lbl">Email Address</span>
+        <input type="text" name="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.4">
+        <span class="no">13</span><span class="lbl">Are there payees availing of tax relief under Special Law or International Tax Treaty?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+      </div>
+      <div class="cell">
+        <span class="no">13A</span><span class="lbl">If yes, specify</span>
+        <input type="text" name="tax_relief_specify">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Computation of Tax</div>
+  <div class="grid">
+    <div class="item">
+      <span class="no">14</span><span class="lbl">Total Taxes Withheld (from Part IV - Schedule 1)</span>
+      <span class="amt"><input class="num calc" type="text" name="total_taxes_withheld" data-calc="n('sch1_total')" readonly></span>
+    </div>
+    <div class="item">
+      <span class="no">15</span><span class="lbl">Less: Tax Remitted in Return Previously Filed, if this is an amended return</span>
+      <span class="amt"><input class="num" type="text" name="prev_remitted"></span>
+    </div>
+    <div class="item">
+      <span class="no">16</span><span class="lbl" style="padding-left:28px">Other Remittances Made (specify) <input type="text" name="other_remit_specify" style="max-width:260px"></span>
+      <span class="amt"><input class="num" type="text" name="other_remittances"></span>
+    </div>
+    <div class="item total">
+      <span class="no">17</span><span class="lbl" style="padding-left:28px">Total Remittances Made (Sum of Items 15 and 16)</span>
+      <span class="amt"><input class="num calc" type="text" name="total_remittances" data-calc="n('prev_remitted')+n('other_remittances')" readonly></span>
+    </div>
+    <div class="item total">
+      <span class="no">18</span><span class="lbl">Tax Still Due/(Over-remittance) (Item 14 Less Item 17)</span>
+      <span class="amt"><input class="num calc" type="text" name="tax_still_due" data-calc="n('total_taxes_withheld')-n('total_remittances')" readonly></span>
+    </div>
+    <div class="item">
+      <span class="no">19</span><span class="lbl">Add: Penalties &mdash; Surcharge</span>
+      <span class="amt"><input class="num" type="text" name="surcharge"></span>
+    </div>
+    <div class="item">
+      <span class="no">20</span><span class="lbl" style="padding-left:64px">Interest</span>
+      <span class="amt"><input class="num" type="text" name="interest"></span>
+    </div>
+    <div class="item">
+      <span class="no">21</span><span class="lbl" style="padding-left:64px">Compromise</span>
+      <span class="amt"><input class="num" type="text" name="compromise"></span>
+    </div>
+    <div class="item total">
+      <span class="no">22</span><span class="lbl" style="padding-left:64px">Total Penalties (Sum of Items 19 to 21)</span>
+      <span class="amt"><input class="num calc" type="text" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly></span>
+    </div>
+    <div class="item total">
+      <span class="no">23</span><span class="lbl bold">TOTAL AMOUNT STILL DUE (Sum of Items 18 and 22)</span>
+      <span class="amt"><input class="num calc" type="text" name="total_amount_due" data-calc="n('tax_still_due')+n('total_penalties')" readonly></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell small">
+        I/We declare under the penalties of perjury that this remittance return, and all its attachments, have been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I give my consent to the processing of my information as contemplated under the Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach authorization letter)
+      </div>
+    </div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input type="text" name="sig_individual"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input type="text" name="sig_nonindividual"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent (Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.6">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="tax_agent_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="accred_date_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="accred_date_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <tr>
+      <th style="width:20%">Particulars</th>
+      <th style="width:22%">Drawee Bank/Agency</th>
+      <th style="width:16%">Number</th>
+      <th style="width:16%">Date (MM/DD/YYYY)</th>
+      <th>Amount</th>
+    </tr>
+    <tr>
+      <td><span class="no">24</span> Cash/Bank Debit Memo</td>
+      <td><input type="text" name="pay24_bank"></td>
+      <td><input type="text" name="pay24_number"></td>
+      <td><input type="text" name="pay24_date" placeholder="MM/DD/YYYY"></td>
+      <td><input class="num" type="text" name="pay24_amount"></td>
+    </tr>
+    <tr>
+      <td><span class="no">25</span> Check</td>
+      <td><input type="text" name="pay25_bank"></td>
+      <td><input type="text" name="pay25_number"></td>
+      <td><input type="text" name="pay25_date" placeholder="MM/DD/YYYY"></td>
+      <td><input class="num" type="text" name="pay25_amount"></td>
+    </tr>
+    <tr>
+      <td><span class="no">26</span> Tax Debit Memo</td>
+      <td></td>
+      <td><input type="text" name="pay26_number"></td>
+      <td><input type="text" name="pay26_date" placeholder="MM/DD/YYYY"></td>
+      <td><input class="num" type="text" name="pay26_amount"></td>
+    </tr>
+    <tr>
+      <td><span class="no">27</span> Others (specify below)<br><input type="text" name="pay27_specify"></td>
+      <td><input type="text" name="pay27_bank"></td>
+      <td><input type="text" name="pay27_number"></td>
+      <td><input type="text" name="pay27_date" placeholder="MM/DD/YYYY"></td>
+      <td><input class="num" type="text" name="pay27_amount"></td>
+    </tr>
+  </table>
+
+  <div class="grid">
+    <div class="row" style="min-height:70px">
+      <div class="cell stack" style="flex:1.4">
+        <span class="lbl">Machine Validation/Revenue Official Receipt Details (if not filed with an Authorized Agent Bank)</span>
+        <textarea name="machine_validation" rows="3"></textarea>
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span>
+        <textarea name="stamp_receipt" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+  <p class="small">*NOTE: Please read the BIR Data Privacy Policy found in the BIR website (www.bir.gov.ph)</p>
+
+</div>
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-title">Quarterly Remittance Return of Final Income Taxes Withheld on Fringe Benefits Paid to Employees Other Than Rank and File</div>
+      <div class="fh-sub">1603Q 01/18ENCS P2</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1603Q</span><span class="ver">January 2018 (ENCS)<br>Page 2</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="lbl">TIN</span>
+        <input class="mid" type="text" name="p2_tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell" style="flex:2">
+        <span class="lbl">Withholding Agent&rsquo;s Name (Last Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p2_agent_name">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part IV &ndash; Details of Taxes Withheld</div>
+  <div class="sub-title">Schedule 1 &ndash; Computation of Tax</div>
+  <table class="sched">
+    <tr>
+      <th style="width:52%">Recipients<br>(A)</th>
+      <th style="width:12%">ATC<br>(B)</th>
+      <th>Monetary Value of Fringe Benefit<br>(C)</th>
+    </tr>
+    <tr>
+      <td><span class="no">1</span> In General, for Citizen, Resident Alien and Non-Resident Alien Engaged in Trade or Business Within the Philippines</td>
+      <td class="center">WF360</td>
+      <td><input class="num" type="text" name="sch1_r1_monetary"></td>
+    </tr>
+    <tr>
+      <td><span class="no">2</span> Non-Resident Alien Not Engaged in Trade or Business Within the Philippines</td>
+      <td class="center">WF330</td>
+      <td><input class="num" type="text" name="sch1_r2_monetary"></td>
+    </tr>
+  </table>
+
+  <div class="sub-title mt">Schedule 1 (continuation)</div>
+  <table class="sched">
+    <tr>
+      <th style="width:14%">Percentage Divisor<br>(D)</th>
+      <th style="width:36%">Tax Base Grossed-up Monetary Value<br>(E)</th>
+      <th style="width:12%">Tax Rate<br>(F)</th>
+      <th>Taxes Withheld<br>(G) = (E x F)</th>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">1</span> <input class="num short" type="text" name="sch1_r1_divisor" value="65" style="max-width:44px;text-align:center"> %</td>
+      <td><input class="num calc" type="text" name="sch1_r1_grossedup" data-calc="n('sch1_r1_monetary')/((n('sch1_r1_divisor')||65)/100)" readonly></td>
+      <td class="center"><input class="num short" type="text" name="sch1_r1_rate" value="35" style="max-width:44px;text-align:center"> %</td>
+      <td><input class="num calc" type="text" name="sch1_r1_taxes" data-calc="n('sch1_r1_grossedup')*(n('sch1_r1_rate')||35)/100" readonly></td>
+    </tr>
+    <tr>
+      <td class="center"><span class="no">2</span> <input class="num short" type="text" name="sch1_r2_divisor" value="75" style="max-width:44px;text-align:center"> %</td>
+      <td><input class="num calc" type="text" name="sch1_r2_grossedup" data-calc="n('sch1_r2_monetary')/((n('sch1_r2_divisor')||75)/100)" readonly></td>
+      <td class="center"><input class="num short" type="text" name="sch1_r2_rate" value="25" style="max-width:44px;text-align:center"> %</td>
+      <td><input class="num calc" type="text" name="sch1_r2_taxes" data-calc="n('sch1_r2_grossedup')*(n('sch1_r2_rate')||25)/100" readonly></td>
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="3"><span class="no">3</span> Total Taxes Withheld (Sum of Items 1 and 2) (To Part II, Item 14)</td>
+        <td><input class="num calc" type="text" name="sch1_total" data-calc="n('sch1_r1_taxes')+n('sch1_r2_taxes')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+</div>
+
+</body>
+</html>

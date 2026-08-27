@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 0619-E — Monthly Remittance Form of Creditable Income Taxes Withheld (Expanded)</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="0619-E">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Monthly Remittance Form of Creditable Income Taxes Withheld (Expanded)</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">0619-E</span><span class="ver">January 2018<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.1">
+        <span class="lbl"><span class="no">1</span> For the Month of (MM/YYYY)</span>
+        <input type="text" name="month_of" placeholder="MM/YYYY">
+      </div>
+      <div class="cell stack" style="flex:1.1">
+        <span class="lbl"><span class="no">2</span> Due Date (MM/DD/YYYY)</span>
+        <input type="text" name="due_date" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> Amended Form?</span>
+        <span><label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4</span> Any Taxes Withheld?</span>
+        <span><label class="opt"><input type="radio" name="taxes_withheld" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="taxes_withheld" value="no"> No</label></span>
+      </div>
+      <div class="cell stack shade" style="flex:.6">
+        <span class="lbl"><span class="no">5</span> ATC</span>
+        <span class="bold">WME10</span>
+      </div>
+      <div class="cell stack shade" style="flex:.7">
+        <span class="lbl"><span class="no">6</span> Tax Type Code</span>
+        <span class="bold">WE</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2.4">
+        <span class="no">7</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell">
+        <span class="no">8</span><span class="lbl">RDO Code</span>
+        <input class="short" type="text" name="rdo_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">9</span> Withholding Agent&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="agent_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3.2">
+        <span class="lbl"><span class="no">10</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span>
+        <input type="text" name="reg_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">10A</span> ZIP Code</span>
+        <input type="text" name="zip_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.4">
+        <span class="no">11</span><span class="lbl">Contact Number</span>
+        <input type="text" name="contact_no">
+      </div>
+      <div class="cell" style="flex:1.6">
+        <span class="no">12</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="agent_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="agent_category" value="government"> Government</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">13</span><span class="lbl">Email Address</span>
+        <input type="text" name="email">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Tax Remittance</div>
+  <div class="grid">
+    <div class="item"><span class="no">14</span><span class="lbl">Amount of Remittance</span><span class="amt"><input class="num" type="text" name="amt_remittance"></span></div>
+    <div class="item"><span class="no">15</span><span class="lbl">Less: Amount Remitted from Previously Filed Form, if this is an amended form</span><span class="amt"><input class="num" type="text" name="prev_remitted"></span></div>
+    <div class="item total"><span class="no">16</span><span class="lbl">Net Amount of Remittance (Item 14 Less Item 15)</span><span class="amt"><input class="num calc" type="text" name="net_remittance" data-calc="n('amt_remittance')-n('prev_remitted')" readonly></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">17A</span><span class="lbl" style="padding-left:24px">Surcharge</span><span class="amt"><input class="num" type="text" name="surcharge"></span></div>
+    <div class="item"><span class="no">17B</span><span class="lbl" style="padding-left:24px">Interest</span><span class="amt"><input class="num" type="text" name="interest"></span></div>
+    <div class="item"><span class="no">17C</span><span class="lbl" style="padding-left:24px">Compromise</span><span class="amt"><input class="num" type="text" name="compromise"></span></div>
+    <div class="item total"><span class="no">17D</span><span class="lbl" style="padding-left:24px">Total Penalties (Sum of Items 17A to 17C)</span><span class="amt"><input class="num calc" type="text" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly></span></div>
+    <div class="item total"><span class="no">18</span><span class="lbl">Total Amount of Remittance (Sum of Items 16 and 17D)</span><span class="amt"><input class="num calc" type="text" name="total_remittance" data-calc="n('net_remittance')+n('total_penalties')" readonly></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell"><p class="small" style="margin:2px 0">I/We declare under the penalties of perjury that this remittance form has been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach authorization letter)</p></div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input type="text" name="sig_individual" style="background:transparent;border:none;text-align:center"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input type="text" name="sig_nonindividual" style="background:transparent;border:none;text-align:center"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.6">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="tax_agent_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="agent_issue_date" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="agent_expiry_date" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:22%">Particulars</th><th style="width:22%">Drawee Bank/Agency</th><th style="width:16%">Number</th><th style="width:16%">Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">19</span>Cash/Bank Debit Memo</td><td><input type="text" name="pay19_bank"></td><td><input type="text" name="pay19_number"></td><td><input type="text" name="pay19_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay19_amount"></td></tr>
+      <tr><td><span class="no">20</span>Check</td><td><input type="text" name="pay20_bank"></td><td><input type="text" name="pay20_number"></td><td><input type="text" name="pay20_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay20_amount"></td></tr>
+      <tr><td><span class="no">21</span>Tax Debit Memo</td><td><input type="text" name="pay21_bank"></td><td><input type="text" name="pay21_number"></td><td><input type="text" name="pay21_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay21_amount"></td></tr>
+      <tr><td><span class="no">22</span>Others (specify below)<br><input type="text" name="pay22_specify"></td><td><input type="text" name="pay22_bank"></td><td><input type="text" name="pay22_number"></td><td><input type="text" name="pay22_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay22_amount"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid">
+    <div class="row" style="min-height:70px">
+      <div class="cell stack" style="flex:1.4">
+        <span class="lbl">Machine Validation/Revenue Official Receipt Details (if not filed with an Authorized Agent Bank)</span>
+        <textarea name="machine_validation" rows="3"></textarea>
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span>
+      </div>
+    </div>
+  </div>
+  <p class="small">*NOTE: Please read the BIR Data Privacy Policy found in the BIR website (www.bir.gov.ph)</p>
+
+</div>
+
+</body>
+</html>

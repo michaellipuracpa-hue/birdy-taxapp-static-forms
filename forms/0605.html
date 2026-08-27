@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 0605 — Payment Form</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="0605">
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republika ng Pilipinas<br>Kagawaran ng Pananalapi<br>Kawanihan ng Rentas Internas</div>
+      <div class="fh-title">Payment Form</div>
+      <div class="fh-sub">Fill in all applicable spaces. Mark all appropriate boxes with an &ldquo;X&rdquo;</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">0605</span><span class="ver">July 1999 (ENCS)</span></div>
+  </div>
+  <div class="form-note">(To be filled up by the BIR) &nbsp; DLN: ____________ &nbsp; PSIC: ____________ &nbsp; PSOC: ____________</div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell">
+        <span class="no">3</span><span class="lbl">Quarter</span>
+        <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+        <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+        <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+        <label class="opt"><input type="radio" name="quarter" value="4"> 4th</label>
+      </div>
+      <div class="cell"><span class="no">4</span><span class="lbl">Due Date (MM/DD/YYYY)</span><input type="text" name="due_date" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">No. of Sheets Attached</span><input type="text" name="sheets_attached" class="short"></div>
+      <div class="cell"><span class="no">6</span><span class="lbl">ATC</span><input type="text" name="atc" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">2</span><span class="lbl">Year Ended (MM/YYYY)</span><input type="text" name="year_ended" class="short" placeholder="MM/YYYY"></div>
+      <div class="cell"><span class="no">7</span><span class="lbl">Return Period (MM/DD/YYYY)</span><input type="text" name="return_period" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">8</span><span class="lbl">Tax Type Code</span><input type="text" name="tax_type_code" class="short"></div>
+      <div class="cell shade"><span class="lbl">BCS No./Item No. (To be filled up by the BIR)</span></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I – Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2"><span class="no">9</span><span class="lbl">Taxpayer Identification No.</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">10</span><span class="lbl">RDO Code</span><input type="text" name="rdo_code" class="short"></div>
+      <div class="cell">
+        <span class="no">11</span><span class="lbl">Taxpayer Classification</span>
+        <label class="opt"><input type="radio" name="taxpayer_classification" value="I"> I</label>
+        <label class="opt"><input type="radio" name="taxpayer_classification" value="N"> N</label>
+      </div>
+      <div class="cell"><span class="no">12</span><span class="lbl">Line of Business/Occupation</span><input type="text" name="line_of_business"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3"><span class="lbl"><span class="no">13</span> Taxpayer&rsquo;s Name (Last Name, First Name, Middle Name for Individuals) / (Registered Name for Non-Individuals)</span><input type="text" name="taxpayer_name"></div>
+      <div class="cell"><span class="no">14</span><span class="lbl">Telephone Number</span><input type="text" name="telephone"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3"><span class="lbl"><span class="no">15</span> Registered Address</span><input type="text" name="registered_address"></div>
+      <div class="cell"><span class="no">16</span><span class="lbl">Zip Code</span><input type="text" name="zip_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl bold"><span class="no">17</span> Manner of Payment</span>
+        <span class="lbl bold">Voluntary Payment</span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_self_assessment"> Self-Assessment</label></span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_penalties"> Penalties</label></span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_tax_deposit"> Tax Deposit/Advance Payment</label></span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_income_tax_second"> Income Tax Second Installment (Individual)</label></span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_others"> Others (Specify)</label> <input type="text" name="mp_others_specify" style="max-width:160px"></span>
+        <span class="lbl bold">Per Audit/Delinquent Account</span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_preliminary_final"> Preliminary/Final Assessment/Deficiency Tax</label></span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="mp_accounts_receivable"> Accounts Receivable/Delinquent Account</label></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl bold"><span class="no">18</span> Type of Payment</span>
+        <span class="lbl"><label class="opt"><input type="radio" name="type_of_payment" value="installment"> Installment</label></span>
+        <span class="lbl">No. of Installment <input type="text" name="installment_no" class="short"></span>
+        <span class="lbl"><label class="opt"><input type="radio" name="type_of_payment" value="partial"> Partial Payment</label></span>
+        <span class="lbl"><label class="opt"><input type="radio" name="type_of_payment" value="full"> Full Payment</label></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II – Computation of Tax</div>
+  <div class="grid">
+    <div class="item"><span class="no">19</span><span class="lbl">Basic Tax / Deposit / Advance Payment</span><span class="amt"><input class="num" name="basic_tax" type="text"></span></div>
+    <div class="row">
+      <div class="cell"><span class="no">20</span><span class="lbl bold">Add: Penalties</span></div>
+      <div class="cell stack"><span class="lbl"><span class="no">20A</span> Surcharge</span><input class="num" type="text" name="surcharge"></div>
+      <div class="cell stack"><span class="lbl"><span class="no">20B</span> Interest</span><input class="num" type="text" name="interest"></div>
+      <div class="cell stack"><span class="lbl"><span class="no">20C</span> Compromise</span><input class="num" type="text" name="compromise"></div>
+      <div class="cell stack"><span class="lbl"><span class="no">20D</span> Total Penalties</span><input class="num calc" type="text" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly></div>
+    </div>
+    <div class="item total"><span class="no">21</span><span class="lbl">Total Amount Payable <em>(Sum of Items 19 &amp; 20D)</em></span><span class="amt"><input class="num calc" name="total_amount_payable" data-calc="n('basic_tax')+n('total_penalties')" readonly type="text"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl bold">For Voluntary Payment</span>
+        <span class="lbl small">I declare, under the penalties of perjury, that this document has been made in good faith, verified by me, and to the best of my knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof.</span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl bold">For Payment of Deficiency Taxes From Audit/Investigation/Delinquent Accounts</span>
+        <span class="lbl small">APPROVED BY:</span>
+      </div>
+      <div class="cell stack shade">
+        <span class="lbl small">Stamp of Receiving Office and Date of Receipt</span>
+        <textarea name="stamp_receipt" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold">22A</div>
+      <input type="text" name="sig_taxpayer">
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative</div>
+      <input type="text" name="sig_taxpayer_title">
+      <div class="cap">Title/Position of Signatory</div>
+    </div>
+    <div class="sig">
+      <div class="small bold">22B</div>
+      <input type="text" name="sig_head_office">
+      <div class="cap">Signature over Printed Name of Head of Office</div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III – Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Particulars</th><th>Drawee Bank/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">23</span> Cash/Bank Debit Memo</td><td></td><td></td><td><input type="text" name="pay_cash_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_cash_amount"></td></tr>
+      <tr><td><span class="no">24</span> Check</td><td><input type="text" name="pay_check_bank"></td><td><input type="text" name="pay_check_number"></td><td><input type="text" name="pay_check_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_check_amount"></td></tr>
+      <tr><td><span class="no">25</span> Tax Debit Memo</td><td></td><td><input type="text" name="pay_tdm_number"></td><td><input type="text" name="pay_tdm_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_tdm_amount"></td></tr>
+      <tr><td><span class="no">26</span> Others</td><td><input type="text" name="pay_others_bank"></td><td><input type="text" name="pay_others_number"></td><td><input type="text" name="pay_others_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_others_amount"></td></tr>
+    </tbody>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl">Machine Validation/Revenue Official Receipt Details (If not filed with the bank)</span><textarea name="machine_validation" rows="3"></textarea></div>
+    </div>
+    <div class="row">
+      <div class="cell small">Taxpayer Classification: &nbsp; I – Individual &nbsp;&nbsp; N – Non-Individual</div>
+    </div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="part-title">BIR Form 0605 (ENCS) — Page 2 — Reference Tables</div>
+  <div class="sub-title" style="border:2px solid var(--ink); border-bottom:none;">ATC — Nature of Payment (selected)</div>
+  <table class="sched">
+    <thead><tr><th style="width:110px">ATC</th><th>NATURE OF PAYMENT</th></tr></thead>
+    <tbody>
+      <tr><td>II 011</td><td>Pure Compensation Income</td></tr>
+      <tr><td>II 012</td><td>Pure Business Income</td></tr>
+      <tr><td>II 013</td><td>Mixed (Compensation and Business)</td></tr>
+      <tr><td>MC 180</td><td>VAT/Non-VAT Registration Fee</td></tr>
+      <tr><td>MC 190</td><td>Travel Tax</td></tr>
+      <tr><td>MC 090</td><td>Tin Card Fees</td></tr>
+      <tr><td>MC010 &amp; MC020</td><td>Tax Amnesty</td></tr>
+      <tr><td>MC 040</td><td>Income from Forfeited Properties</td></tr>
+      <tr><td>MC 050</td><td>Proceeds from Sale of Rent Estate</td></tr>
+      <tr><td>MC 060</td><td>Energy Tax on Electric Power Consumption</td></tr>
+      <tr><td>MC 031</td><td>Deficiency Tax</td></tr>
+      <tr><td>MC 030</td><td>Delinquent Accounts/Accounts Receivable</td></tr>
+      <tr><td>FP 010 – FP 930</td><td>Fines and Penalties</td></tr>
+      <tr><td>MC 200</td><td>Others</td></tr>
+      <tr><td>MC 210</td><td>Miscellaneous Taxes – Other Tax Revenue</td></tr>
+      <tr><td>MC 220 – MC 240</td><td>Advance Payment on Privilege Store</td></tr>
+      <tr><td>VM 160</td><td>VAT on Manufacturing – Sugar</td></tr>
+      <tr><td>IC 080</td><td>Income Tax on International Carriers</td></tr>
+      <tr><td>PT 041</td><td>Percentage Tax on International Carriers</td></tr>
+      <tr><td>DS 010</td><td>Documentary Stamp Tax – General</td></tr>
+      <tr><td>XA010–XA040 / XA061–XA090 / XA051–XA053</td><td>Excise Tax on Alcohol Products (Distilled Spirits / Wines / Fermented Liquor)</td></tr>
+      <tr><td>XB010–XB100</td><td>Excise Tax on Sweetened Products (juice drinks, tea, carbonated beverages, flavored water, energy and sports drinks, powdered drinks, cereal and grain beverages, other beverages with added sugar, HFCS, coconut sap sugar/steviol glycosides)</td></tr>
+      <tr><td>XC010</td><td>Performance of Services on Invasive Cosmetic Procedures</td></tr>
+      <tr><td>XT010–XT130</td><td>Excise Tax on Tobacco Products (smoking and chewing tobacco, cigars, cigarettes packed by hand/machine) and Tobacco Inspection/Monitoring Fees</td></tr>
+      <tr><td>XP010–XP190</td><td>Excise Tax on Petroleum Products (gasoline, naphtha, aviation gas, diesel, bunker fuel, jet fuel, kerosene, asphalts, LPG, lubes and greases, waxes and petrolatum, processed gas)</td></tr>
+      <tr><td>XG020–XG120</td><td>Excise Tax on Miscellaneous Products/Articles (Automobiles, Non-Essential Goods)</td></tr>
+      <tr><td>XM010–XM051</td><td>Excise Tax on Mineral Products (coal &amp; coke, non-metallic &amp; quarry resources, gold and chromite, copper &amp; other metallic minerals, indigenous petroleum, others)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title mt" style="border:2px solid var(--ink); border-bottom:none;">Tax Type</div>
+  <table class="sched">
+    <thead><tr><th style="width:60px">Code</th><th>Description</th><th style="width:60px">Code</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td class="center">RF</td><td>REGISTRATION FEE</td><td class="center">DS</td><td>DOCUMENTARY STAMP TAX</td></tr>
+      <tr><td class="center">TR</td><td>TRAVEL TAX-PTA</td><td class="center">WB</td><td>WITHHOLDING TAX-BANKS AND OTHER FINANCIAL INSTITUTIONS</td></tr>
+      <tr><td class="center">ET</td><td>ENERGY TAX</td><td class="center">WC</td><td>WITHHOLDING TAX-COMPENSATION</td></tr>
+      <tr><td class="center">QP</td><td>QUALIFYING FEES-PAGCOR</td><td class="center">WE</td><td>WITHHOLDING TAX-EXPANDED</td></tr>
+      <tr><td class="center">MC</td><td>MISCELLANEOUS TAX</td><td class="center">WF</td><td>WITHHOLDING TAX-FINAL</td></tr>
+      <tr><td class="center">XV</td><td>EXCISE-AD VALOREM</td><td class="center">WG</td><td>WITHHOLDING TAX – VAT AND OTHER PERCENTAGE TAXES</td></tr>
+      <tr><td class="center">XS</td><td>EXCISE-SPECIFIC</td><td class="center">WO</td><td>WITHHOLDING TAX-OTHERS (ONE-TIME TRANSACTION NOT SUBJECT TO CAPITAL GAINS TAX)</td></tr>
+      <tr><td class="center">XF</td><td>TOBACCO INSPECTION AND MONITORING FEES</td><td class="center">WR</td><td>WITHHOLDING TAX – FRINGE BENEFITS</td></tr>
+      <tr><td class="center">IT</td><td>INCOME TAX</td><td class="center">WW</td><td>WITHHOLDING TAX – PERCENTAGE TAX ON WINNING AND PRIZES</td></tr>
+      <tr><td class="center">CG</td><td>CAPITAL GAINS TAX – Real Property</td><td class="center">VT</td><td>VALUE-ADDED TAX</td></tr>
+      <tr><td class="center">CS</td><td>CAPITAL GAINS TAX – Stocks</td><td class="center">PT</td><td>PERCENTAGE TAX</td></tr>
+      <tr><td class="center">ES</td><td>ESTATE TAX</td><td class="center">ST</td><td>PERCENTAGE TAX – STOCKS</td></tr>
+      <tr><td class="center">DN</td><td>DONOR&rsquo;S TAX</td><td class="center">SO</td><td>PERCENTAGE TAX – STOCKS (IPO)</td></tr>
+      <tr><td class="center"></td><td></td><td class="center">SL</td><td>PERCENTAGE TAX – SPECIAL LAWS</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

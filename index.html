@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIR Tax App</title>
+<style>
+  :root { --accent:#1a3e72; --gold:#ffb62e; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Helvetica Neue",Arial,sans-serif; background:#eef1f5; color:#1c2430; }
+  header { background:var(--accent); color:#fff; padding:28px 32px 22px; }
+  header h1 { margin:0 0 4px; font-size:26px; }
+  header p { margin:0; opacity:.85; font-size:13.5px; }
+  main { max-width:1100px; margin:24px auto 60px; padding:0 24px; }
+  .cat { background:#fff; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,.08); margin-bottom:22px; overflow:hidden; }
+  .cat h2 { margin:0; padding:12px 18px; font-size:15px; background:#243b5e; color:#fff; display:flex; align-items:center; gap:10px; }
+  .cat h2 .tag { font-size:11px; background:var(--gold); color:#38270a; border-radius:20px; padding:2px 10px; font-weight:700; }
+  .forms { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); }
+  .form-card { padding:13px 18px; border-top:1px solid #e5e9f0; border-right:1px solid #e5e9f0; display:flex; flex-direction:column; gap:3px; }
+  .form-card b { font-size:14px; color:var(--accent); }
+  .form-card span { font-size:12px; color:#5a6474; line-height:1.35; }
+  .form-card .links { margin-top:7px; display:flex; gap:10px; }
+  .form-card a.open { background:var(--accent); color:#fff; text-decoration:none; font-size:12px; font-weight:600; padding:4px 14px; border-radius:5px; }
+  .form-card a.open:hover { background:#2b5aa5; }
+  .form-card a.pdf { color:#8a93a3; font-size:11.5px; text-decoration:none; align-self:center; }
+  .form-card a.pdf:hover { color:var(--accent); text-decoration:underline; }
+  footer { text-align:center; font-size:11.5px; color:#8a93a3; padding:20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>BIR Tax App</h1>
+  <p>Fillable Philippine BIR tax returns — open a form, fill in your records, and export as PDF. Entries auto-save in your browser per record.</p>
+</header>
+<main>
+
+  <section class="cat">
+    <h2>Income Tax <span class="tag">9 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>1700</b><span>Annual Income Tax Return — Individuals Earning Purely Compensation Income</span>
+        <div class="links"><a class="open" href="forms/1700.html">Open form</a><a class="pdf" href="../01 Income Tax/1700 Jan 2018 ENCS v6.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1701</b><span>Annual Income Tax Return — Individuals (incl. Mixed Income Earner), Estates and Trusts</span>
+        <div class="links"><a class="open" href="forms/1701.html">Open form</a><a class="pdf" href="../01 Income Tax/1701 Jan 2018 final with rates.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1701A</b><span>Annual Income Tax Return — Individuals Earning Purely from Business/Profession (Graduated w/ OSD or 8%)</span>
+        <div class="links"><a class="open" href="forms/1701A.html">Open form</a><a class="pdf" href="../01 Income Tax/1701A Jan 2018 v5 with rates.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1701Q</b><span>Quarterly Income Tax Return — Individuals, Estates and Trusts</span>
+        <div class="links"><a class="open" href="forms/1701Q.html">Open form</a><a class="pdf" href="../01 Income Tax/1701Q Jan 2018 final rev2_copy.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1701-MS</b><span>Annual Income Tax Return for Micro and Small Taxpayers (Aug 2024)</span>
+        <div class="links"><a class="open" href="forms/1701-MS.html">Open form</a><a class="pdf" href="../01 Income Tax/1701-MS August 2024 Fillable_01.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1702-RT</b><span>Annual Income Tax Return — Corporations Subject Only to REGULAR Income Tax Rate</span>
+        <div class="links"><a class="open" href="forms/1702-RT.html">Open form</a><a class="pdf" href="../01 Income Tax/1702-RT Jan 2018 ENCS Final v3.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1702-MX</b><span>Annual Income Tax Return — Corporations with Mixed Income Subject to Multiple Rates / Special / Exempt</span>
+        <div class="links"><a class="open" href="forms/1702-MX.html">Open form</a><a class="pdf" href="../01 Income Tax/1702-MX Jan 2018 ENCS Final with OSDv2.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1702-EX</b><span>Annual Income Tax Return — Corporations EXEMPT under the Tax Code and Special Laws</span>
+        <div class="links"><a class="open" href="forms/1702-EX.html">Open form</a><a class="pdf" href="../01 Income Tax/1702-EX Jan 2018 ENCS v2.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1702Q</b><span>Quarterly Income Tax Return — Corporations, Partnerships and Other Non-Individual Taxpayers</span>
+        <div class="links"><a class="open" href="forms/1702Q.html">Open form</a><a class="pdf" href="../01 Income Tax/1702Q 2018ENCS final2.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <section class="cat">
+    <h2>Value Added Tax <span class="tag">3 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>2550Q</b><span>Quarterly Value-Added Tax Return (April 2024)</span>
+        <div class="links"><a class="open" href="forms/2550Q.html">Open form</a><a class="pdf" href="../02 Value Added Tax/2550Q  April 2024 ENCS_Final.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>2550-DS</b><span>Value-Added Tax Return on Digital Services (Jan 2025)</span>
+        <div class="links"><a class="open" href="forms/2550-DS.html">Open form</a><a class="pdf" href="../02 Value Added Tax/2550-DS  Jan 2025 version_Folio.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1600-VT</b><span>Monthly Remittance Return of Value-Added Tax Withheld</span>
+        <div class="links"><a class="open" href="forms/1600-VT.html">Open form</a><a class="pdf" href="../02 Value Added Tax/1600-VT January 2018 ENCS final.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <section class="cat">
+    <h2>Withholding Tax — Expanded <span class="tag">5 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>0619-E</b><span>Monthly Remittance Form of Creditable Income Taxes Withheld (Expanded)</span>
+        <div class="links"><a class="open" href="forms/0619-E.html">Open form</a><a class="pdf" href="../03 Withholding Tax - Expanded/0619-E Jan 2018 rev final.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1601-EQ</b><span>Quarterly Remittance Return of Creditable Income Taxes Withheld (Expanded)</span>
+        <div class="links"><a class="open" href="forms/1601-EQ.html">Open form</a><a class="pdf" href="../03 Withholding Tax - Expanded/1601-EQ January 2019 ENCS final.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1604-E</b><span>Annual Information Return of Creditable Income Taxes Withheld (Expanded) / Income Payments Exempt</span>
+        <div class="links"><a class="open" href="forms/1604-E.html">Open form</a><a class="pdf" href="../03 Withholding Tax - Expanded/1604E Jan 2018 ENCS Final2.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1606</b><span>Withholding Tax Remittance Return — Onerous Transfer of Real Property (Other than Capital Asset)</span>
+        <div class="links"><a class="open" href="forms/1606.html">Open form</a><a class="pdf" href="../03 Withholding Tax - Expanded/1606 Jan 2018 ENCS Final version.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>2307</b><span>Certificate of Creditable Tax Withheld at Source</span>
+        <div class="links"><a class="open" href="forms/2307.html">Open form</a><a class="pdf" href="../03 Withholding Tax - Expanded/2307 Jan 2018 ENCS v3.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <section class="cat">
+    <h2>Withholding Tax — Compensation <span class="tag">3 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>1601-C</b><span>Monthly Remittance Return of Income Taxes Withheld on Compensation</span>
+        <div class="links"><a class="open" href="forms/1601-C.html">Open form</a><a class="pdf" href="../04 Withholding Tax - Compensation/1601C final Jan 2018 with DPA.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1604-C</b><span>Annual Information Return of Income Taxes Withheld on Compensation</span>
+        <div class="links"><a class="open" href="forms/1604-C.html">Open form</a><a class="pdf" href="../04 Withholding Tax - Compensation/1604-C Jan 2018 Final.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>2316</b><span>Certificate of Compensation Payment / Tax Withheld</span>
+        <div class="links"><a class="open" href="forms/2316.html">Open form</a><a class="pdf" href="../04 Withholding Tax - Compensation/2316 Sep 2021 ENCS_Final_corrected.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <section class="cat">
+    <h2>Withholding Tax — Final <span class="tag">5 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>0619-F</b><span>Monthly Remittance Form of Final Income Taxes Withheld</span>
+        <div class="links"><a class="open" href="forms/0619-F.html">Open form</a><a class="pdf" href="../05 Withholding Tax - Final/0619-F Jan 2018 Guidelines.pdf">guidelines PDF</a></div></div>
+      <div class="form-card"><b>1601-FQ</b><span>Quarterly Remittance Return of Final Income Taxes Withheld</span>
+        <div class="links"><a class="open" href="forms/1601-FQ.html">Open form</a><a class="pdf" href="../05 Withholding Tax - Final/1601-FQ 2020 final.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1603Q</b><span>Quarterly Remittance Return of Final Income Taxes Withheld on Fringe Benefits</span>
+        <div class="links"><a class="open" href="forms/1603Q.html">Open form</a><a class="pdf" href="../05 Withholding Tax - Final/1603Q Jan 2018 final.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1604-F</b><span>Annual Information Return of Income Payments Subjected to Final Withholding Taxes</span>
+        <div class="links"><a class="open" href="forms/1604-F.html">Open form</a><a class="pdf" href="../05 Withholding Tax - Final/1604-F Jan 2018 Final 2.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>2306</b><span>Certificate of Final Tax Withheld at Source</span>
+        <div class="links"><a class="open" href="forms/2306.html">Open form</a><a class="pdf" href="../05 Withholding Tax - Final/2306 Jan 2018 ENCS v4.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <section class="cat">
+    <h2>Percentage Tax <span class="tag">2 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>2551Q</b><span>Quarterly Percentage Tax Return</span>
+        <div class="links"><a class="open" href="forms/2551Q.html">Open form</a><a class="pdf" href="../06 Percentage Tax/2551Q Jan 2018 ENCS final rev 3_copy.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>1600-PT</b><span>Monthly Remittance Return of Other Percentage Taxes Withheld</span>
+        <div class="links"><a class="open" href="forms/1600-PT.html">Open form</a><a class="pdf" href="../06 Percentage Tax/1600-PT January 2018 ENCS final.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <section class="cat">
+    <h2>Others <span class="tag">3 forms</span></h2>
+    <div class="forms">
+      <div class="form-card"><b>0605</b><span>Payment Form</span>
+        <div class="links"><a class="open" href="forms/0605.html">Open form</a><a class="pdf" href="../07 Others/0605version1999_09.02.2022_copy.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>0611-A</b><span>Payment Form Covered by a Letter Notice</span>
+        <div class="links"><a class="open" href="forms/0611-A.html">Open form</a><a class="pdf" href="../07 Others/0611-A Oct 2014 ENCS.pdf">source PDF</a></div></div>
+      <div class="form-card"><b>2121</b><span>One-Time Abatement for Micro Taxpayers — Application Form</span>
+        <div class="links"><a class="open" href="forms/2121.html">Open form</a><a class="pdf" href="../07 Others/Form 2121.pdf">source PDF</a></div></div>
+    </div>
+  </section>
+
+  <footer>Data is stored locally in your browser (per form, per record). Use “Export as PDF” inside each form, then choose “Save as PDF” in the print dialog.<br>
+  Print format follows the BIR spec (RMC 44-2023 / 51-2024): Folio 8.5″ × 13″ bond paper, portrait, official margins built in — set Scale to 100% / Actual size (never shrink-to-fit) and turn headers &amp; footers off.</footer>
+</main>
+</body>
+</html>

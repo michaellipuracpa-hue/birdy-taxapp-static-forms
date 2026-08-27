@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2121 — One-Time Abatement for Micro Taxpayers (Application)</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="2121">
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">One-Time Abatement for Micro Taxpayers — Application Form</div>
+      <div class="fh-sub">Fill in all applicable white spaces. Mark all appropriate boxes with an &ldquo;X&rdquo;</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2121</span><span class="ver">June 2026</span></div>
+  </div>
+  <div class="form-note">(To be filled up by BIR) DLN: _________________</div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">Return Period / Date of Transaction (MM/DD/YYYY)</span><input type="text" name="return_period" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell">
+        <span class="no">2</span><span class="lbl">For the</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell"><span class="no">3</span><span class="lbl">Year Ended (MM/DD/YYYY)</span><input type="text" name="year_ended" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4</span> Alphanumeric Tax Code (ATC)</span>
+        <span class="lbl"><label class="opt"><input type="radio" name="atc" value="MC350"> MC350 – Individual</label></span>
+        <span class="lbl"><label class="opt"><input type="radio" name="atc" value="MC351"> MC351 – Corporate</label></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I – Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2"><span class="no">5</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">6</span><span class="lbl">RDO Code</span><input type="text" name="rdo_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">7</span> Taxpayer&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span><input type="text" name="taxpayer_name"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">8</span> Trade Name</span><input type="text" name="trade_name"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3"><span class="lbl"><span class="no">9</span> Registered Address</span><input type="text" name="registered_address"></div>
+      <div class="cell"><span class="no">9A</span><span class="lbl">ZIP Code</span><input type="text" name="zip_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">10</span><span class="lbl">Taxpayer Classification</span>
+        <label class="opt"><input type="radio" name="taxpayer_classification" value="individual"> Individual</label>
+        <label class="opt"><input type="radio" name="taxpayer_classification" value="corporation"> Corporation</label>
+      </div>
+      <div class="cell"><span class="no">11</span><span class="lbl">Line of Business</span><input type="text" name="line_of_business"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">12</span><span class="lbl">Contact Number (Landline/Cellphone No.)</span><input type="text" name="contact_number"></div>
+      <div class="cell"><span class="no">13</span><span class="lbl">Email Address</span><input type="text" name="email_address"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II – Computation</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:26px"></th><th>Particulars</th><th style="width:120px">Tax Type</th><th style="width:180px">Basic Amount Due</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="center"><span class="no">14</span></td><td>Delinquent Account</td><td><input type="text" name="item14_tax_type"></td><td><input class="num" type="text" name="item14_amount"></td></tr>
+      <tr><td class="center"><span class="no">15</span></td><td>Assessment with Pending Administrative Protest</td><td><input type="text" name="item15_tax_type"></td><td><input class="num" type="text" name="item15_amount"></td></tr>
+      <tr><td class="center"><span class="no">16</span></td><td>Tax Cases Disputed by the Taxpayer before the Department of Justice and the Courts</td><td><input type="text" name="item16_tax_type"></td><td><input class="num" type="text" name="item16_amount"></td></tr>
+      <tr><td class="center"><span class="no">17</span></td><td>Tax Collection Cases Filed with the Courts Against Taxpayers</td><td><input type="text" name="item17_tax_type"></td><td><input class="num" type="text" name="item17_amount"></td></tr>
+      <tr><td class="center"><span class="no">18</span></td><td>Pending Compromise Application</td><td><input type="text" name="item18_tax_type"></td><td><input class="num" type="text" name="item18_amount"></td></tr>
+      <tr><td class="center"><span class="no">19</span></td><td>Pending Abatement Application</td><td><input type="text" name="item19_tax_type"></td><td><input class="num" type="text" name="item19_amount"></td></tr>
+      <tr><td class="center"><span class="no">20</span></td><td>Criminal Violations Not Filed in Courts</td><td><input type="text" name="item20_tax_type"></td><td><input class="num" type="text" name="item20_amount"></td></tr>
+      <tr><td class="center"><span class="no">21</span></td><td>Tagged &ldquo;Accounts Payable or Due to BIR&rdquo; in the Taxpayer&rsquo;s Books of Account</td><td><input type="text" name="item21_tax_type"></td><td><input class="num" type="text" name="item21_amount"></td></tr>
+      <tr><td class="center"><span class="no">22</span></td><td>Only Penalties Due (No basic tax due)</td><td><input type="text" name="item22_tax_type"></td><td><input class="num" type="text" name="item22_amount"></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td class="center"><span class="no">23</span></td><td colspan="2">Total Amount Due for Abatement <em>(Sum of Items 14 to 22)</em></td><td><input class="num calc" type="text" name="total_abatement" data-calc="n('item14_amount')+n('item15_amount')+n('item16_amount')+n('item17_amount')+n('item18_amount')+n('item19_amount')+n('item20_amount')+n('item21_amount')+n('item22_amount')" readonly></td></tr>
+    </tfoot>
+  </table>
+
+  <div class="grid">
+    <div class="row"><div class="cell small">
+      <span class="no">24</span>&nbsp; I/We hereby declare, under the penalties of Perjury, that all the information provided by me/us (as taxpayer/authorized representative) in this application form, are true, correct and complete pursuant to the provisions of the National Internal Revenue Code of 1997, as amended, and the revenue regulations issued pursuant thereto. Also, I/we declare and fully understand that I/we will be held criminally, civilly and administratively liable under existing laws, rules and regulations if any of the information/statement I/we submitted/supplied herein is false, misleading, deceptive and inaccurate. Finally, I/we give my consent to the processing of my information as contemplated under Republic Act (RA) No. 10173, or the Data Privacy Act of 2012, for legitimate and lawful purpose, adhering to the principle of proportionality.
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold">For Individual:</div>
+      <input type="text" name="ind_name">
+      <div class="cap">Taxpayer Name/Authorized Representative</div>
+      <input type="text" name="ind_title_tin">
+      <div class="cap">Title/Designation / TIN</div>
+      <input type="text" name="sig_individual">
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent (Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold">For Non-Individual:</div>
+      <input type="text" name="nonind_name">
+      <div class="cap">Name of President/VP/Authorized Officer or Representative</div>
+      <input type="text" name="nonind_title_tin">
+      <div class="cap">Title/Designation / TIN</div>
+      <input type="text" name="sig_nonindividual">
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative (Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span><input type="text" name="tax_agent_no"></div>
+      <div class="cell"><span class="lbl">Date of Issue (MM/DD/YYYY)</span><input type="text" name="tax_agent_issue_date" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="lbl">Expiry Date (MM/DD/YYYY)</span><input type="text" name="tax_agent_expiry_date" class="short" placeholder="MM/DD/YYYY"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl bold">Remarks:</span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="remarks_complete"> Complete as to documentary requirements</label></span>
+        <span class="lbl"><label class="opt"><input type="checkbox" name="remarks_others"> Others</label> <input type="text" name="remarks_others_specify" style="max-width:180px"></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl bold">Reviewed by:</span>
+        <input type="text" name="reviewed_by">
+        <span class="lbl small">Assistant Revenue District Officer (Signature Over Printed Name)</span>
+      </div>
+      <div class="cell stack shade">
+        <span class="lbl small">Stamp of Receiving Office and Date of Receipt (Revenue Officer&rsquo;s Signature)</span>
+        <textarea name="stamp_receipt" rows="2"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl bold">Checked/Evaluated by:</span>
+        <input type="text" name="checked_by">
+        <span class="lbl small">Revenue Officer (Signature Over Printed Name)</span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl bold">Approved by:</span>
+        <input type="text" name="approved_by">
+        <span class="lbl small">Revenue District Officer (Signature Over Printed Name)</span>
+      </div>
+    </div>
+  </div>
+  <div class="small mt">*NOTE: The BIR Data Privacy Policy is in the BIR website (www.bir.gov.ph)</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2551Q — Quarterly Percentage Tax Return</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="2551Q">
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Percentage Tax Return</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2551Q</span><span class="ver">January 2018 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell">
+        <span class="no">3</span><span class="lbl">Quarter</span>
+        <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+        <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+        <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+        <label class="opt"><input type="radio" name="quarter" value="4"> 4th</label>
+      </div>
+      <div class="cell">
+        <span class="no">4</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">2</span><span class="lbl">Year Ended (MM/YYYY)</span><input type="text" name="year_ended" class="short" placeholder="MM/YYYY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">Number of Sheet/s Attached</span><input type="text" name="sheets_attached" class="short"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I – Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2"><span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">7</span><span class="lbl">RDO Code</span><input type="text" name="rdo_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">8</span> Taxpayer&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span><input type="text" name="taxpayer_name"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3"><span class="lbl"><span class="no">9</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span><input type="text" name="registered_address"></div>
+      <div class="cell"><span class="no">9A</span><span class="lbl">ZIP Code</span><input type="text" name="zip_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">10</span><span class="lbl">Contact Number (Landline/Cellphone No.)</span><input type="text" name="contact_number"></div>
+      <div class="cell"><span class="no">11</span><span class="lbl">Email Address</span><input type="text" name="email_address"></div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:2">
+        <span class="no">12</span><span class="lbl">Are you availing of tax relief under Special Law or International Tax Treaty?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">12A</span><span class="lbl">If yes, specify</span><input type="text" name="tax_relief_specify"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">13</span> Only for individual taxpayers whose sales/receipts are subject to Percentage Tax under Section 116 of the Tax Code, as amended: What income tax rates are you availing? (choose one) <em>(To be filled out only on the initial quarter of the taxable year)</em></span>
+        <span class="lbl">
+          <label class="opt"><input type="radio" name="income_tax_rate" value="graduated"> Graduated income tax rate on net taxable income</label>
+          &nbsp;&nbsp;
+          <label class="opt"><input type="radio" name="income_tax_rate" value="8percent"> 8% income tax rate on gross sales/receipts/others</label>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II – Total Tax Payable</div>
+  <div class="grid">
+    <div class="item total"><span class="no">14</span><span class="lbl">Total Tax Due <em>(From Schedule 1 Item 7)</em></span><span class="amt"><input class="num calc" name="total_tax_due" data-calc="n('s1_total_tax_due')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Less: Tax Credit/Payment (attach proof)</span><span class="amt"></span></div>
+    <div class="item"><span class="no">15</span><span class="lbl">Creditable Percentage Tax Withheld per BIR Form No. 2307</span><span class="amt"><input class="num" name="credit_2307" type="text"></span></div>
+    <div class="item"><span class="no">16</span><span class="lbl">Tax Paid in Return Previously Filed, if this is an Amended Return</span><span class="amt"><input class="num" name="tax_paid_previous" type="text"></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl">Other Tax Credit/Payment (specify) <input type="text" name="other_credit_specify" style="max-width:220px"></span><span class="amt"><input class="num" name="other_credit" type="text"></span></div>
+    <div class="item total"><span class="no">18</span><span class="lbl">Total Tax Credits/Payments <em>(Sum of Items 15 to 17)</em></span><span class="amt"><input class="num calc" name="total_credits" data-calc="n('credit_2307')+n('tax_paid_previous')+n('other_credit')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">19</span><span class="lbl">Tax Still Payable/(Overpayment) <em>(Item 14 Less Item 18)</em></span><span class="amt"><input class="num calc" name="tax_still_payable" data-calc="n('total_tax_due')-n('total_credits')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">20</span><span class="lbl">Surcharge</span><span class="amt"><input class="num" name="surcharge" type="text"></span></div>
+    <div class="item"><span class="no">21</span><span class="lbl">Interest</span><span class="amt"><input class="num" name="interest" type="text"></span></div>
+    <div class="item"><span class="no">22</span><span class="lbl">Compromise</span><span class="amt"><input class="num" name="compromise" type="text"></span></div>
+    <div class="item total"><span class="no">23</span><span class="lbl">Total Penalties <em>(Sum of Items 20 to 22)</em></span><span class="amt"><input class="num calc" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">24</span><span class="lbl">TOTAL AMOUNT PAYABLE/(Overpayment) <em>(Sum of Items 19 and 23)</em></span><span class="amt"><input class="num calc" name="total_amount_payable" data-calc="n('tax_still_payable')+n('total_penalties')" readonly type="text"></span></div>
+    <div class="row">
+      <div class="cell">
+        <span class="lbl">If overpayment, mark one box only:</span>
+        <label class="opt"><input type="radio" name="overpayment_option" value="refund"> To be refunded</label>
+        <label class="opt"><input type="radio" name="overpayment_option" value="tcc"> To be issued a Tax Credit Certificate</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell small">
+      I/We declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I give my consent to the processing of my information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach authorization letter)
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold">For Individual:</div>
+      <input type="text" name="sig_individual">
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate title/designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold">For Non-Individual:</div>
+      <input type="text" name="sig_nonindividual">
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent<br>(Indicate title/designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (If applicable)</span><input type="text" name="tax_agent_no"></div>
+      <div class="cell"><span class="lbl">Date of Issue (MM/DD/YYYY)</span><input type="text" name="tax_agent_issue_date" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="lbl">Expiry Date (MM/DD/YYYY)</span><input type="text" name="tax_agent_expiry_date" class="short" placeholder="MM/DD/YYYY"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III – Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Particulars</th><th>Drawee Bank/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">25</span> Cash/Bank Debit Memo</td><td><input type="text" name="pay_cash_bank"></td><td><input type="text" name="pay_cash_number"></td><td><input type="text" name="pay_cash_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_cash_amount"></td></tr>
+      <tr><td><span class="no">26</span> Check</td><td><input type="text" name="pay_check_bank"></td><td><input type="text" name="pay_check_number"></td><td><input type="text" name="pay_check_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_check_amount"></td></tr>
+      <tr><td><span class="no">27</span> Tax Debit Memo</td><td><input type="text" name="pay_tdm_bank"></td><td><input type="text" name="pay_tdm_number"></td><td><input type="text" name="pay_tdm_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_tdm_amount"></td></tr>
+      <tr><td><span class="no">28</span> Others (Specify below)<br><input type="text" name="pay_others_specify"></td><td><input type="text" name="pay_others_bank"></td><td><input type="text" name="pay_others_number"></td><td><input type="text" name="pay_others_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_others_amount"></td></tr>
+    </tbody>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2"><span class="lbl">Machine Validation/Revenue Official Receipt (ROR) Details (if not filed with an Authorized Agent Bank)</span><textarea name="machine_validation" rows="3"></textarea></div>
+      <div class="cell stack"><span class="lbl">Stamp of receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="3"></textarea></div>
+    </div>
+  </div>
+  <div class="small mt">*NOTE: Please read the BIR Data Privacy Policy found in the BIR website (www.bir.gov.ph)</div>
+</div>
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Percentage Tax Return</div>
+      <div class="fh-sub">2551Q 01/18ENCS P2</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2551Q</span><span class="ver">January 2018 (ENCS)<br>Page 2</span></div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">TIN</span><input type="text" name="p2_tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell" style="flex:2"><span class="lbl">Taxpayer&rsquo;s Last Name (if Individual) / Registered Name (if Non-Individual)</span><input type="text" name="p2_taxpayer_name"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Schedule 1 – Computation of Tax (Attach additional sheet/s, if necessary)</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:26px"></th><th style="width:140px">Alphanumeric Tax Code (ATC)</th><th>Taxable Amount</th><th style="width:70px">Tax Rate (%)</th><th style="width:170px">Tax Due</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="center"><span class="no">1</span></td><td><input type="text" name="s1_row1_atc"></td><td><input class="num" type="text" name="s1_row1_amount"></td><td><input class="num" type="text" name="s1_row1_rate"></td><td><input class="num calc" type="text" name="s1_row1_taxdue" data-calc="n('s1_row1_amount')*n('s1_row1_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">2</span></td><td><input type="text" name="s1_row2_atc"></td><td><input class="num" type="text" name="s1_row2_amount"></td><td><input class="num" type="text" name="s1_row2_rate"></td><td><input class="num calc" type="text" name="s1_row2_taxdue" data-calc="n('s1_row2_amount')*n('s1_row2_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">3</span></td><td><input type="text" name="s1_row3_atc"></td><td><input class="num" type="text" name="s1_row3_amount"></td><td><input class="num" type="text" name="s1_row3_rate"></td><td><input class="num calc" type="text" name="s1_row3_taxdue" data-calc="n('s1_row3_amount')*n('s1_row3_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">4</span></td><td><input type="text" name="s1_row4_atc"></td><td><input class="num" type="text" name="s1_row4_amount"></td><td><input class="num" type="text" name="s1_row4_rate"></td><td><input class="num calc" type="text" name="s1_row4_taxdue" data-calc="n('s1_row4_amount')*n('s1_row4_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">5</span></td><td><input type="text" name="s1_row5_atc"></td><td><input class="num" type="text" name="s1_row5_amount"></td><td><input class="num" type="text" name="s1_row5_rate"></td><td><input class="num calc" type="text" name="s1_row5_taxdue" data-calc="n('s1_row5_amount')*n('s1_row5_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">6</span></td><td><input type="text" name="s1_row6_atc"></td><td><input class="num" type="text" name="s1_row6_amount"></td><td><input class="num" type="text" name="s1_row6_rate"></td><td><input class="num calc" type="text" name="s1_row6_taxdue" data-calc="n('s1_row6_amount')*n('s1_row6_rate')/100" readonly></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td class="center"><span class="no">7</span></td><td colspan="3">Total Tax Due <em>(Sum of Items 1 to 6) (To Part II Item 14)</em></td><td><input class="num calc" type="text" name="s1_total_tax_due" data-calc="n('s1_row1_taxdue')+n('s1_row2_taxdue')+n('s1_row3_taxdue')+n('s1_row4_taxdue')+n('s1_row5_taxdue')+n('s1_row6_taxdue')" readonly></td></tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt" style="border:2px solid var(--ink); border-bottom:none;">Table 1 – Alphanumeric Tax Code (ATC)</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:60px">ATC</th><th>Percentage Tax On</th><th style="width:70px">Tax Rate</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>PT 010</td><td>Persons exempt from VAT under Sec. 109(BB) (Sec. 116)</td><td class="center">3%</td></tr>
+      <tr><td>PT 040</td><td>Domestic carriers and keepers of garages (Sec. 117)</td><td class="center">3%</td></tr>
+      <tr><td>PT 041</td><td>International Carriers (Sec. 118)</td><td class="center">3%</td></tr>
+      <tr><td>PT 060</td><td>Franchises on gas and water utilities (Sec. 119)</td><td class="center">2%</td></tr>
+      <tr><td>PT 070</td><td>Franchises on radio/TV broadcasting companies whose annual gross receipts do not exceed P10 M (Sec. 119)</td><td class="center">3%</td></tr>
+      <tr><td>PT 090</td><td>Overseas dispatch, message or conversation originating from the Philippines (Sec. 120)</td><td class="center">10%</td></tr>
+      <tr><td>PT 140</td><td>Cockpits (Sec. 125)</td><td class="center">18%</td></tr>
+      <tr><td>PT 150</td><td>Tax on amusement places, such as cabarets, night and day clubs, videoke bars, karaoke bars, karaoke television, karaoke boxes, music lounges and other similar establishments (Sec. 125)</td><td class="center">18%</td></tr>
+      <tr><td>PT 160</td><td>Boxing Exhibition (Sec. 125)</td><td class="center">10%</td></tr>
+      <tr><td>PT 170</td><td>Professional Basketball Games (Sec. 125)</td><td class="center">15%</td></tr>
+      <tr><td>PT 180</td><td>Jai-alai and Race Tracks (Sec. 125)</td><td class="center">30%</td></tr>
+      <tr><td colspan="3" class="bold">Tax on Banks and Non-Bank Financial Intermediaries Performing Quasi-Banking Functions (Sec. 121)</td></tr>
+      <tr><td colspan="3">1) On interest, commissions and discounts from lending activities as well as income from financial leasing, on the basis of remaining maturities of instruments from which such receipts are derived</td></tr>
+      <tr><td>PT 105</td><td>&nbsp;&nbsp;&nbsp;- Maturity period is five (5) years or less</td><td class="center">5%</td></tr>
+      <tr><td>PT 101</td><td>&nbsp;&nbsp;&nbsp;- Maturity period is more than five (5) years</td><td class="center">1%</td></tr>
+      <tr><td>PT 102</td><td>2) On dividends and equity shares and net income of subsidiaries</td><td class="center">0%</td></tr>
+      <tr><td>PT 103</td><td>3) On royalties, rentals of property, real or personal, profits from exchange and all other gross income</td><td class="center">7%</td></tr>
+      <tr><td>PT 104</td><td>4) On net trading gains within the taxable year on foreign currency, debt securities, derivatives and other financial instruments</td><td class="center">7%</td></tr>
+      <tr><td colspan="3" class="bold">Tax on Other Non-Bank Financial Intermediaries not Performing Quasi-Banking Functions (Sec. 122)</td></tr>
+      <tr><td colspan="3">1) On interest, commissions and discounts from lending activities as well as income from financial leasing, on the basis of remaining maturities of instruments from which such receipts are derived</td></tr>
+      <tr><td>PT 113</td><td>&nbsp;&nbsp;&nbsp;- Maturity period is five (5) years or less</td><td class="center">5%</td></tr>
+      <tr><td>PT 114</td><td>&nbsp;&nbsp;&nbsp;- Maturity period is more than five (5) years</td><td class="center">1%</td></tr>
+      <tr><td>PT 115</td><td>2) From all other items treated as gross income under the code</td><td class="center">5%</td></tr>
+      <tr><td>PT 120</td><td>Life Insurance Premiums (Sec. 123)</td><td class="center">2%</td></tr>
+      <tr><td colspan="3" class="bold">Agents of Foreign Insurance Companies (Sec. 124)</td></tr>
+      <tr><td>PT 130</td><td>1) Insurance Agents</td><td class="center">4%</td></tr>
+      <tr><td>PT 132</td><td>2) Owners of property obtaining insurance directly with foreign insurance companies</td><td class="center">5%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

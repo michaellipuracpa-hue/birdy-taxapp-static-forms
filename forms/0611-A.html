@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 0611-A — Payment Form Covered by a Letter Notice</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="0611-A">
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Payment Form Covered by a Letter Notice</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using black ink. Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies must be filed with the BIR and one held by the taxpayer</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">0611-A</span><span class="ver">October 2014 (ENCS)</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell"><span class="no">2</span><span class="lbl">Year Ended (MM/YYYY)</span><input type="text" name="year_ended" class="short" placeholder="MM/YYYY"></div>
+      <div class="cell"><span class="no">3</span><span class="lbl">Number of Sheet/s Attached</span><input type="text" name="sheets_attached" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">4</span><span class="lbl">Return Period (MM/DD/YYYY)</span><input type="text" name="return_period" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">Alphanumeric Tax Code (ATC)</span><input type="text" name="atc" class="short"></div>
+      <div class="cell"><span class="no">6</span><span class="lbl">Tax Type Code</span><input type="text" name="tax_type_code" class="short"></div>
+      <div class="cell">
+        <span class="no">7</span><span class="lbl">Taxpayer Classification</span>
+        <label class="opt"><input type="radio" name="taxpayer_classification" value="individual"> Individual</label>
+        <label class="opt"><input type="radio" name="taxpayer_classification" value="non-individual"> Non-Individual</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I – Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2"><span class="no">8</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">9</span><span class="lbl">RDO Code</span><input type="text" name="rdo_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">10</span> Taxpayer&rsquo;s Name (Last Name, First Name, Middle Name for Individual)/(Registered Name for Non-Individual)</span><input type="text" name="taxpayer_name"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">11</span> Trade Name</span><input type="text" name="trade_name"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3"><span class="lbl"><span class="no">12</span> Registered Address (indicate complete registered address)</span><input type="text" name="registered_address"></div>
+      <div class="cell"><span class="no">12A</span><span class="lbl">ZIP Code</span><input type="text" name="zip_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">13</span><span class="lbl">Contact Number</span><input type="text" name="contact_number"></div>
+      <div class="cell"><span class="no">14</span><span class="lbl">Email Address</span><input type="text" name="email_address"></div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:2"><span class="no">15</span><span class="lbl">Main Line of Business</span><input type="text" name="line_of_business"></div>
+      <div class="cell"><span class="no">16</span><span class="lbl">PSIC</span><input type="text" name="psic" class="short"></div>
+      <div class="cell"><span class="no">17</span><span class="lbl">PSOC</span><input type="text" name="psoc" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl bold"><span class="no">18</span> Type of Payment</span>
+        <span class="lbl"><label class="opt"><input type="radio" name="type_of_payment" value="full"> Full Payment</label></span>
+        <span class="lbl"><label class="opt"><input type="radio" name="type_of_payment" value="installment"> Installment Payment</label></span>
+        <span class="lbl">
+          <label class="opt"><input type="radio" name="installment_no" value="1"> 1st Installment</label>
+          <label class="opt"><input type="radio" name="installment_no" value="2"> 2nd Installment</label>
+          <label class="opt"><input type="radio" name="installment_no" value="3"> 3rd Installment</label>
+        </span>
+        <span class="lbl"><label class="opt"><input type="radio" name="installment_no" value="subsequent"> Subsequent installment after the 3rd installment (specify the number)</label> <input type="text" name="installment_subsequent_no" class="short"></span>
+      </div>
+      <div class="cell stack"><span class="lbl"><span class="no">19</span> Letter Notice Number</span><input type="text" name="letter_notice_number"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II – Computation of Payable</div>
+  <div class="grid">
+    <div class="item"><span class="no">20</span><span class="lbl">Basic Tax</span><span class="amt"><input class="num" name="basic_tax" type="text"></span></div>
+    <div class="item"><span class="no">21</span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">21A</span><span class="lbl">&nbsp;&nbsp;&nbsp;Surcharge</span><span class="amt"><input class="num" name="surcharge" type="text"></span></div>
+    <div class="item"><span class="no">21B</span><span class="lbl">&nbsp;&nbsp;&nbsp;Interest</span><span class="amt"><input class="num" name="interest" type="text"></span></div>
+    <div class="item"><span class="no">21C</span><span class="lbl">&nbsp;&nbsp;&nbsp;Compromise</span><span class="amt"><input class="num" name="compromise" type="text"></span></div>
+    <div class="item total"><span class="no">21D</span><span class="lbl">&nbsp;&nbsp;&nbsp;Total Penalties <em>(Sum of Items 21A to 21C)</em></span><span class="amt"><input class="num calc" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">22</span><span class="lbl">Total Amount Payable <em>(Sum of Items 20 and 21D)</em></span><span class="amt"><input class="num calc" name="total_amount_payable" data-calc="n('basic_tax')+n('total_penalties')" readonly type="text"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell small">
+      We declare under the penalties of perjury, that this return has been made in good faith, verified by us, and to the best of our knowledge and belief, is true and correct pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. (If Authorized Representative, attach authorization letter).
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <input type="text" name="sig_president">
+      <div class="cap">Signature over Printed Name of President/Principal Officer/Authorized Representative/Taxpayer (indicate title and TIN)</div>
+    </div>
+    <div class="sig">
+      <input type="text" name="sig_treasurer">
+      <div class="cap">Signature over Printed Name of Treasurer/Assistant Treasurer (indicate title and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">Tax Agent Acc. No./Atty&rsquo;s Roll No. (if applicable)</span><input type="text" name="tax_agent_no"></div>
+      <div class="cell"><span class="lbl">Date of Issuance (MM/DD/YYYY)</span><input type="text" name="tax_agent_issue_date" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="lbl">Expiry Date (MM/DD/YYYY)</span><input type="text" name="tax_agent_expiry_date" class="short" placeholder="MM/DD/YYYY"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III – Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Particulars</th><th>Drawee Bank/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">23</span> Cash/Bank Debit Memo</td><td><input type="text" name="pay_cash_bank"></td><td><input type="text" name="pay_cash_number"></td><td><input type="text" name="pay_cash_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_cash_amount"></td></tr>
+      <tr><td><span class="no">24</span> Check</td><td><input type="text" name="pay_check_bank"></td><td><input type="text" name="pay_check_number"></td><td><input type="text" name="pay_check_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_check_amount"></td></tr>
+      <tr><td><span class="no">25</span> Tax Debit Memo</td><td><input type="text" name="pay_tdm_bank"></td><td><input type="text" name="pay_tdm_number"></td><td><input type="text" name="pay_tdm_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_tdm_amount"></td></tr>
+      <tr><td><span class="no">26</span> Others (specify below)<br><input type="text" name="pay_others_specify"></td><td><input type="text" name="pay_others_bank"></td><td><input type="text" name="pay_others_number"></td><td><input type="text" name="pay_others_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_others_amount"></td></tr>
+    </tbody>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2"><span class="lbl">Machine Validation/Revenue Official Receipt (ROR) Details (if not filed with an Authorized Agent Bank)</span><textarea name="machine_validation" rows="3"></textarea></div>
+      <div class="cell stack"><span class="lbl">Stamp of receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="3"></textarea></div>
+    </div>
+  </div>
+</div>
+
+<div class="sheet">
+  <div class="part-title">Guidelines and Instruction for BIR Form No. 0611-A [October 2014 (ENCS)] — Payment Form Covered by a Letter Notice</div>
+  <div class="grid">
+    <div class="row"><div class="cell stack">
+      <span class="lbl bold">Who Shall Use This Form</span>
+      <span class="lbl small">This form shall be used by any person, natural or juridical, including estates and trusts, who are issued Letter Notices generated through the following third-party information (TPI) data matching programs:<br>
+      1. Reconciliation of Listings for Enforcement (RELIEF)/Bureau of Customs (BOC) Data Program; and<br>
+      2. Tax Reconciliation Systems (TRS).<br><br>
+      The PDF format of the payment form is available for download through the Bureau of Internal Revenue (BIR) website www.bir.gov.ph.</span>
+    </div></div>
+    <div class="row"><div class="cell stack">
+      <span class="lbl bold">Where to File and Pay</span>
+      <span class="lbl small">This form shall be filed and the tax shall be paid with any Authorized Agent Bank (AAB) and/or thru Electronic Filing and Payment System (eFPS) under the jurisdiction of the Revenue District Office (RDO)/Large Taxpayers Division/Large Taxpayers District Office where the taxpayer (head office of the taxpayer) is registered or required to be registered and file a return.<br><br>
+      For filing and payment with an AAB, taxpayer must accomplish and submit BIR-prescribed deposit slip which the bank teller shall machine validate as evidence that the BIR tax payment was deposited to the account of the Bureau of Treasury. The AAB receiving the payment form shall also machine validate and stamp mark the word &ldquo;Received&rdquo; on the payment form as proof of filing and payment of the tax by the taxpayer. The machine validation shall reflect the date of payment, amount paid and transactions code, the name of the bank, branch code, teller&rsquo;s code and teller&rsquo;s initial. Bank debit advice/memo shall still be issued to taxpayers paying under the bank debit system.<br><br>
+      In places where there are no AABs, this form shall be filed and the tax shall be paid to the Revenue Collection Officer (RCO) or duly authorized City or Municipal Treasurer of the RDO where the taxpayer is registered or required to be registered. The RCO or duly authorized City or Municipal Treasurer shall issue a Revenue Official Receipt (ROR) therefor.<br><br>
+      For payment thru eFPS, taxpayer must pay the tax liability through the internet banking facilities of the AABs, via debit from their enrolled bank account.<br><br>
+      The form shall be in triplicate copies and distributed as follows: Original – Taxpayer&rsquo;s Copy; Duplicate – Bank&rsquo;s Copy; Triplicate – Revenue District Office&rsquo;s Copy</span>
+    </div></div>
+    <div class="row"><div class="cell stack">
+      <span class="lbl bold">NOTE</span>
+      <span class="lbl small">This form shall be accomplished per tax type. The applicable tax type code under Item No. 6 and alphanumeric tax code (ATC) under Item No. 5 of this form shall be:</span>
+    </div></div>
+  </div>
+  <table class="sched">
+    <thead><tr><th style="width:110px">Tax Type Code</th><th>Type of Tax</th><th style="width:90px">ATC</th></tr></thead>
+    <tbody>
+      <tr><td class="center">IT</td><td>Income Tax</td><td class="center">MC 250</td></tr>
+      <tr><td class="center">VT</td><td>Value-Added Tax</td><td class="center">MC 251</td></tr>
+      <tr><td class="center">WC</td><td>Withholding Tax – Compensation</td><td class="center">MC 254</td></tr>
+      <tr><td class="center">WE</td><td>Withholding Tax – Expanded</td><td class="center">MC 255</td></tr>
+      <tr><td class="center">PT</td><td>Percentage Tax – Quarterly</td><td class="center">MC 265</td></tr>
+      <tr><td class="center">PM</td><td>Percentage Tax – Monthly</td><td class="center">MC 266</td></tr>
+      <tr><td class="center">MC</td><td>Mandatory Compromise Penalty</td><td class="center">MC 200</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

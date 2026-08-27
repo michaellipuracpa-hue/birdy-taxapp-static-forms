@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1701Q — Quarterly Income Tax Return</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1701Q">
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Income Tax Return</div>
+      <div class="fh-sub">For Individuals, Estates and Trusts. Enter all required information in CAPITAL LETTERS using BLACK ink.
+        Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies must be filed with the BIR and one held by the Tax Filer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1701Q</span><span class="ver">January 2018 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">For the Year</span><input class="short" name="year" type="text" placeholder="YYYY"></div>
+      <div class="cell"><span class="no">2</span><span class="lbl">Quarter</span>
+        <label class="opt"><input type="radio" name="quarter" value="1"> First</label>
+        <label class="opt"><input type="radio" name="quarter" value="2"> Second</label>
+        <label class="opt"><input type="radio" name="quarter" value="3"> Third</label>
+      </div>
+      <div class="cell"><span class="no">3</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">4</span><span class="lbl">Number of Sheet/s Attached</span><input class="short num" name="sheets_attached" type="text" style="flex:0 1 60px"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information on Taxpayer/Filer</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">5</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input class="mid" name="tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">6</span><span class="lbl">RDO Code</span><input class="short" name="rdo" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex-wrap:wrap"><span class="no">7</span><span class="lbl">Taxpayer/Filer Type</span>
+        <label class="opt"><input type="radio" name="taxpayer_type" value="single_proprietor"> Single Proprietor</label>
+        <label class="opt"><input type="radio" name="taxpayer_type" value="professional"> Professional</label>
+        <label class="opt"><input type="radio" name="taxpayer_type" value="estate"> Estate</label>
+        <label class="opt"><input type="radio" name="taxpayer_type" value="trust"> Trust</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex-wrap:wrap"><span class="no">8</span><span class="lbl">Alphanumeric Tax Code (ATC)</span>
+        <label class="opt"><input type="radio" name="atc" value="II012"> II012 Business Income-Graduated IT Rates</label>
+        <label class="opt"><input type="radio" name="atc" value="II014"> II014 Income from Profession&ndash;Graduated IT Rates</label>
+        <label class="opt"><input type="radio" name="atc" value="II013"> II013 Mixed Income&ndash;Graduated IT Rates</label>
+        <label class="opt"><input type="radio" name="atc" value="II015"> II015 Business Income - 8% IT Rate</label>
+        <label class="opt"><input type="radio" name="atc" value="II017"> II017 Income from Profession &ndash; 8% IT Rate</label>
+        <label class="opt"><input type="radio" name="atc" value="II016"> II016 Mixed Income &ndash; 8% IT Rate</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">9</span> <span class="lbl">Taxpayer/Filer&rsquo;s Name (Last Name, First Name, Middle Name for Individual) / ESTATE of (First Name, Middle Name, Last Name) / TRUST FAO: (First Name, Middle Name, Last Name)</span></span><input name="name" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">10</span> <span class="lbl">Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span></span><input name="address" type="text"></div>
+      <div class="cell stack" style="flex:0 0 120px"><span class="lbl"><span class="no">10A</span> ZIP Code</span><input name="zip" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">11</span><span class="lbl">Date of Birth (MM/DD/YYYY)</span><input class="mid" name="birth_date" type="text" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">12</span><span class="lbl">Email Address</span><input name="email" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">13</span><span class="lbl">Citizenship</span><input name="citizenship" type="text"></div>
+      <div class="cell"><span class="no">14</span><span class="lbl">Foreign Tax Number (if applicable)</span><input name="foreign_tax_no" type="text"></div>
+      <div class="cell"><span class="no">15</span><span class="lbl">Claiming Foreign Tax Credits?</span>
+        <label class="opt"><input type="radio" name="foreign_credits" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="foreign_credits" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">16</span> <span class="lbl">Tax Rate* (choose one, for income from business/profession)</span></span>
+        <label class="opt" style="white-space:normal"><input type="radio" name="tax_rate_choice" value="graduated"> Graduated Rates per Tax Table - page 2 (Choose Method of Deduction in Item 16A)</label>
+        <label class="opt" style="white-space:normal"><input type="radio" name="tax_rate_choice" value="8pct"> 8% on gross sales/receipts &amp; other non-operating income in lieu of Graduated Rates under Sec. 24(A)(2)(a) &amp; Percentage Tax under Sec. 116 of the NIRC, as amended [available if gross sales/receipts and other non-operating income do not exceed Three million pesos (P3M)]</label>
+      </div>
+      <div class="cell stack"><span><span class="no">16A</span> <span class="lbl">Method of Deduction</span></span>
+        <label class="opt" style="white-space:normal"><input type="radio" name="method_deduction" value="itemized"> Itemized Deduction [Sec. 34(A-J), NIRC]</label>
+        <label class="opt" style="white-space:normal"><input type="radio" name="method_deduction" value="osd"> Optional Standard Deduction (OSD) [40% of Gross Sales/Receipts/Revenues/Fees [Sec. 34(L), NIRC]</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Background Information on Spouse (if applicable)</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">17</span><span class="lbl">Spouse&rsquo;s TIN</span><input class="mid" name="sp_tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">18</span><span class="lbl">RDO Code</span><input class="short" name="sp_rdo" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex-wrap:wrap"><span class="no">19</span><span class="lbl">Filer&rsquo;s Spouse Type</span>
+        <label class="opt"><input type="radio" name="sp_type" value="single_proprietor"> Single Proprietor</label>
+        <label class="opt"><input type="radio" name="sp_type" value="professional"> Professional</label>
+        <label class="opt"><input type="radio" name="sp_type" value="compensation_earner"> Compensation Earner</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex-wrap:wrap"><span class="no">20</span><span class="lbl">ATC</span>
+        <label class="opt"><input type="radio" name="sp_atc" value="II012"> II012 Business Income-Graduated IT Rates</label>
+        <label class="opt"><input type="radio" name="sp_atc" value="II014"> II014 Income from Profession-Graduated IT Rates</label>
+        <label class="opt"><input type="radio" name="sp_atc" value="II013"> II013 Mixed Income - Graduated IT Rates</label>
+        <label class="opt"><input type="radio" name="sp_atc" value="II011"> II011 Compensation Income</label>
+        <label class="opt"><input type="radio" name="sp_atc" value="II015"> II015 Business Income - 8% IT Rate</label>
+        <label class="opt"><input type="radio" name="sp_atc" value="II017"> II017 Income from Profession - 8% IT Rate</label>
+        <label class="opt"><input type="radio" name="sp_atc" value="II016"> II016 Mixed Income - 8% IT Rate</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">21</span> <span class="lbl">Spouse&rsquo;s Name (Last Name, First Name, Middle Name)</span></span><input name="sp_name" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">22</span><span class="lbl">Citizenship</span><input name="sp_citizenship" type="text"></div>
+      <div class="cell"><span class="no">23</span><span class="lbl">Foreign Tax Number, if applicable</span><input name="sp_foreign_tax_no" type="text"></div>
+      <div class="cell"><span class="no">24</span><span class="lbl">Claiming Foreign Tax Credits?</span>
+        <label class="opt"><input type="radio" name="sp_foreign_credits" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="sp_foreign_credits" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">25</span> <span class="lbl">Tax Rate* (choose one, for income from business/profession)</span></span>
+        <label class="opt" style="white-space:normal"><input type="radio" name="sp_tax_rate_choice" value="graduated"> Graduated Rates per Tax Table - page 2 (Choose Method of Deduction in Item 25A)</label>
+        <label class="opt" style="white-space:normal"><input type="radio" name="sp_tax_rate_choice" value="8pct"> 8% on gross sales/receipts &amp; other non-operating income in lieu of Graduated Rates under Sec. 24(A)(2)(a) &amp; Percentage Tax under Sec. 116 of the NIRC, as amended [available if gross sales/receipts and other non-operating income do not exceed Three million pesos (P3M)]</label>
+      </div>
+      <div class="cell stack"><span><span class="no">25A</span> <span class="lbl">Method of Deduction</span></span>
+        <label class="opt" style="white-space:normal"><input type="radio" name="sp_method_deduction" value="itemized"> Itemized Deduction [Sec. 34(A-J), NIRC]</label>
+        <label class="opt" style="white-space:normal"><input type="radio" name="sp_method_deduction" value="osd"> Optional Standard Deduction (OSD) [40% of Gross Sales/Receipts/Revenues/Fees [Sec. 34(L), NIRC]</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Total Tax Payable <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <div class="grid">
+    <div class="item total"><span class="no"></span><span class="lbl">Particulars</span><span class="amt center bold small" style="justify-content:center">A) Taxpayer/Filer</span><span class="amt2 center bold small" style="justify-content:center">B) Spouse</span></div>
+    <div class="item"><span class="no">26</span><span class="lbl">Tax Due (From Part V, Schedule I-Item 46 OR Schedule II-Item 54)</span>
+      <span class="amt"><input class="num calc" name="i26_a" data-calc="v('tax_rate_choice')==='8pct' ? n('i54_a') : v('tax_rate_choice')==='graduated' ? n('i46_a') : (n('i46_a')||n('i54_a'))" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i26_b" data-calc="v('sp_tax_rate_choice')==='8pct' ? n('i54_b') : v('sp_tax_rate_choice')==='graduated' ? n('i46_b') : (n('i46_b')||n('i54_b'))" readonly type="text"></span></div>
+    <div class="item"><span class="no">27</span><span class="lbl">Less: Tax Credits/Payments (From Part V, Schedule III-Item 62)</span>
+      <span class="amt"><input class="num calc" name="i27_a" data-calc="n('i62_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i27_b" data-calc="n('i62_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">28</span><span class="lbl">Tax Payable/(Overpayment) (Item 26 Less Item 27) (From Part V, Item 63)</span>
+      <span class="amt"><input class="num calc" name="i28_a" data-calc="n('i26_a')-n('i27_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i28_b" data-calc="n('i26_b')-n('i27_b')" readonly type="text"></span></div>
+    <div class="item"><span class="no">29</span><span class="lbl">Add: Total Penalties (From Part V, Schedule IV-Item 67)</span>
+      <span class="amt"><input class="num calc" name="i29_a" data-calc="n('i67_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i29_b" data-calc="n('i67_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">30</span><span class="lbl">Total Amount Payable/(Overpayment) (Sum of Items 28 and 29) (From Part V, Item 68)</span>
+      <span class="amt"><input class="num calc" name="i30_a" data-calc="n('i28_a')+n('i29_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i30_b" data-calc="n('i28_b')+n('i29_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">31</span><span class="lbl">Aggregate Amount Payable/(Overpayment) (Sum of Items 30A and 30B)</span>
+      <span class="amt"><input class="num calc" name="i31" data-calc="n('i30_a')+n('i30_b')" readonly type="text"></span>
+      <span class="amt2"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell small" style="padding:6px 8px">
+      I declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by me, and to the best of my knowledge and belief,
+      are true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I give my
+      consent to the processing of my information as contemplated under the **Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.
+      (If Authorized Representative, attach authorization letter and indicate TIN)
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig"><div class="line"><input name="sig_name" type="text" style="border:none;background:transparent;text-align:center"></div><div class="cap">Signature and Printed Name of Taxpayer/Authorized Representative/Tax Agent (Indicate Title/Designation and TIN)</div></div>
+  </div>
+
+  <div class="part-title mt">Part IV &ndash; Details of Payment</div>
+  <table class="sched">
+    <tr><th>Particulars</th><th>Drawee Bank/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    <tr><td><span class="no">32</span> Cash/Bank Debit Memo</td><td><input name="pay32_bank" type="text"></td><td><input name="pay32_no" type="text"></td><td><input name="pay32_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="pay32_amt" type="text"></td></tr>
+    <tr><td><span class="no">33</span> Check</td><td><input name="pay33_bank" type="text"></td><td><input name="pay33_no" type="text"></td><td><input name="pay33_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="pay33_amt" type="text"></td></tr>
+    <tr><td><span class="no">34</span> Tax Debit Memo</td><td><input name="pay34_bank" type="text"></td><td><input name="pay34_no" type="text"></td><td><input name="pay34_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="pay34_amt" type="text"></td></tr>
+    <tr><td><span class="no">35</span> Others (specify) <input name="pay35_specify" type="text"></td><td><input name="pay35_bank" type="text"></td><td><input name="pay35_no" type="text"></td><td><input name="pay35_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="pay35_amt" type="text"></td></tr>
+  </table>
+
+  <div class="grid">
+    <div class="row" style="min-height:70px">
+      <div class="cell stack"><span class="lbl small">Machine Validation/Revenue Official Receipt Details (if not filed with an Authorized Agent Bank)</span><textarea name="machine_validation" rows="2"></textarea></div>
+      <div class="cell stack" style="flex:0 0 240px"><span class="lbl small center">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span></div>
+    </div>
+  </div>
+  <p class="small">NOTES: * I understand that this choice is irrevocable for this taxable year. However, the 8% Income Tax (IT) Rate option if initially selected shall automatically be changed to graduated IT rates when gross sales/receipts and other non-operating income exceed Three million pesos (P3M)<br>
+  ** Please read the BIR Data Privacy Policy found in the BIR website (www.bir.gov.ph)</p>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-title">Quarterly Income Tax Return</div>
+      <div class="fh-sub">For Individuals, Estates and Trusts</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1701Q</span><span class="ver">January 2018 (ENCS)<br>Page 2</span></div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">TIN</span><input class="mid" name="p2_tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="lbl">Taxpayer/Filer&rsquo;s Last Name</span><input name="p2_last_name" type="text"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part V &ndash; Computation of Tax Due <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <div class="grid">
+    <div class="row"><div class="cell small">Declaration this Quarter &mdash; If graduated rate, fill in items 36 to 46; if 8%, fill in items 47 to 54</div></div>
+  </div>
+
+  <div class="sub-title">Schedule I &ndash; For Graduated IT Rate</div>
+  <div class="grid">
+    <div class="item total"><span class="no"></span><span class="lbl">Particulars</span><span class="amt center bold small" style="justify-content:center">A) Taxpayer/Filer</span><span class="amt2 center bold small" style="justify-content:center">B) Spouse</span></div>
+    <div class="item"><span class="no">36</span><span class="lbl">Sales/Revenues/Receipts/Fees (net of sales returns, allowances and discounts)</span>
+      <span class="amt"><input class="num" name="i36_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i36_b" type="text"></span></div>
+    <div class="item"><span class="no">37</span><span class="lbl">Less: Cost of Sales/Services (applicable only if availing Itemized Deductions)</span>
+      <span class="amt"><input class="num" name="i37_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i37_b" type="text"></span></div>
+    <div class="item total"><span class="no">38</span><span class="lbl">Gross Income/(Loss) from Operation (Item 36 Less Item 37)</span>
+      <span class="amt"><input class="num calc" name="i38_a" data-calc="n('i36_a')-n('i37_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i38_b" data-calc="n('i36_b')-n('i37_b')" readonly type="text"></span></div>
+    <div class="item shade"><span class="no"></span><span class="lbl bold">Less: Allowable Deductions</span><span class="amt"></span><span class="amt2"></span></div>
+    <div class="item"><span class="no">39</span><span class="lbl">Total Allowable Itemized Deductions</span>
+      <span class="amt"><input class="num" name="i39_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i39_b" type="text"></span></div>
+    <div class="item shade"><span class="no"></span><span class="lbl center bold">OR</span><span class="amt"></span><span class="amt2"></span></div>
+    <div class="item"><span class="no">40</span><span class="lbl">Optional Standard Deduction (OSD) (<input class="num" name="i40_rate" value="40" type="text" style="max-width:34px">% of Item 36)</span>
+      <span class="amt"><input class="num calc" name="i40_a" data-calc="v('method_deduction')==='osd' ? n('i36_a')*n('i40_rate')/100 : 0" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i40_b" data-calc="v('sp_method_deduction')==='osd' ? n('i36_b')*n('i40_rate')/100 : 0" readonly type="text"></span></div>
+    <div class="item total"><span class="no">41</span><span class="lbl">Net Income/(Loss) This Quarter (If Itemized: Item 38 Less Item 39; If OSD: Item 38 Less Item 40)</span>
+      <span class="amt"><input class="num calc" name="i41_a" data-calc="v('method_deduction')==='osd' ? n('i38_a')-n('i40_a') : n('i38_a')-n('i39_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i41_b" data-calc="v('sp_method_deduction')==='osd' ? n('i38_b')-n('i40_b') : n('i38_b')-n('i39_b')" readonly type="text"></span></div>
+    <div class="item"><span class="no">42</span><span class="lbl">Add: Taxable Income/(Loss) Previous Quarter/s</span>
+      <span class="amt"><input class="num" name="i42_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i42_b" type="text"></span></div>
+    <div class="item"><span class="no">43</span><span class="lbl">Non-Operating Income (specify) <input name="i43_specify" type="text" style="max-width:240px"></span>
+      <span class="amt"><input class="num" name="i43_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i43_b" type="text"></span></div>
+    <div class="item"><span class="no">44</span><span class="lbl">Amount Received/Share in Income by a Partner from General Professional Partnership (GPP)</span>
+      <span class="amt"><input class="num" name="i44_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i44_b" type="text"></span></div>
+    <div class="item total"><span class="no">45</span><span class="lbl">Total Taxable Income/(Loss) To Date (Sum of Items 41 to 44)</span>
+      <span class="amt"><input class="num calc" name="i45_a" data-calc="n('i41_a')+n('i42_a')+n('i43_a')+n('i44_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i45_b" data-calc="n('i41_b')+n('i42_b')+n('i43_b')+n('i44_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">46</span><span class="lbl">TAX DUE (Item 45 x Applicable Tax Rate based on Tax Table below) (To Part III, Item 26)</span>
+      <span class="amt"><input class="num calc" name="i46_a" data-calc="gradTax(n('i45_a'), n('year'))" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i46_b" data-calc="gradTax(n('i45_b'), n('year'))" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title">Schedule II &ndash; For 8% IT Rate</div>
+  <div class="grid">
+    <div class="item"><span class="no">47</span><span class="lbl">Sales/Revenues/Receipts/Fees (net of sales returns, allowances and discounts)</span>
+      <span class="amt"><input class="num" name="i47_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i47_b" type="text"></span></div>
+    <div class="item"><span class="no">48</span><span class="lbl">Add: Non-Operating Income (specify) <input name="i48_specify" type="text" style="max-width:240px"></span>
+      <span class="amt"><input class="num" name="i48_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i48_b" type="text"></span></div>
+    <div class="item total"><span class="no">49</span><span class="lbl">Total Income for the quarter (Sum of Items 47 and 48)</span>
+      <span class="amt"><input class="num calc" name="i49_a" data-calc="n('i47_a')+n('i48_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i49_b" data-calc="n('i47_b')+n('i48_b')" readonly type="text"></span></div>
+    <div class="item"><span class="no">50</span><span class="lbl">Add: Total Taxable Income/(Loss) Previous Quarter (Item 51 of previous quarter)</span>
+      <span class="amt"><input class="num" name="i50_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i50_b" type="text"></span></div>
+    <div class="item total"><span class="no">51</span><span class="lbl">Cumulative Taxable Income/(Loss) as of This Quarter (Sum of Items 49 and 50)</span>
+      <span class="amt"><input class="num calc" name="i51_a" data-calc="n('i49_a')+n('i50_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i51_b" data-calc="n('i49_b')+n('i50_b')" readonly type="text"></span></div>
+    <div class="item"><span class="no">52</span><span class="lbl">Less: Allowable reduction from gross sales/receipts and other non-operating income of purely self-employed individuals and/or professionals in the amount of P 250,000</span>
+      <span class="amt"><input class="num calc" name="i52_a" data-calc="v('atc')==='II016' ? 0 : Math.min(250000, Math.max(0, n('i51_a')))" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i52_b" data-calc="v('sp_atc')==='II016' ? 0 : Math.min(250000, Math.max(0, n('i51_b')))" readonly type="text"></span></div>
+    <div class="item total"><span class="no">53</span><span class="lbl">Taxable Income/(Loss) To Date (Item 51 Less Item 52)</span>
+      <span class="amt"><input class="num calc" name="i53_a" data-calc="n('i51_a')-n('i52_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i53_b" data-calc="n('i51_b')-n('i52_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">54</span><span class="lbl">TAX DUE (Item 53 x 8% Tax Rate) (To Part III, Item 26)</span>
+      <span class="amt"><input class="num calc" name="i54_a" data-calc="Math.max(0, n('i53_a'))*0.08" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i54_b" data-calc="Math.max(0, n('i53_b'))*0.08" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title">Schedule III &ndash; Tax Credits/Payments</div>
+  <div class="grid">
+    <div class="item"><span class="no">55</span><span class="lbl">Prior Year&rsquo;s Excess Credits</span>
+      <span class="amt"><input class="num" name="i55_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i55_b" type="text"></span></div>
+    <div class="item"><span class="no">56</span><span class="lbl">Tax Payment/s for the Previous Quarter/s</span>
+      <span class="amt"><input class="num" name="i56_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i56_b" type="text"></span></div>
+    <div class="item"><span class="no">57</span><span class="lbl">Creditable Tax Withheld for the Previous Quarter/s</span>
+      <span class="amt"><input class="num" name="i57_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i57_b" type="text"></span></div>
+    <div class="item"><span class="no">58</span><span class="lbl">Creditable Tax Withheld per BIR Form No. 2307 for this Quarter</span>
+      <span class="amt"><input class="num" name="i58_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i58_b" type="text"></span></div>
+    <div class="item"><span class="no">59</span><span class="lbl">Tax Paid in Return Previously Filed, if this is an Amended Return</span>
+      <span class="amt"><input class="num" name="i59_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i59_b" type="text"></span></div>
+    <div class="item"><span class="no">60</span><span class="lbl">Foreign Tax Credits, if applicable</span>
+      <span class="amt"><input class="num" name="i60_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i60_b" type="text"></span></div>
+    <div class="item"><span class="no">61</span><span class="lbl">Other Tax Credits/Payments (specify) <input name="i61_specify" type="text" style="max-width:240px"></span>
+      <span class="amt"><input class="num" name="i61_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i61_b" type="text"></span></div>
+    <div class="item total"><span class="no">62</span><span class="lbl">Total Tax Credits/Payments (Sum of Items 55 to 61) (To Part III, Item 27)</span>
+      <span class="amt"><input class="num calc" name="i62_a" data-calc="n('i55_a')+n('i56_a')+n('i57_a')+n('i58_a')+n('i59_a')+n('i60_a')+n('i61_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i62_b" data-calc="n('i55_b')+n('i56_b')+n('i57_b')+n('i58_b')+n('i59_b')+n('i60_b')+n('i61_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">63</span><span class="lbl">Tax Payable/(Overpayment) (Item 46 or 54, Less Item 62) (To Part III, Item 28)</span>
+      <span class="amt"><input class="num calc" name="i63_a" data-calc="n('i26_a')-n('i62_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i63_b" data-calc="n('i26_b')-n('i62_b')" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title">Schedule IV &ndash; Penalties</div>
+  <div class="grid">
+    <div class="item"><span class="no">64</span><span class="lbl">Surcharge</span>
+      <span class="amt"><input class="num" name="i64_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i64_b" type="text"></span></div>
+    <div class="item"><span class="no">65</span><span class="lbl">Interest</span>
+      <span class="amt"><input class="num" name="i65_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i65_b" type="text"></span></div>
+    <div class="item"><span class="no">66</span><span class="lbl">Compromise</span>
+      <span class="amt"><input class="num" name="i66_a" type="text"></span>
+      <span class="amt2"><input class="num" name="i66_b" type="text"></span></div>
+    <div class="item total"><span class="no">67</span><span class="lbl">Total Penalties (Sum of Items 64 to 66) (To Part III, Item 29)</span>
+      <span class="amt"><input class="num calc" name="i67_a" data-calc="n('i64_a')+n('i65_a')+n('i66_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i67_b" data-calc="n('i64_b')+n('i65_b')+n('i66_b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">68</span><span class="lbl">Total Amount Payable/(Overpayment) (Sum of Items 63 and 67) (To Part III, Item 30)</span>
+      <span class="amt"><input class="num calc" name="i68_a" data-calc="n('i63_a')+n('i67_a')" readonly type="text"></span>
+      <span class="amt2"><input class="num calc" name="i68_b" data-calc="n('i63_b')+n('i67_b')" readonly type="text"></span></div>
+  </div>
+
+  <table class="sched mt">
+    <tr><th colspan="2">TABLE 1 &ndash; Tax Rates (effective January 1, 2018 to December 31, 2022)</th><th colspan="2">TABLE 2 &ndash; Tax Rates (effective January 1, 2023 and onwards)</th></tr>
+    <tr><th>If Taxable Income is:</th><th>Tax Due is:</th><th>If Taxable Income is:</th><th>Tax Due is:</th></tr>
+    <tr><td>Not over P 250,000</td><td>0%</td><td>Not over P 250,000</td><td>0%</td></tr>
+    <tr><td>Over P 250,000 but not over P 400,000</td><td>20% of the excess over P 250,000</td><td>Over P 250,000 but not over P 400,000</td><td>15% of the excess over P 250,000</td></tr>
+    <tr><td>Over P 400,000 but not over P 800,000</td><td>P 30,000 + 25% of the excess over P 400,000</td><td>Over P 400,000 but not over P 800,000</td><td>P 22,500 + 20% of the excess over P 400,000</td></tr>
+    <tr><td>Over P 800,000 but not over P 2,000,000</td><td>P 130,000 + 30% of the excess over P 800,000</td><td>Over P 800,000 but not over P 2,000,000</td><td>P 102,500 + 25% of the excess over P 800,000</td></tr>
+    <tr><td>Over P 2,000,000 but not over P 8,000,000</td><td>P 490,000 + 32% of the excess over P 2,000,000</td><td>Over P 2,000,000 but not over P 8,000,000</td><td>P 402,500 + 30% of the excess over P 2,000,000</td></tr>
+    <tr><td>Over P 8,000,000</td><td>P 2,410,000 + 35% of the excess over P 8,000,000</td><td>Over P 8,000,000</td><td>P 2,202,500 + 35% of the excess over P 8,000,000</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

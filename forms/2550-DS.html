@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2550-DS — VAT Return on Digital Services</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="2550-DS">
+
+<div class="sheet">
+
+  <div class="small">For BIR Use Only &nbsp; BCS/Item: ____________________</div>
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Value-Added Tax (VAT) Return</div>
+      <div class="fh-sub">For Nonresident Digital Service Provider<br>Enter all required information in CAPITAL LETTERS using BLACK ink. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2550-DS</span><span class="ver">January 2025</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">Type of Payment</span>
+        <label class="opt"><input type="radio" name="payment_type" value="vat_due"> Payment of Value-Added Tax Due</label>
+        <label class="opt"><input type="radio" name="payment_type" value="advance"> Advance Payment/Deposit</label>
+      </div>
+      <div class="cell"><span class="no">2</span><span class="lbl">ATC</span><span class="lbl bold">VN 010</span></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">3</span><span class="lbl">For the</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell"><span class="no">4</span><span class="lbl">Year Ended (MM/YYYY)</span><input class="short" name="year_ended" type="text" placeholder="MM/YYYY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">Quarter</span>
+        <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+        <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+        <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+        <label class="opt"><input type="radio" name="quarter" value="4"> 4th</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">6</span><span class="lbl">Return Period (MM/DD/YYYY) From</span><input class="short" name="ret_from" type="text" placeholder="MM/DD/YYYY"><span class="lbl">To</span><input class="short" name="ret_to" type="text" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">7</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information of Taxpayer</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">8</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input class="mid" name="tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">9</span><span class="lbl">RDO Code</span><input class="short" name="rdo" type="text" value="039"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">10</span> Registered Name</span><input name="registered_name" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">11</span> Address in the Country of Residence</span><input name="foreign_address" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">12</span> Registered Email Address</span><input name="email" type="text"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Background Information of Resident Third-Party Service Provider (if applicable)</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">13</span> Name (Last Name, First Name, Middle Name for Individuals OR Registered Name for Non-Individuals)</span><input name="tp_name" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">14</span><span class="lbl">TIN</span><input class="mid" name="tp_tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">15</span><span class="lbl">Contact Number</span><input name="tp_contact" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">16</span> Email Address</span><input name="tp_email" type="text"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Computation of VAT Payable</div>
+  <div class="grid">
+    <div class="item"><span class="no">17</span><span class="lbl">Gross Sales for the Quarter</span><span class="amt"><input class="num" name="i17" type="text"></span></div>
+    <div class="item"><span class="no">18</span><span class="lbl">Less: Gross Sales Subjected to Withholding Tax</span><span class="amt"><input class="num" name="i18" type="text"></span></div>
+    <div class="item total"><span class="no">19</span><span class="lbl">Balance Subject to VAT <em>(Item 17 Less Item 18)</em></span><span class="amt"><input class="num calc" name="i19" data-calc="n('i17')-n('i18')" readonly type="text"></span></div>
+    <div class="item"><span class="no">20</span><span class="lbl">VAT Rate</span><span class="amt"><input class="num" name="i20_rate" value="12.0" type="text" style="max-width:.6in;text-align:center"><span class="lbl bold">&nbsp;%</span></span></div>
+    <div class="item total"><span class="no">21</span><span class="lbl">VAT Payable <em>(Item 19 multiply by Item 20)</em></span><span class="amt"><input class="num calc" name="i21" data-calc="n('i19')*n('i20_rate')/100" readonly type="text"></span></div>
+    <div class="item"><span class="no">22</span><span class="lbl bold">Less: Payments/Credits</span><span class="amt"></span></div>
+    <div class="item"><span class="no">22A</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;VAT paid in return previously filed, if this is an amended return</span><span class="amt"><input class="num" name="i22a" type="text"></span></div>
+    <div class="item"><span class="no">22B</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;Excess Payment Carried Over from Previous Return/Quarter</span><span class="amt"><input class="num" name="i22b" type="text"></span></div>
+    <div class="item"><span class="no">22C</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;Advance Payment/Deposit Made for this Quarter</span><span class="amt"><input class="num" name="i22c" type="text"></span></div>
+    <div class="item"><span class="no">22D</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;Other Payment/Credit (Specify) <input name="i22d_spec" type="text" style="max-width:2.4in"></span><span class="amt"><input class="num" name="i22d" type="text"></span></div>
+    <div class="item total"><span class="no">22E</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;Total Payments/Credits <em>(Sum of Items 22A to 22D)</em></span><span class="amt"><input class="num calc" name="i22e" data-calc="n('i22a')+n('i22b')+n('i22c')+n('i22d')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">23</span><span class="lbl">VAT Still Payable / (Excess Payments) <em>(Item 21 Less Item 22E)</em></span><span class="amt"><input class="num calc" name="i23" data-calc="n('i21')-n('i22e')" readonly type="text"></span></div>
+    <div class="item"><span class="no">24</span><span class="lbl">Add: Penalties &nbsp;&nbsp; <span class="no">24A</span> Surcharge</span><span class="amt"><input class="num" name="i24a" type="text"></span></div>
+    <div class="item"><span class="no">24B</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interest</span><span class="amt"><input class="num" name="i24b" type="text"></span></div>
+    <div class="item total"><span class="no">24C</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Penalties <em>(Sum of Items 24A and 24B)</em></span><span class="amt"><input class="num calc" name="i24c" data-calc="n('i24a')+n('i24b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">25</span><span class="lbl bold">TOTAL AMOUNT PAYABLE / (Excess Payments) <em>(Sum of Items 23 and 24C)</em></span><span class="amt"><input class="num calc" name="i25" data-calc="n('i23')+n('i24c')" readonly type="text"></span></div>
+    <div class="item"><span class="no">26</span><span class="lbl bold">ADVANCE PAYMENT/DEPOSIT</span><span class="amt"><input class="num" name="i26" type="text"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">27</span><span class="lbl small">I hereby declare, under the penalties of Perjury, that all the information provided by me (as taxpayer/authorized representative) in this tax return, which I filed electronically, are true, correct and complete pursuant to the provisions of the National Internal Revenue Code of 1997, as amended, and the revenue regulations issued pursuant thereto. Further, I declare and fully understand that I will be held criminally, civilly and administratively liable under existing laws, rules and regulations if any of the information/statement I submitted/supplied therein are false, misleading, deceptive and inaccurate.</span></div>
+    </div>
+    <div class="row">
+      <div class="cell"><label class="opt"><input type="checkbox" name="agree"> Agree</label></div>
+    </div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input name="sig_name" type="text"></div>
+      <div class="cap"><span class="no">28</span> Printed Name and Signature of Taxpayer/Third-Party Service Provider</div>
+    </div>
+    <div class="sig">
+      <div class="line"><input name="tp_sig_tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cap"><span class="no">29</span> TIN of Third Party Service Provider</div>
+    </div>
+  </div>
+
+  <div class="part-title">Part IV &ndash; Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Particulars</th><th>Drawee Bank/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">30</span>Cash/Bank Debit Advice</td><td><input name="p30_bank" type="text"></td><td><input name="p30_number" type="text"></td><td><input name="p30_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p30_amount" type="text"></td></tr>
+      <tr><td><span class="no">31</span>Check</td><td><input name="p31_bank" type="text"></td><td><input name="p31_number" type="text"></td><td><input name="p31_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p31_amount" type="text"></td></tr>
+      <tr><td><span class="no">32</span>Others (specify)<br><input name="p32_spec" type="text"></td><td><input name="p32_bank" type="text"></td><td><input name="p32_number" type="text"></td><td><input name="p32_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p32_amount" type="text"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl">Machine Validation/Revenue Official Receipt Details (if not filed with an Authorized Agent Bank)</span><textarea name="machine_validation" rows="3"></textarea></div>
+      <div class="cell stack"><span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="3"></textarea></div>
+    </div>
+  </div>
+  <div class="small mt">*NOTE: The BIR Data Privacy Policy is in the BIR website (www.bir.gov.ph)</div>
+
+</div>
+
+</body>
+</html>

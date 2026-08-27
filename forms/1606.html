@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1606 — Withholding Tax Remittance Return (Onerous Transfer of Real Property)</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1606">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Withholding Tax Remittance Return</div>
+      <div class="fh-sub">(For Onerous Transfer of Real Property Other Than Capital Asset) (Including Taxable and Exempt)<br>Enter all required information in CAPITAL LETTERS using BLACK ink. Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1606</span><span class="ver">January 2018 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.2">
+        <span class="lbl"><span class="no">1</span> Date of Transaction (MM/DD/YYYY)</span>
+        <input type="text" name="transaction_date" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">2</span> Amended Return?</span>
+        <span><label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> Any Taxes Withheld?</span>
+        <span><label class="opt"><input type="radio" name="taxes_withheld" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="taxes_withheld" value="no"> No</label></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4</span> No. of Sheet/s Attached</span>
+        <input class="short" type="text" name="sheets_attached">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:1.4">
+        <span class="no">5</span><span class="lbl">RDO Code of Location of Property</span>
+        <input class="short" type="text" name="rdo_code">
+      </div>
+      <div class="cell" style="flex:1.6">
+        <span class="no">6</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="agent_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="agent_category" value="government"> Government</label>
+      </div>
+    </div>
+  </div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:4%"></th><th style="width:30%"><span class="no">7</span> Buyer&rsquo;s Name (Last Name, First Name, Middle Name for Individuals OR Registered Name for Non-Individuals) (Attach additional sheet/s, if necessary)</th><th>Buyer&rsquo;s Registered Address (Indicate complete address. If branch, indicate the branch address. If registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</th><th style="width:18%">Buyer&rsquo;s Taxpayer Identification Number (TIN)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">7A</span></td><td><input type="text" name="buyer_a_name"></td><td><input type="text" name="buyer_a_address"></td><td><input type="text" name="buyer_a_tin" placeholder="000-000-000-00000"></td></tr>
+      <tr><td><span class="no">7B</span></td><td><input type="text" name="buyer_b_name"></td><td><input type="text" name="buyer_b_address"></td><td><input type="text" name="buyer_b_tin" placeholder="000-000-000-00000"></td></tr>
+      <tr><td><span class="no">7C</span></td><td><input type="text" name="buyer_c_name"></td><td><input type="text" name="buyer_c_address"></td><td><input type="text" name="buyer_c_tin" placeholder="000-000-000-00000"></td></tr>
+    </tbody>
+  </table>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:4%"></th><th style="width:30%"><span class="no">8</span> Seller&rsquo;s Name (Last Name, First Name, Middle Name for Individuals OR Registered Name for Non-Individuals) (Attach additional sheet/s, if necessary)</th><th>Seller&rsquo;s Registered Address (Indicate complete address. If branch, indicate the branch address. If registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</th><th style="width:18%">Seller&rsquo;s Taxpayer Identification Number (TIN)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">8A</span></td><td><input type="text" name="seller_a_name"></td><td><input type="text" name="seller_a_address"></td><td><input type="text" name="seller_a_tin" placeholder="000-000-000-00000"></td></tr>
+      <tr><td><span class="no">8B</span></td><td><input type="text" name="seller_b_name"></td><td><input type="text" name="seller_b_address"></td><td><input type="text" name="seller_b_tin" placeholder="000-000-000-00000"></td></tr>
+      <tr><td><span class="no">8C</span></td><td><input type="text" name="seller_c_name"></td><td><input type="text" name="seller_c_address"></td><td><input type="text" name="seller_c_tin" placeholder="000-000-000-00000"></td></tr>
+    </tbody>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:0 0 110px"><span class="no">9</span><span class="lbl bold">ATC/Tax Rates</span></div>
+      <div class="cell stack">
+        <span><span class="lbl bold">Individual:</span>
+          <label class="opt"><input type="radio" name="atc" value="WI555"> WI 555 &ndash; 1.5 %</label>
+          <label class="opt"><input type="radio" name="atc" value="WI556"> WI 556 &ndash; 3.0 %</label>
+          <label class="opt"><input type="radio" name="atc" value="WI557"> WI 557 &ndash; 5.0 %</label>
+          <label class="opt"><input type="radio" name="atc" value="WI558"> WI 558 &ndash; 6.0 %</label>
+        </span>
+        <span><span class="lbl bold">Corporate:</span>
+          <label class="opt"><input type="radio" name="atc" value="WC555"> WC 555 &ndash; 1.5 %</label>
+          <label class="opt"><input type="radio" name="atc" value="WC556"> WC 556 &ndash; 3.0 %</label>
+          <label class="opt"><input type="radio" name="atc" value="WC557"> WC 557 &ndash; 5.0 %</label>
+          <label class="opt"><input type="radio" name="atc" value="WC558"> WC 558 &ndash; 6.0 %</label>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.2">
+        <span class="no">10</span><span class="lbl">Does the selling price cover more than one property?</span>
+        <label class="opt"><input type="radio" name="multi_property" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="multi_property" value="no"> No</label>
+      </div>
+      <div class="cell" style="flex:1.8">
+        <span class="no">11</span><span class="lbl">Are you availing of tax relief under an International Tax Treaty or Special Law?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+        <span class="lbl">If yes, specify</span>
+        <input type="text" name="tax_relief_specify">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Computation of Tax</div>
+  <div class="grid">
+    <div class="item"><span class="no">12</span><span class="lbl">Taxable Base (From Part IV Schedule 3 Item 2)</span><span class="amt"><input class="num calc" type="text" name="taxable_base" data-calc="n('s3_taxable_base')" readonly></span></div>
+    <div class="item"><span class="no">13</span><span class="lbl">Applicable Tax Rate (From Part IV Schedule 4)</span><span class="amt"><input class="num" type="text" name="tax_rate" value="6" placeholder="%"></span></div>
+    <div class="item total"><span class="no">14</span><span class="lbl">Tax Due (Item 12 Multiply by Item 13)</span><span class="amt"><input class="num calc" type="text" name="tax_due" data-calc="n('taxable_base')*n('tax_rate')/100" readonly></span></div>
+    <div class="item"><span class="no">15</span><span class="lbl">Less: Tax paid in previously filed return, if this is an amended return</span><span class="amt"><input class="num" type="text" name="prev_tax_paid"></span></div>
+    <div class="item total"><span class="no">16</span><span class="lbl">Required Tax to be Withheld (Item 14 Less Item 15)</span><span class="amt"><input class="num calc" type="text" name="required_wtax" data-calc="n('tax_due')-n('prev_tax_paid')" readonly></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">17A</span><span class="lbl" style="padding-left:24px">Surcharge</span><span class="amt"><input class="num" type="text" name="surcharge"></span></div>
+    <div class="item"><span class="no">17B</span><span class="lbl" style="padding-left:24px">Interest</span><span class="amt"><input class="num" type="text" name="interest"></span></div>
+    <div class="item"><span class="no">17C</span><span class="lbl" style="padding-left:24px">Compromise</span><span class="amt"><input class="num" type="text" name="compromise"></span></div>
+    <div class="item total"><span class="no">17D</span><span class="lbl" style="padding-left:24px">Total Penalties (Sum of Items 17A to 17C)</span><span class="amt"><input class="num calc" type="text" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly></span></div>
+    <div class="item total"><span class="no">18</span><span class="lbl">TOTAL AMOUNT PAYABLE/(Over remittance) (Sum of Item 16 and Item 17D)</span><span class="amt"><input class="num calc" type="text" name="total_payable" data-calc="n('required_wtax')+n('total_penalties')" readonly></span></div>
+    <div class="row"><div class="cell"><span class="lbl small">In case of over remittance, apply for tax refund using BIR Form No. 1914 (Application for Tax Credits / Refunds)</span></div></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell"><p class="small" style="margin:2px 0">I/We declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach Special Power of Attorney)</p></div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input type="text" name="sig_individual" style="background:transparent;border:none;text-align:center"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate title and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input type="text" name="sig_nonindividual" style="background:transparent;border:none;text-align:center"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent<br>(Indicate title and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.6">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (If applicable)</span>
+        <input type="text" name="tax_agent_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="agent_issue_date" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Expiry Date (MM/DD/YYYY)</span>
+        <input type="text" name="agent_expiry_date" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:22%">Particulars</th><th style="width:22%">Drawee Bank/Bank Code/Agency</th><th style="width:16%">Number</th><th style="width:16%">Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">19</span>Cash/Bank Debit Memo</td><td><input type="text" name="pay19_bank"></td><td><input type="text" name="pay19_number"></td><td><input type="text" name="pay19_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay19_amount"></td></tr>
+      <tr><td><span class="no">20</span>Check</td><td><input type="text" name="pay20_bank"></td><td><input type="text" name="pay20_number"></td><td><input type="text" name="pay20_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay20_amount"></td></tr>
+      <tr><td><span class="no">21</span>Tax Debit Memo</td><td><input type="text" name="pay21_bank"></td><td><input type="text" name="pay21_number"></td><td><input type="text" name="pay21_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay21_amount"></td></tr>
+      <tr><td><span class="no">22</span>Others (Specify below)<br><input type="text" name="pay22_specify"></td><td><input type="text" name="pay22_bank"></td><td><input type="text" name="pay22_number"></td><td><input type="text" name="pay22_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay22_amount"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid">
+    <div class="row" style="min-height:70px">
+      <div class="cell stack" style="flex:1.4">
+        <span class="lbl">Machine Validation</span>
+        <textarea name="machine_validation" rows="3"></textarea>
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Stamp of Receiving of Authorized Agent Bank and Date of Receipt (Bank Teller&rsquo;s Initial)</span>
+      </div>
+    </div>
+  </div>
+  <p class="small">*NOTE: The BIR Data Privacy Policy is in the BIR website (www.bir.gov.ph)</p>
+
+</div>
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">&nbsp;</div>
+      <div class="fh-title">Withholding Tax Remittance Return</div>
+      <div class="fh-sub">(For Onerous Transfer of Real Property Other Than Capital Asset) (Including Taxable and Exempt)</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1606</span><span class="ver">January 2018 (ENCS)<br>Page 2</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="lbl">TIN of Buyer</span>
+        <input class="mid" type="text" name="p2_buyer_tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Taxpayer&rsquo;s/Buyer&rsquo;s Name</span>
+        <input type="text" name="p2_buyer_name">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part IV &ndash; Schedules</div>
+  <div class="sub-title">Schedule 1 &ndash; Brief Description of Property (Attach additional sheet/s if necessary)</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:4%"></th><th style="width:24%">OCT/TCT/CCT No.</th><th style="width:24%">Tax Declaration (TD) No.</th><th>Location</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="center">1</td><td><input type="text" name="s1_r1_oct"></td><td><input type="text" name="s1_r1_td"></td><td><input type="text" name="s1_r1_location"></td></tr>
+      <tr><td class="center">2</td><td><input type="text" name="s1_r2_oct"></td><td><input type="text" name="s1_r2_td"></td><td><input type="text" name="s1_r2_location"></td></tr>
+      <tr><td class="center">3</td><td><input type="text" name="s1_r3_oct"></td><td><input type="text" name="s1_r3_td"></td><td><input type="text" name="s1_r3_location"></td></tr>
+      <tr><td class="center">4</td><td><input type="text" name="s1_r4_oct"></td><td><input type="text" name="s1_r4_td"></td><td><input type="text" name="s1_r4_location"></td></tr>
+      <tr><td class="center">5</td><td><input type="text" name="s1_r5_oct"></td><td><input type="text" name="s1_r5_td"></td><td><input type="text" name="s1_r5_location"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title mt">Schedule 1 &ndash; Brief Description of Property (continuation)</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:4%"></th><th style="width:17%">Lot / Improvement</th><th style="width:13%">Classification*</th><th style="width:11%">Area (sq.m.)</th><th style="width:18%">Fair Market Value (FMV) per TD (Column 1)</th><th style="width:18%">FMV per BIR (Zonal Value) (Column 2)</th><th>Fair Market Value (whichever is higher between Columns 1 &amp; 2)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="center">1</td><td><input type="text" name="s1c_r1_lot"></td><td><input type="text" name="s1c_r1_class"></td><td><input class="num" type="text" name="s1c_r1_area"></td><td><input class="num" type="text" name="s1c_r1_fmv_td"></td><td><input class="num" type="text" name="s1c_r1_fmv_zonal"></td><td><input class="num calc" type="text" name="s1c_r1_fmv_high" data-calc="Math.max(n('s1c_r1_fmv_td'),n('s1c_r1_fmv_zonal'))" readonly></td></tr>
+      <tr><td class="center">2</td><td><input type="text" name="s1c_r2_lot"></td><td><input type="text" name="s1c_r2_class"></td><td><input class="num" type="text" name="s1c_r2_area"></td><td><input class="num" type="text" name="s1c_r2_fmv_td"></td><td><input class="num" type="text" name="s1c_r2_fmv_zonal"></td><td><input class="num calc" type="text" name="s1c_r2_fmv_high" data-calc="Math.max(n('s1c_r2_fmv_td'),n('s1c_r2_fmv_zonal'))" readonly></td></tr>
+      <tr><td class="center">3</td><td><input type="text" name="s1c_r3_lot"></td><td><input type="text" name="s1c_r3_class"></td><td><input class="num" type="text" name="s1c_r3_area"></td><td><input class="num" type="text" name="s1c_r3_fmv_td"></td><td><input class="num" type="text" name="s1c_r3_fmv_zonal"></td><td><input class="num calc" type="text" name="s1c_r3_fmv_high" data-calc="Math.max(n('s1c_r3_fmv_td'),n('s1c_r3_fmv_zonal'))" readonly></td></tr>
+      <tr><td class="center">4</td><td><input type="text" name="s1c_r4_lot"></td><td><input type="text" name="s1c_r4_class"></td><td><input class="num" type="text" name="s1c_r4_area"></td><td><input class="num" type="text" name="s1c_r4_fmv_td"></td><td><input class="num" type="text" name="s1c_r4_fmv_zonal"></td><td><input class="num calc" type="text" name="s1c_r4_fmv_high" data-calc="Math.max(n('s1c_r4_fmv_td'),n('s1c_r4_fmv_zonal'))" readonly></td></tr>
+      <tr><td class="center">5</td><td><input type="text" name="s1c_r5_lot"></td><td><input type="text" name="s1c_r5_class"></td><td><input class="num" type="text" name="s1c_r5_area"></td><td><input class="num" type="text" name="s1c_r5_fmv_td"></td><td><input class="num" type="text" name="s1c_r5_fmv_zonal"></td><td><input class="num calc" type="text" name="s1c_r5_fmv_high" data-calc="Math.max(n('s1c_r5_fmv_td'),n('s1c_r5_fmv_zonal'))" readonly></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td class="bold" colspan="6">TOTAL (To Schedule 3 Item 1B)</td>
+        <td><input class="num calc" type="text" name="s1c_total_fmv" data-calc="n('s1c_r1_fmv_high')+n('s1c_r2_fmv_high')+n('s1c_r3_fmv_high')+n('s1c_r4_fmv_high')+n('s1c_r5_fmv_high')" readonly></td></tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule 2 &ndash; Transaction Description</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">1</span> Description of Transaction (Mark one box only)</span>
+        <span><label class="opt"><input type="radio" name="s2_transaction" value="cash"> Cash Sales</label>
+        <label class="opt"><input type="radio" name="s2_transaction" value="installment"> Installment Sale</label></span>
+        <span><label class="opt"><input type="radio" name="s2_transaction" value="foreclosure"> Foreclosure Sale</label></span>
+        <span><label class="opt"><input type="radio" name="s2_transaction" value="exempt"> Exempt</label>
+        <label class="opt"><input type="radio" name="s2_transaction" value="others"> Others</label></span>
+        <span class="lbl">If Exempt, or Others, specify</span>
+        <input type="text" name="s2_transaction_specify">
+      </div>
+      <div class="cell stack" style="flex:1.6;border-left:1px solid var(--rule)">
+        <span class="lbl bold">For Installment Sale:</span>
+        <div class="item" style="width:100%;border-bottom:1px solid var(--rule)"><span class="no">2</span><span class="lbl">Selling Price</span><span class="amt"><input class="num" type="text" name="s2_selling_price"></span></div>
+        <div class="item" style="width:100%;border-bottom:1px solid var(--rule)"><span class="no">3</span><span class="lbl">Cost and Other Expenses</span><span class="amt"><input class="num" type="text" name="s2_cost_expenses"></span></div>
+        <div class="item" style="width:100%;border-bottom:1px solid var(--rule)"><span class="no">4</span><span class="lbl">Mortgage Assumed</span><span class="amt"><input class="num" type="text" name="s2_mortgage_assumed"></span></div>
+        <div class="item" style="width:100%;border-bottom:1px solid var(--rule)"><span class="no">5</span><span class="lbl">Total Payments during the Initial Year</span><span class="amt"><input class="num" type="text" name="s2_initial_year_payments"></span></div>
+        <div class="item" style="width:100%;border-bottom:1px solid var(--rule)"><span class="no">6</span><span class="lbl">Amount of Installment this Month (To Schedule 3 Item 1C)</span><span class="amt"><input class="num" type="text" name="s2_installment_month"></span></div>
+        <div class="item" style="width:100%"><span class="no">7</span><span class="lbl">Total No. of Installments in The Contract</span><span class="amt"><input class="num" type="text" name="s2_total_installments"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title mt">Schedule 3 &ndash; Determination of Taxable Base</div>
+  <div class="grid">
+    <div class="item"><span class="no">1A</span><span class="lbl">Gross Selling Price / Bid Price for foreclosure sale</span><span class="amt"><input class="num" type="text" name="s3_gross_selling_price"></span></div>
+    <div class="item"><span class="no">1B</span><span class="lbl">Total Fair Market Value of Land and Improvement per Schedule 1</span><span class="amt"><input class="num calc" type="text" name="s3_total_fmv" data-calc="n('s1c_total_fmv')" readonly></span></div>
+    <div class="item"><span class="no">1C</span><span class="lbl">Installment Collected (For Installment sale excluding interest) (From Schedule 2 Item 6)</span><span class="amt"><input class="num calc" type="text" name="s3_installment_collected" data-calc="n('s2_installment_month')" readonly></span></div>
+    <div class="item"><span class="no">1D</span><span class="lbl">Others (Specify) <input type="text" name="s3_others_specify" style="max-width:260px"></span><span class="amt"><input class="num" type="text" name="s3_others_amount"></span></div>
+    <div class="item total"><span class="no">2</span><span class="lbl">Taxable Base (For cash/foreclosure sale Item A or B whichever is higher; For installment sales Item C; or, For other transaction Item D, whichever is applicable) (To Part II, Item 12)</span><span class="amt"><input class="num calc" type="text" name="s3_taxable_base" data-calc="v('s2_transaction')==='installment' ? n('s3_installment_collected') : (v('s2_transaction')==='others'||v('s2_transaction')==='exempt') ? n('s3_others_amount') : Math.max(n('s3_gross_selling_price'),n('s3_total_fmv'))" readonly></span></div>
+  </div>
+
+  <div class="sub-title mt">Schedule 4 &ndash; Tax Rates</div>
+  <table class="sched">
+    <thead>
+      <tr><th>TRANSACTION</th><th style="width:14%">TAX RATE</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>a. Registered with and certified by the Housing and Land Use Regulatory Board (HLURB) or HUDCC as engaged in socialized housing project. The selling price of the house and lot or only the lot does not exceed Php450,000 and Php180,000, respectively, or as may from time to time be determined by the HUDCC.</td><td class="center">Exempt</td></tr>
+      <tr><td>b. Upon the following values of real property, where the seller/transferor is habitually engaged in the real estate business:<br>&nbsp;&nbsp;&nbsp;With a selling price of Five Hundred Thousand Pesos (Php 500,000) or less</td><td class="center">1.5 %</td></tr>
+      <tr><td>&nbsp;&nbsp;&nbsp;With a selling price of more than Five Hundred Thousand Pesos (Php 500,000) but not more than Two Million Pesos (Php 2,000,000)</td><td class="center">3.0 %</td></tr>
+      <tr><td>&nbsp;&nbsp;&nbsp;With a selling price of more than Two Million Pesos (Php 2,000,000)</td><td class="center">5.0 %</td></tr>
+      <tr><td>c. Seller / transferor is not habitually engaged in real estate business</td><td class="center">6.0 %</td></tr>
+    </tbody>
+  </table>
+  <p class="small">* RR-Residential Regular&nbsp;&nbsp; RC-Residential Condominium&nbsp;&nbsp; CR-Condominium Regular&nbsp;&nbsp; CC-Commercial Condominium&nbsp;&nbsp; CL-Cemetery Lot&nbsp;&nbsp; PS-Parking Slot&nbsp;&nbsp; GL-Government Lot&nbsp;&nbsp; GP-General Purpose&nbsp;&nbsp; A-Agricultural&nbsp;&nbsp; I-Industrial&nbsp;&nbsp; X-Institutional&nbsp;&nbsp; APD-Area for Priority Development</p>
+
+</div>
+
+</body>
+</html>

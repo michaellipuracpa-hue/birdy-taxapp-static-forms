@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1604-C — Annual Information Return of Income Taxes Withheld on Compensation</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1604-C">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Annual Information Return of Income Taxes Withheld on Compensation</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1604-C</span><span class="ver">January 2018<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the Year (20YY)</span>
+        <input class="short" type="text" name="p0_year" placeholder="20YY">
+      </div>
+      <div class="cell">
+        <span class="no">2</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="p0_amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="p0_amended" value="no"> No</label>
+      </div>
+      <div class="cell">
+        <span class="no">3</span><span class="lbl">Number of Sheet/s Attached</span>
+        <input class="short" type="text" name="p0_sheets">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2">
+        <span class="no">4</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="p1_tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell">
+        <span class="no">5</span><span class="lbl">RDO Code</span>
+        <input class="short" type="text" name="p1_rdo">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">6</span> Withholding Agent&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p1_agent_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">7</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span>
+        <input type="text" name="p1_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">7A</span> ZIP Code</span>
+        <input class="short" type="text" name="p1_zip">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">8</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="p1_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="p1_category" value="government"> Government</label>
+      </div>
+      <div class="cell">
+        <span class="no">8A</span><span class="lbl">If private, top withholding agent?</span>
+        <label class="opt"><input type="radio" name="p1_top_agent" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="p1_top_agent" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">9</span><span class="lbl">Contact Number</span>
+        <input type="text" name="p1_contact">
+      </div>
+      <div class="cell">
+        <span class="no">10</span><span class="lbl">Email Address</span>
+        <input type="text" name="p1_email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.6">
+        <span class="no">11</span><span class="lbl">In case of overwithholding/overremittance after the year-end adjustments on compensation, have you released the refund/s to your employee/s?</span>
+        <label class="opt"><input type="radio" name="p1_refund_released" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="p1_refund_released" value="no"> No</label>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">11A</span> If Yes, specify the date of refund (MM/DD/YYYY)</span>
+        <input type="text" name="p1_refund_date" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.6">
+        <span class="no">12</span><span class="lbl">Total amount of overremittance on Tax withheld under compensation</span>
+        <input class="num" type="text" name="p1_overremittance">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">13</span> Month of First Crediting of Overremittance (MM)</span>
+        <input class="short" type="text" name="p1_first_crediting" placeholder="MM">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Summary of Remittances per BIR Form No. 1601-C</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:14%">Month</th>
+        <th style="width:18%">Date of Remittance (MM/DD/YYYY)</th>
+        <th style="width:22%">Drawee Bank/ Bank Code/ Agency</th>
+        <th style="width:24%">TRA/eROR/eAR Number</th>
+        <th>Taxes Withheld</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>January</td><td><input type="text" name="p2_jan_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_jan_bank"></td><td><input type="text" name="p2_jan_number"></td><td><input class="num" type="text" name="p2_jan_withheld"></td></tr>
+      <tr><td>February</td><td><input type="text" name="p2_feb_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_feb_bank"></td><td><input type="text" name="p2_feb_number"></td><td><input class="num" type="text" name="p2_feb_withheld"></td></tr>
+      <tr><td>March</td><td><input type="text" name="p2_mar_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_mar_bank"></td><td><input type="text" name="p2_mar_number"></td><td><input class="num" type="text" name="p2_mar_withheld"></td></tr>
+      <tr><td>April</td><td><input type="text" name="p2_apr_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_apr_bank"></td><td><input type="text" name="p2_apr_number"></td><td><input class="num" type="text" name="p2_apr_withheld"></td></tr>
+      <tr><td>May</td><td><input type="text" name="p2_may_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_may_bank"></td><td><input type="text" name="p2_may_number"></td><td><input class="num" type="text" name="p2_may_withheld"></td></tr>
+      <tr><td>June</td><td><input type="text" name="p2_jun_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_jun_bank"></td><td><input type="text" name="p2_jun_number"></td><td><input class="num" type="text" name="p2_jun_withheld"></td></tr>
+      <tr><td>July</td><td><input type="text" name="p2_jul_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_jul_bank"></td><td><input type="text" name="p2_jul_number"></td><td><input class="num" type="text" name="p2_jul_withheld"></td></tr>
+      <tr><td>August</td><td><input type="text" name="p2_aug_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_aug_bank"></td><td><input type="text" name="p2_aug_number"></td><td><input class="num" type="text" name="p2_aug_withheld"></td></tr>
+      <tr><td>September</td><td><input type="text" name="p2_sep_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_sep_bank"></td><td><input type="text" name="p2_sep_number"></td><td><input class="num" type="text" name="p2_sep_withheld"></td></tr>
+      <tr><td>October</td><td><input type="text" name="p2_oct_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_oct_bank"></td><td><input type="text" name="p2_oct_number"></td><td><input class="num" type="text" name="p2_oct_withheld"></td></tr>
+      <tr><td>November</td><td><input type="text" name="p2_nov_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_nov_bank"></td><td><input type="text" name="p2_nov_number"></td><td><input class="num" type="text" name="p2_nov_withheld"></td></tr>
+      <tr><td>December</td><td><input type="text" name="p2_dec_date" placeholder="MM/DD/YYYY"></td><td><input type="text" name="p2_dec_bank"></td><td><input type="text" name="p2_dec_number"></td><td><input class="num" type="text" name="p2_dec_withheld"></td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>TOTAL</td><td class="shade"></td><td class="shade"></td><td class="shade"></td>
+        <td><input class="num calc" type="text" name="p2_total_withheld" data-calc="n('p2_jan_withheld')+n('p2_feb_withheld')+n('p2_mar_withheld')+n('p2_apr_withheld')+n('p2_may_withheld')+n('p2_jun_withheld')+n('p2_jul_withheld')+n('p2_aug_withheld')+n('p2_sep_withheld')+n('p2_oct_withheld')+n('p2_nov_withheld')+n('p2_dec_withheld')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+</div><!-- /sheet 1 -->
+
+<div class="sheet">
+
+  <div class="sub-title">Continuation of Part II</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:16%">Month</th>
+        <th style="width:28%">Adjustment</th>
+        <th style="width:28%">Penalties</th>
+        <th>Total Amount Remitted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>January</td><td><input class="num" type="text" name="p2b_jan_adjustment"></td><td><input class="num" type="text" name="p2b_jan_penalties"></td><td><input class="num calc" type="text" name="p2b_jan_remitted" data-calc="n('p2_jan_withheld')+n('p2b_jan_adjustment')+n('p2b_jan_penalties')" readonly></td></tr>
+      <tr><td>February</td><td><input class="num" type="text" name="p2b_feb_adjustment"></td><td><input class="num" type="text" name="p2b_feb_penalties"></td><td><input class="num calc" type="text" name="p2b_feb_remitted" data-calc="n('p2_feb_withheld')+n('p2b_feb_adjustment')+n('p2b_feb_penalties')" readonly></td></tr>
+      <tr><td>March</td><td><input class="num" type="text" name="p2b_mar_adjustment"></td><td><input class="num" type="text" name="p2b_mar_penalties"></td><td><input class="num calc" type="text" name="p2b_mar_remitted" data-calc="n('p2_mar_withheld')+n('p2b_mar_adjustment')+n('p2b_mar_penalties')" readonly></td></tr>
+      <tr><td>April</td><td><input class="num" type="text" name="p2b_apr_adjustment"></td><td><input class="num" type="text" name="p2b_apr_penalties"></td><td><input class="num calc" type="text" name="p2b_apr_remitted" data-calc="n('p2_apr_withheld')+n('p2b_apr_adjustment')+n('p2b_apr_penalties')" readonly></td></tr>
+      <tr><td>May</td><td><input class="num" type="text" name="p2b_may_adjustment"></td><td><input class="num" type="text" name="p2b_may_penalties"></td><td><input class="num calc" type="text" name="p2b_may_remitted" data-calc="n('p2_may_withheld')+n('p2b_may_adjustment')+n('p2b_may_penalties')" readonly></td></tr>
+      <tr><td>June</td><td><input class="num" type="text" name="p2b_jun_adjustment"></td><td><input class="num" type="text" name="p2b_jun_penalties"></td><td><input class="num calc" type="text" name="p2b_jun_remitted" data-calc="n('p2_jun_withheld')+n('p2b_jun_adjustment')+n('p2b_jun_penalties')" readonly></td></tr>
+      <tr><td>July</td><td><input class="num" type="text" name="p2b_jul_adjustment"></td><td><input class="num" type="text" name="p2b_jul_penalties"></td><td><input class="num calc" type="text" name="p2b_jul_remitted" data-calc="n('p2_jul_withheld')+n('p2b_jul_adjustment')+n('p2b_jul_penalties')" readonly></td></tr>
+      <tr><td>August</td><td><input class="num" type="text" name="p2b_aug_adjustment"></td><td><input class="num" type="text" name="p2b_aug_penalties"></td><td><input class="num calc" type="text" name="p2b_aug_remitted" data-calc="n('p2_aug_withheld')+n('p2b_aug_adjustment')+n('p2b_aug_penalties')" readonly></td></tr>
+      <tr><td>September</td><td><input class="num" type="text" name="p2b_sep_adjustment"></td><td><input class="num" type="text" name="p2b_sep_penalties"></td><td><input class="num calc" type="text" name="p2b_sep_remitted" data-calc="n('p2_sep_withheld')+n('p2b_sep_adjustment')+n('p2b_sep_penalties')" readonly></td></tr>
+      <tr><td>October</td><td><input class="num" type="text" name="p2b_oct_adjustment"></td><td><input class="num" type="text" name="p2b_oct_penalties"></td><td><input class="num calc" type="text" name="p2b_oct_remitted" data-calc="n('p2_oct_withheld')+n('p2b_oct_adjustment')+n('p2b_oct_penalties')" readonly></td></tr>
+      <tr><td>November</td><td><input class="num" type="text" name="p2b_nov_adjustment"></td><td><input class="num" type="text" name="p2b_nov_penalties"></td><td><input class="num calc" type="text" name="p2b_nov_remitted" data-calc="n('p2_nov_withheld')+n('p2b_nov_adjustment')+n('p2b_nov_penalties')" readonly></td></tr>
+      <tr><td>December</td><td><input class="num" type="text" name="p2b_dec_adjustment"></td><td><input class="num" type="text" name="p2b_dec_penalties"></td><td><input class="num calc" type="text" name="p2b_dec_remitted" data-calc="n('p2_dec_withheld')+n('p2b_dec_adjustment')+n('p2b_dec_penalties')" readonly></td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>TOTAL</td>
+        <td><input class="num calc" type="text" name="p2b_total_adjustment" data-calc="n('p2b_jan_adjustment')+n('p2b_feb_adjustment')+n('p2b_mar_adjustment')+n('p2b_apr_adjustment')+n('p2b_may_adjustment')+n('p2b_jun_adjustment')+n('p2b_jul_adjustment')+n('p2b_aug_adjustment')+n('p2b_sep_adjustment')+n('p2b_oct_adjustment')+n('p2b_nov_adjustment')+n('p2b_dec_adjustment')" readonly></td>
+        <td><input class="num calc" type="text" name="p2b_total_penalties" data-calc="n('p2b_jan_penalties')+n('p2b_feb_penalties')+n('p2b_mar_penalties')+n('p2b_apr_penalties')+n('p2b_may_penalties')+n('p2b_jun_penalties')+n('p2b_jul_penalties')+n('p2b_aug_penalties')+n('p2b_sep_penalties')+n('p2b_oct_penalties')+n('p2b_nov_penalties')+n('p2b_dec_penalties')" readonly></td>
+        <td><input class="num calc" type="text" name="p2b_total_remitted" data-calc="n('p2b_jan_remitted')+n('p2b_feb_remitted')+n('p2b_mar_remitted')+n('p2b_apr_remitted')+n('p2b_may_remitted')+n('p2b_jun_remitted')+n('p2b_jul_remitted')+n('p2b_aug_remitted')+n('p2b_sep_remitted')+n('p2b_oct_remitted')+n('p2b_nov_remitted')+n('p2b_dec_remitted')" readonly></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="grid">
+    <div class="row"><div class="cell small">
+      I/We declare under the penalties of perjury that this return, and all its attachments, has been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input type="text" name="sig_individual"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input type="text" name="sig_non_individual"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent (Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="sig_accreditation_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="sig_date_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="sig_date_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+  <div class="small mt">*NOTE: The BIR Data Privacy is in the BIR website (www.bir.gov.ph)</div>
+
+</div><!-- /sheet 2 -->
+
+</body>
+</html>

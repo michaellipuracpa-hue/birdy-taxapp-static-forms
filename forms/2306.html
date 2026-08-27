@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2306 — Certificate of Final Tax Withheld at Source</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="2306">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Certificate of Final Tax Withheld at Source</div>
+      <div class="fh-sub">Fill in all applicable spaces. Mark all appropriate boxes with an &ldquo;X&rdquo;.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2306</span><span class="ver">January 2018 (ENCS)</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the Period&emsp;From (MM/DD/YYYY)</span>
+        <input class="mid" type="text" name="p0_1_period_from" placeholder="MM/DD/YYYY">
+        <span class="lbl">To (MM/DD/YYYY)</span>
+        <input class="mid" type="text" name="p0_1_period_to" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Income Recipient/Payee Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">2</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="p1_2_tin" placeholder="000-000-000-00000">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> Payee&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p1_3_payee_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">4</span> Registered Address</span>
+        <input type="text" name="p1_4_registered_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4A</span> ZIP Code</span>
+        <input type="text" name="p1_4a_zip">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">5</span> Foreign Address, if applicable</span>
+        <input type="text" name="p1_5_foreign_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">5A</span> ICR No. (For Alien Payee Only)</span>
+        <input type="text" name="p1_5a_icr_no">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Withholding Agent/Payor Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="p2_6_tin" placeholder="000-000-000-00000">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">7</span> Payor&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p2_7_payor_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">8</span> Registered Address</span>
+        <input type="text" name="p2_8_registered_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">8A</span> ZIP Code</span>
+        <input type="text" name="p2_8a_zip">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Income Payment and Tax Withheld (Attach additional sheet if necessary)</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:45%">Nature of Income Payment</th>
+        <th style="width:13%">ATC</th>
+        <th style="width:21%">Amount of Payment</th>
+        <th style="width:21%">Tax Withheld</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="fwt1_nature"></td>
+        <td><input type="text" name="fwt1_atc"></td>
+        <td><input class="num" type="text" name="fwt1_amount"></td>
+        <td><input class="num" type="text" name="fwt1_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fwt2_nature"></td>
+        <td><input type="text" name="fwt2_atc"></td>
+        <td><input class="num" type="text" name="fwt2_amount"></td>
+        <td><input class="num" type="text" name="fwt2_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fwt3_nature"></td>
+        <td><input type="text" name="fwt3_atc"></td>
+        <td><input class="num" type="text" name="fwt3_amount"></td>
+        <td><input class="num" type="text" name="fwt3_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fwt4_nature"></td>
+        <td><input type="text" name="fwt4_atc"></td>
+        <td><input class="num" type="text" name="fwt4_amount"></td>
+        <td><input class="num" type="text" name="fwt4_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fwt5_nature"></td>
+        <td><input type="text" name="fwt5_atc"></td>
+        <td><input class="num" type="text" name="fwt5_amount"></td>
+        <td><input class="num" type="text" name="fwt5_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="fwt6_nature"></td>
+        <td><input type="text" name="fwt6_atc"></td>
+        <td><input class="num" type="text" name="fwt6_amount"></td>
+        <td><input class="num" type="text" name="fwt6_tax"></td>
+      </tr>
+      <tr>
+        <td class="bold center">Total</td>
+        <td></td>
+        <td><input class="num calc" type="text" name="fwt_total_amount" data-calc="n('fwt1_amount')+n('fwt2_amount')+n('fwt3_amount')+n('fwt4_amount')+n('fwt5_amount')+n('fwt6_amount')" readonly></td>
+        <td><input class="num calc" type="text" name="fwt_total_tax" data-calc="n('fwt1_tax')+n('fwt2_tax')+n('fwt3_tax')+n('fwt4_tax')+n('fwt5_tax')+n('fwt6_tax')" readonly></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid mt">
+    <div class="row"><div class="cell small">
+      We declare under the penalties of perjury that this certificate has been made in good faith, verified by us, and to the best of our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, we give our consent to the processing of our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.
+    </div></div>
+  </div>
+
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sig_payor_name"></div>
+      <div class="cap">Signature over Printed Name of Payor/Payor&rsquo;s Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig" style="flex:0 0 180px">
+      <div class="line"><input type="text" name="sig_payor_date" placeholder="MM/DD/YYYY"></div>
+      <div class="cap">Date Signed (MM/DD/YYYY)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="payor_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="payor_accred_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="payor_accred_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="grid mt">
+    <div class="row"><div class="cell shade bold small center">CONFORME:</div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sig_payee_name"></div>
+      <div class="cap">Signature over Printed Name of Payee/Payee&rsquo;s Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig" style="flex:0 0 180px">
+      <div class="line"><input type="text" name="sig_payee_date" placeholder="MM/DD/YYYY"></div>
+      <div class="cap">Date Signed (MM/DD/YYYY)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="payee_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="payee_accred_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="payee_accred_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title mt">To be accomplished for Value-Added Tax/Percentage Tax Withholding (substituted filing)</div>
+  <div class="grid">
+    <div class="row"><div class="cell small">
+      I declare, under the penalties of perjury, that the information herein stated are reported under BIR Form No. 1600 which have been filed with the Bureau of Internal Revenue.
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sf_sig_payor_name"></div>
+      <div class="cap">Signature over Printed Name of Payor/Payor&rsquo;s Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="sf_payor_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="sf_payor_accred_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="sf_payor_accred_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="grid mt">
+    <div class="row"><div class="cell small">
+      I declare under the penalties of perjury that I am qualified under substituted filing of Percentage Tax/Value-Added Tax Returns (BIR Form 2551Q/2550M/Q), since I have only one payor from whom I earn our income; that, in accordance with RR 14-2003, I have availed of the Optional Registration under the 3% Final Percentage Tax Withholding/12% Final VAT Withholding in lieu of the 3% Percentage Tax/12% VAT in order to be entitled to the privileges accorded by the Substituted Percentage Tax Return/Substituted VAT Return System prescribed in the aforesaid Regulations; that, this Declaration is sufficient authority of the withholding agent to withhold 3% Final Percentage Tax/12% Final VAT from my sale of goods and/or services.
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sf_sig_payee_name"></div>
+      <div class="cap">Signature over Printed Name of Payee/Payee&rsquo;s Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="sf_payee_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="sf_payee_accred_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="sf_payee_accred_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="small mt">*NOTE: The BIR Data Privacy is in the BIR website (www.bir.gov.ph)</div>
+
+</div><!-- /sheet 1 -->
+
+<div class="sheet">
+
+  <div class="part-title">Schedules of Alphanumeric Tax Codes</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:74%">Nature of Income Payment</th>
+        <th>ATC &mdash; Individual</th>
+        <th>ATC &mdash; Corporate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="3" class="bold" style="background:var(--shade)">Income Tax &mdash; Fringe Benefit</td></tr>
+      <tr><td><span class="no">1</span> In General, for Citizen, Resident Alien and Non-Resident Alien Engaged in Trade or Business Within the Philippines</td><td class="center">WF360</td><td class="center"></td></tr>
+      <tr><td><span class="no">2</span> Non-Resident Alien Not Engaged in Trade or Business Within the Philippines</td><td class="center">WF330</td><td class="center"></td></tr>
+      <tr><td colspan="3" class="bold" style="background:var(--shade)">Interest/Yield from Bank Deposits/Deposit Substitutes/Government Securities</td></tr>
+      <tr><td><span class="no">3</span> Savings Deposit</td><td class="center">WI161</td><td class="center">WC161</td></tr>
+      <tr><td><span class="no">4</span> Time Deposit</td><td class="center">WI161</td><td class="center">WC161</td></tr>
+      <tr><td><span class="no">5</span> Government Securities</td><td class="center">WI162</td><td class="center">WC162</td></tr>
+      <tr><td><span class="no">6</span> Deposit Substitutes/Others</td><td class="center">WI163</td><td class="center">WC163</td></tr>
+      <tr><td><span class="no">7</span> Pre-terminated Long-Term Deposits/Investment &mdash; Less than three (3) years</td><td class="center">WI440</td><td class="center">WC440</td></tr>
+      <tr><td>&emsp;Three (3) years to less than four (4) years</td><td class="center">WI441</td><td class="center"></td></tr>
+      <tr><td>&emsp;Four (4) years to less than five (5) years</td><td class="center">WI442</td><td class="center"></td></tr>
+      <tr><td><span class="no">8</span> Foreign Currency Deposit</td><td class="center">WI170</td><td class="center">WC170</td></tr>
+      <tr><td><span class="no">9</span> On Amounts Withdrawn from Decedent&rsquo;s Deposit Account</td><td class="center">WI165</td><td class="center"></td></tr>
+      <tr><td><span class="no">10</span> Interest on foreign loans payable to Non-Resident Foreign Corporations (NRFCs)</td><td class="center"></td><td class="center">WC180</td></tr>
+      <tr><td><span class="no">11</span> Interest and other income payments on foreign currency transactions/loans payable to Offshore Banking Units (OBUs)</td><td class="center"></td><td class="center">WC190</td></tr>
+      <tr><td><span class="no">12</span> Interest and other income payments on foreign currency transactions/loans payable to Foreign Currency Deposit Units (FCDUs)</td><td class="center"></td><td class="center">WC191</td></tr>
+      <tr><td><span class="no">13</span> Cash dividend payment by domestic corporation to citizens and resident aliens/NRFCs</td><td class="center">WI202</td><td class="center">WC212</td></tr>
+      <tr><td><span class="no">14</span> Property dividend payment by domestic corporation to citizens and resident aliens/NRFCs</td><td class="center">WI203</td><td class="center">WC213</td></tr>
+      <tr><td><span class="no">15</span> Cash dividend payment by domestic corporation to NRFCs whose countries allowed tax deemed paid credit (subject to tax sparing rule)</td><td class="center"></td><td class="center">WC222</td></tr>
+      <tr><td><span class="no">16</span> Property dividend payment by domestic corporation to NRFCs whose countries allowed tax deemed paid credit (subject to tax sparing rule)</td><td class="center"></td><td class="center">WC223</td></tr>
+      <tr><td><span class="no">17</span> Cash dividend payment by domestic corporation to Non-resident Alien engaged in Trade or Business within the Philippines (NRAETB)</td><td class="center">WI224</td><td class="center"></td></tr>
+      <tr><td><span class="no">18</span> Property dividend payment by domestic corporation to NRAETB</td><td class="center">WI225</td><td class="center"></td></tr>
+      <tr><td><span class="no">19</span> Share of NRAETB in the distributable net income after tax of a partnership (except General Professional Partnership) of which he is a partner, or share in the net income after tax of an association, joint account or a joint venture taxable as a corporation of which he is a member or a co-venturer</td><td class="center">WI226</td><td class="center"></td></tr>
+      <tr><td><span class="no">20</span> On other payments to NRFCs</td><td class="center"></td><td class="center">WC230</td></tr>
+      <tr><td><span class="no">21</span> Distributive share of individual partners in a taxable partnership, association, joint account or joint venture or consortium</td><td class="center">WI240</td><td class="center"></td></tr>
+      <tr><td><span class="no">22</span> All kinds of royalty payments to citizens, resident aliens and NRAETB (other than WI380 and WI341), domestic and resident foreign corporations</td><td class="center">WI250</td><td class="center">WC250</td></tr>
+      <tr><td><span class="no">23</span> On prizes exceeding P10,000 and other winnings paid to individuals</td><td class="center">WI260</td><td class="center"></td></tr>
+      <tr><td><span class="no">24</span> Branch profit remittances by all corporations except PEZA/SBMA/CDA registered</td><td class="center"></td><td class="center">WC280</td></tr>
+      <tr><td><span class="no">25</span> On the gross rentals, lease and charter fees derived by non-resident owner or lessor of foreign vessels</td><td class="center"></td><td class="center">WC290</td></tr>
+      <tr><td><span class="no">26</span> On the gross rentals, charters and other fees derived by non-resident lessor of aircraft, machineries and equipment</td><td class="center"></td><td class="center">WC300</td></tr>
+      <tr><td><span class="no">27</span> On payments to oil exploration service contractors/sub-contractors</td><td class="center">WI310</td><td class="center">WC310</td></tr>
+      <tr><td><span class="no">28</span> Payments to non-resident alien not engaged in trade or business within the Philippines (NRANETB) except on sale of shares in domestic corporation and real property</td><td class="center">WI330</td><td class="center"></td></tr>
+      <tr><td><span class="no">29</span> On payments to non-resident individual/foreign corporate cinematographic film owners, lessors or distributors</td><td class="center">WI340</td><td class="center">WC340</td></tr>
+      <tr><td><span class="no">30</span> Royalties paid to NRAETB on cinematographic films and similar works</td><td class="center">WI341</td><td class="center"></td></tr>
+      <tr><td><span class="no">31</span> Final tax on interest or other payments upon tax-free covenant bonds, mortgages, deeds of trust or other obligations under Sec. 57C of the National Internal Revenue Code of 1997, as amended</td><td class="center">WI350</td><td class="center"></td></tr>
+      <tr><td><span class="no">32</span> Royalties paid to citizens, resident aliens and NRAETB on books, other literary works and musical compositions</td><td class="center">WI380</td><td class="center"></td></tr>
+      <tr><td><span class="no">33</span> On interest payments to taxpayers enjoying preferential tax rates (i.e. PEZA Registered Enterprises)</td><td class="center"></td><td class="center">WC390</td></tr>
+      <tr><td><span class="no">34</span> Informers Cash Reward to individuals/juridical persons</td><td class="center">WI410</td><td class="center">WC410</td></tr>
+      <tr><td><span class="no">35</span> Income Payments on Capital Gains Tax on sale/exchange or other disposition of Real Property &mdash; Individual</td><td class="center">WI450</td><td class="center"></td></tr>
+      <tr><td><span class="no">36</span> Income Payments on Capital Gains Tax on the sale/exchange or other disposition of Land and Building &mdash; Corporate</td><td class="center"></td><td class="center">WC450</td></tr>
+      <tr><td><span class="no">37</span> Cash or property dividend paid by a Real Estate Investment Trust (REIT)</td><td class="center">WI700</td><td class="center">WIC700</td></tr>
+      <tr><td colspan="3" class="bold" style="background:var(--shade)">For Business Tax</td></tr>
+      <tr><td><span class="no">38</span> VAT Withholding on Purchase of Goods</td><td class="center" colspan="2">WV010</td></tr>
+      <tr><td><span class="no">39</span> VAT Withholding on Purchase of Services</td><td class="center" colspan="2">WV020</td></tr>
+      <tr><td><span class="no">40</span> VAT Withholding on Purchases of Goods (with waiver of privilege to claim input tax credit) (final)</td><td class="center" colspan="2">WV014</td></tr>
+      <tr><td><span class="no">41</span> VAT Withholding on Purchases of Services (with waiver of privilege to claim input tax credit) (final)</td><td class="center" colspan="2">WV024</td></tr>
+      <tr><td><span class="no">42</span> Persons Exempt from VAT under Section 109BB (Section 116 applies)</td><td class="center" colspan="2">WB084</td></tr>
+      <tr><td><span class="no">43</span> Tax on Winnings and Prizes (Sec. 126) (double/forecast/quinella/trifecta bets) &mdash; Gov&rsquo;t. Withholding Agent (4%)</td><td class="center" colspan="2">WB191</td></tr>
+      <tr><td><span class="no">44</span> Tax on Winnings and Prizes on horse races/owners of winning racehorses (Sec. 126) &mdash; Gov&rsquo;t. Withholding Agent (10%)</td><td class="center" colspan="2">WB192</td></tr>
+      <tr><td><span class="no">45</span> Tax on Winnings and Prizes (Sec. 126) (double/forecast/quinella/trifecta bets) &mdash; Private Withholding Agent (4%)</td><td class="center" colspan="2">WB193</td></tr>
+      <tr><td><span class="no">46</span> Tax on Winnings and Prizes on horse races/owners of winning racehorses (Sec. 126) &mdash; Private Withholding Agent (10%)</td><td class="center" colspan="2">WB194</td></tr>
+      <tr><td><span class="no">47</span> VAT Withholding from non-residents (Government Withholding Agent)</td><td class="center" colspan="2">WV040</td></tr>
+      <tr><td><span class="no">48</span> VAT Withholding from non-residents (Private Withholding Agent)</td><td class="center" colspan="2">WV050</td></tr>
+    </tbody>
+  </table>
+
+</div><!-- /sheet 2 -->
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2550Q — Quarterly Value-Added Tax Return</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="2550Q">
+
+<!-- ================= PAGE 1 ================= -->
+<div class="sheet">
+
+  <div class="small">For BIR Use Only &nbsp; BCS/Item: ____________________</div>
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Value-Added Tax (VAT) Return</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2550Q</span><span class="ver">April 2024 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">For the</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell"><span class="no">2</span><span class="lbl">Year Ended (MM/YYYY)</span><input class="short" name="year_ended" type="text" placeholder="MM/YYYY"></div>
+      <div class="cell"><span class="no">3</span><span class="lbl">Quarter</span>
+        <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+        <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+        <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+        <label class="opt"><input type="radio" name="quarter" value="4"> 4th</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">4</span><span class="lbl">Return Period (MM/DD/YYYY) From</span><input class="short" name="ret_from" type="text" placeholder="MM/DD/YYYY"><span class="lbl">To</span><input class="short" name="ret_to" type="text" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">6</span><span class="lbl">Short Period Return?</span>
+        <label class="opt"><input type="radio" name="short_period" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="short_period" value="no"> No</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">7</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input class="mid" name="tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">8</span><span class="lbl">RDO Code</span><input class="short" name="rdo" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">9</span> Taxpayer&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span><input name="taxpayer_name" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">10</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span><input name="reg_address" type="text"></div>
+      <div class="cell stack" style="flex:0 0 1.4in"><span class="lbl"><span class="no">10A</span> ZIP Code</span><input name="zip" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">11</span> Contact Number (Landline/Cellphone No.)</span><input name="contact_no" type="text"></div>
+      <div class="cell stack"><span class="lbl"><span class="no">12</span> Email Address</span><input name="email" type="text"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">13</span><span class="lbl">Taxpayer Classification</span>
+        <label class="opt"><input type="radio" name="classification" value="micro"> Micro</label>
+        <label class="opt"><input type="radio" name="classification" value="small"> Small</label>
+        <label class="opt"><input type="radio" name="classification" value="medium"> Medium</label>
+        <label class="opt"><input type="radio" name="classification" value="large"> Large</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">14</span><span class="lbl">Are you availing of tax relief under Special Law or International Tax Treaty?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">14A</span><span class="lbl">If yes, specify</span><input name="tax_relief_spec" type="text"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Total Tax Payable</div>
+  <div class="grid">
+    <div class="item"><span class="no">15</span><span class="lbl">Net VAT Payable/(Excess Input Tax) <em>(From Part IV, Item 61)</em></span><span class="amt"><input class="num calc" name="i15" data-calc="n('i61b')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Less: Tax Credits/Payments</span><span class="amt"></span></div>
+    <div class="item"><span class="no">16</span><span class="lbl">Creditable VAT Withheld <em>(From Part V - Schedule 3, Column D)</em></span><span class="amt"><input class="num calc" name="i16" data-calc="n('s3_total')" readonly type="text"></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl">Advance VAT Payments <em>(From Part V - Schedule 4)</em></span><span class="amt"><input class="num calc" name="i17" data-calc="n('s4_total')" readonly type="text"></span></div>
+    <div class="item"><span class="no">18</span><span class="lbl">VAT paid in return previously filed, if this is an amended return</span><span class="amt"><input class="num" name="i18" type="text"></span></div>
+    <div class="item"><span class="no">19</span><span class="lbl">Other Credits/Payment (Specify) <input name="i19_spec" type="text" style="max-width:2.6in"></span><span class="amt"><input class="num" name="i19" type="text"></span></div>
+    <div class="item total"><span class="no">20</span><span class="lbl">Total Tax Credits/Payment <em>(Sum of Items 16 to 19)</em></span><span class="amt"><input class="num calc" name="i20" data-calc="n('i16')+n('i17')+n('i18')+n('i19')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">21</span><span class="lbl">Tax Still Payable/(Excess Credits) <em>(Item 15 Less Item 20)</em></span><span class="amt"><input class="num calc" name="i21" data-calc="n('i15')-n('i20')" readonly type="text"></span></div>
+    <div class="item"><span class="no">22</span><span class="lbl">Add: Penalties &nbsp;&nbsp; Surcharge</span><span class="amt"><input class="num" name="i22" type="text"></span></div>
+    <div class="item"><span class="no">23</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interest</span><span class="amt"><input class="num" name="i23" type="text"></span></div>
+    <div class="item"><span class="no">24</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compromise</span><span class="amt"><input class="num" name="i24" type="text"></span></div>
+    <div class="item total"><span class="no">25</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Penalties <em>(Sum of Items 22 to 24)</em></span><span class="amt"><input class="num calc" name="i25" data-calc="n('i22')+n('i23')+n('i24')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">26</span><span class="lbl bold">TOTAL AMOUNT PAYABLE/(Excess Credits) <em>(Sum of Items 21 and 25)</em></span><span class="amt"><input class="num calc" name="i26" data-calc="n('i21')+n('i25')" readonly type="text"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell"><span class="lbl small">I/We declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach authorization letter and indicate TIN)</span></div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input name="sig_individual" type="text"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input name="sig_nonindividual" type="text"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent (Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (If applicable)</span><input name="tax_agent_no" type="text"></div>
+      <div class="cell stack"><span class="lbl">Date of Issue (MM/DD/YYYY)</span><input name="tax_agent_issue" type="text" placeholder="MM/DD/YYYY"></div>
+      <div class="cell stack"><span class="lbl">Expiry Date (MM/DD/YYYY)</span><input name="tax_agent_expiry" type="text" placeholder="MM/DD/YYYY"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Particulars</th><th>Drawee Bank/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">27</span>Cash/Bank Debit Advice</td><td><input name="p27_bank" type="text"></td><td><input name="p27_number" type="text"></td><td><input name="p27_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p27_amount" type="text"></td></tr>
+      <tr><td><span class="no">28</span>Check</td><td><input name="p28_bank" type="text"></td><td><input name="p28_number" type="text"></td><td><input name="p28_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p28_amount" type="text"></td></tr>
+      <tr><td><span class="no">29</span>Tax Debit Memo</td><td><input name="p29_bank" type="text"></td><td><input name="p29_number" type="text"></td><td><input name="p29_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p29_amount" type="text"></td></tr>
+      <tr><td><span class="no">30</span>Others (Specify below)<br><input name="p30_spec" type="text"></td><td><input name="p30_bank" type="text"></td><td><input name="p30_number" type="text"></td><td><input name="p30_date" type="text" placeholder="MM/DD/YYYY"></td><td><input class="num" name="p30_amount" type="text"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl">Machine Validation/Revenue Official Receipt (ROR) Details (if not filed with an Authorized Agent Bank)</span><textarea name="machine_validation" rows="3"></textarea></div>
+      <div class="cell stack"><span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="3"></textarea></div>
+    </div>
+  </div>
+  <div class="small mt">*NOTE: The BIR Data Privacy Policy is in the BIR website (www.bir.gov.ph)</div>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-title">Quarterly Value-Added Tax (VAT) Return</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2550Q</span><span class="ver">April 2024 (ENCS)<br>Page 2</span></div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">TIN</span><input class="mid" name="p2_tin" type="text" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="lbl">Taxpayer&rsquo;s Last Name (if Individual)/ Registered Name (if Non-Individual)</span><input name="p2_name" type="text"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part IV &ndash; Details of VAT Computation</div>
+  <div class="grid">
+    <div class="item total"><span class="no"></span><span class="lbl bold">Total Sales and Output Tax</span><span class="amt2"><span class="lbl bold">A. Sales for the Quarter (Exclusive of VAT)</span></span><span class="amt"><span class="lbl bold">B. Output Tax for the Quarter</span></span></div>
+    <div class="item"><span class="no">31</span><span class="lbl">VATable Sales <span class="small">(&times; VAT rate <input class="num" name="i31_rate" value="12" type="text" style="max-width:.45in;text-align:center">%)</span></span><span class="amt2"><input class="num" name="i31a" type="text"></span><span class="amt"><input class="num calc" name="i31b" data-calc="n('i31a')*n('i31_rate')/100" readonly type="text"></span></div>
+    <div class="item"><span class="no">32</span><span class="lbl">Zero-Rated Sales</span><span class="amt2"><input class="num" name="i32a" type="text"></span><span class="amt"></span></div>
+    <div class="item"><span class="no">33</span><span class="lbl">Exempt Sales</span><span class="amt2"><input class="num" name="i33a" type="text"></span><span class="amt"></span></div>
+    <div class="item total"><span class="no">34</span><span class="lbl">Total Sales &amp; Output Tax Due <em>(Sum of Items 31A to 33A) / (Item 31B)</em></span><span class="amt2"><input class="num calc" name="i34a" data-calc="n('i31a')+n('i32a')+n('i33a')" readonly type="text"></span><span class="amt"><input class="num calc" name="i34b" data-calc="n('i31b')" readonly type="text"></span></div>
+    <div class="item"><span class="no">35</span><span class="lbl">Less: Output VAT on Uncollected Receivables</span><span class="amt2"></span><span class="amt"><input class="num" name="i35b" type="text"></span></div>
+    <div class="item"><span class="no">36</span><span class="lbl">Add: Output VAT on Recovered Uncollected Receivables Previously Deducted</span><span class="amt2"></span><span class="amt"><input class="num" name="i36b" type="text"></span></div>
+    <div class="item total"><span class="no">37</span><span class="lbl">Total Adjusted Output Tax Due <em>(Item 34B Less Item 35B Add Item 36B)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i37b" data-calc="n('i34b')-n('i35b')+n('i36b')" readonly type="text"></span></div>
+
+    <div class="item total"><span class="no"></span><span class="lbl bold">Less: Allowable Input Tax</span><span class="amt2"></span><span class="amt"><span class="lbl bold">B. Input Tax</span></span></div>
+    <div class="item"><span class="no">38</span><span class="lbl">Input Tax Carried Over from Previous Quarter</span><span class="amt2"></span><span class="amt"><input class="num" name="i38b" type="text"></span></div>
+    <div class="item"><span class="no">39</span><span class="lbl">Input Tax Deferred on Capital Goods Exceeding P1 Million from Previous Quarter <em>(From Part V - Schedule 1 Col E)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i39b" data-calc="n('s1_total_e')" readonly type="text"></span></div>
+    <div class="item"><span class="no">40</span><span class="lbl">Transitional Input Tax</span><span class="amt2"></span><span class="amt"><input class="num" name="i40b" type="text"></span></div>
+    <div class="item"><span class="no">41</span><span class="lbl">Presumptive Input Tax</span><span class="amt2"></span><span class="amt"><input class="num" name="i41b" type="text"></span></div>
+    <div class="item"><span class="no">42</span><span class="lbl">Others (Specify) <input name="i42_spec" type="text" style="max-width:2.6in"></span><span class="amt2"></span><span class="amt"><input class="num" name="i42b" type="text"></span></div>
+    <div class="item total"><span class="no">43</span><span class="lbl">Total <em>(Sum of Items 38B to 42B)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i43b" data-calc="n('i38b')+n('i39b')+n('i40b')+n('i41b')+n('i42b')" readonly type="text"></span></div>
+
+    <div class="item total"><span class="no"></span><span class="lbl bold">Current Transactions</span><span class="amt2"><span class="lbl bold">A. Purchases</span></span><span class="amt"><span class="lbl bold">B. Input Tax</span></span></div>
+    <div class="item"><span class="no">44</span><span class="lbl">Domestic Purchases</span><span class="amt2"><input class="num" name="i44a" type="text"></span><span class="amt"><input class="num" name="i44b" type="text"></span></div>
+    <div class="item"><span class="no">45</span><span class="lbl">Services Rendered by Non-Residents</span><span class="amt2"><input class="num" name="i45a" type="text"></span><span class="amt"><input class="num" name="i45b" type="text"></span></div>
+    <div class="item"><span class="no">46</span><span class="lbl">Importations</span><span class="amt2"><input class="num" name="i46a" type="text"></span><span class="amt"><input class="num" name="i46b" type="text"></span></div>
+    <div class="item"><span class="no">47</span><span class="lbl">Others (Specify) <input name="i47_spec" type="text" style="max-width:1.8in"></span><span class="amt2"><input class="num" name="i47a" type="text"></span><span class="amt"><input class="num" name="i47b" type="text"></span></div>
+    <div class="item"><span class="no">48</span><span class="lbl">Domestic Purchases with No Input Tax</span><span class="amt2"><input class="num" name="i48a" type="text"></span><span class="amt"></span></div>
+    <div class="item"><span class="no">49</span><span class="lbl">VAT-Exempt Importations</span><span class="amt2"><input class="num" name="i49a" type="text"></span><span class="amt"></span></div>
+    <div class="item total"><span class="no">50</span><span class="lbl">Total Current Purchases/Input Tax <em>(Sum of Items 44A to 49A)/(Sum of Items 44B to 47B)</em></span><span class="amt2"><input class="num calc" name="i50a" data-calc="n('i44a')+n('i45a')+n('i46a')+n('i47a')+n('i48a')+n('i49a')" readonly type="text"></span><span class="amt"><input class="num calc" name="i50b" data-calc="n('i44b')+n('i45b')+n('i46b')+n('i47b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">51</span><span class="lbl">Total Available Input Tax <em>(Sum of Items 43B and 50B)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i51b" data-calc="n('i43b')+n('i50b')" readonly type="text"></span></div>
+
+    <div class="item total"><span class="no"></span><span class="lbl bold">Less: Adjustment/Deductions from Input Tax</span><span class="amt2"></span><span class="amt"><span class="lbl bold">B. Input Tax</span></span></div>
+    <div class="item"><span class="no">52</span><span class="lbl">Input Tax on Purchases/Importation of Capital Goods exceeding P1 Million deferred for the succeeding period <em>(From Part V Schedule 1, Column I)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i52b" data-calc="n('s1_total_i')" readonly type="text"></span></div>
+    <div class="item"><span class="no">53</span><span class="lbl">Input Tax Attributable to VAT Exempt Sales <em>(From Part V - Schedule 2)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i53b" data-calc="n('s2_total')" readonly type="text"></span></div>
+    <div class="item"><span class="no">54</span><span class="lbl">VAT Refund/TCC Claimed</span><span class="amt2"></span><span class="amt"><input class="num" name="i54b" type="text"></span></div>
+    <div class="item"><span class="no">55</span><span class="lbl">Input VAT on Unpaid Payables</span><span class="amt2"></span><span class="amt"><input class="num" name="i55b" type="text"></span></div>
+    <div class="item"><span class="no">56</span><span class="lbl">Others (Specify) <input name="i56_spec" type="text" style="max-width:2.6in"></span><span class="amt2"></span><span class="amt"><input class="num" name="i56b" type="text"></span></div>
+    <div class="item total"><span class="no">57</span><span class="lbl">Total Deductions from Input Tax <em>(Sum of Items 52B to 56B)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i57b" data-calc="n('i52b')+n('i53b')+n('i54b')+n('i55b')+n('i56b')" readonly type="text"></span></div>
+    <div class="item"><span class="no">58</span><span class="lbl">Add: Input VAT on Settled Unpaid Payables Previously Deducted</span><span class="amt2"></span><span class="amt"><input class="num" name="i58b" type="text"></span></div>
+    <div class="item total"><span class="no">59</span><span class="lbl">Adjusted Deductions from Input Tax <em>(Sum of Items 57B and 58B)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i59b" data-calc="n('i57b')+n('i58b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">60</span><span class="lbl">Total Allowable Input Tax <em>(Item 51B Less Item 59B)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i60b" data-calc="n('i51b')-n('i59b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">61</span><span class="lbl bold">Net VAT Payable/(Excess Input Tax) <em>(Item 37B Less Item 60B) (To Part II, Item 15)</em></span><span class="amt2"></span><span class="amt"><input class="num calc" name="i61b" data-calc="n('i37b')-n('i60b')" readonly type="text"></span></div>
+  </div>
+
+  <div class="part-title">Part V &ndash; Schedules</div>
+
+  <div class="sub-title">Schedule 1 &ndash; Amortized Input Tax from Capital Goods (Attach additional sheet/s, if necessary)</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th>Date Purchased/ Imported (MM/DD/YYYY)<br>(A)</th>
+        <th>Source Code*<br>(B)</th>
+        <th>Description<br>(C)</th>
+        <th>Amount of Purchases/ Importation of Capital Goods Exceeding P1M<br>(D)</th>
+        <th>Balance of Input Tax from Previous Period<br>(E)</th>
+        <th>Estimated Life (in months)<br>(F)</th>
+        <th>Recognized Life (in Months)/ Remaining Life<br>(G)</th>
+        <th>Allowable Input Tax for the Period**<br>(H)</th>
+        <th>Balance of Input Tax to be carried to Next Period (E) Less (H)<br>(I)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><input name="s1_r1_a" type="text"></td><td><input name="s1_r1_b" type="text"></td><td><input name="s1_r1_c" type="text"></td><td><input class="num" name="s1_r1_d" type="text"></td><td><input class="num" name="s1_r1_e" type="text"></td><td><input class="num" name="s1_r1_f" type="text"></td><td><input class="num" name="s1_r1_g" type="text"></td><td><span class="small">mos:</span><input class="num" name="s1_r1_m" value="3" type="text" style="max-width:.35in;text-align:center"><input class="num calc" name="s1_r1_h" data-calc="n('s1_r1_g') ? n('s1_r1_e')/n('s1_r1_g')*n('s1_r1_m') : 0" readonly type="text"></td><td><input class="num calc" name="s1_r1_i" data-calc="n('s1_r1_e')-n('s1_r1_h')" readonly type="text"></td></tr>
+      <tr><td><input name="s1_r2_a" type="text"></td><td><input name="s1_r2_b" type="text"></td><td><input name="s1_r2_c" type="text"></td><td><input class="num" name="s1_r2_d" type="text"></td><td><input class="num" name="s1_r2_e" type="text"></td><td><input class="num" name="s1_r2_f" type="text"></td><td><input class="num" name="s1_r2_g" type="text"></td><td><span class="small">mos:</span><input class="num" name="s1_r2_m" value="3" type="text" style="max-width:.35in;text-align:center"><input class="num calc" name="s1_r2_h" data-calc="n('s1_r2_g') ? n('s1_r2_e')/n('s1_r2_g')*n('s1_r2_m') : 0" readonly type="text"></td><td><input class="num calc" name="s1_r2_i" data-calc="n('s1_r2_e')-n('s1_r2_h')" readonly type="text"></td></tr>
+      <tr><td><input name="s1_r3_a" type="text"></td><td><input name="s1_r3_b" type="text"></td><td><input name="s1_r3_c" type="text"></td><td><input class="num" name="s1_r3_d" type="text"></td><td><input class="num" name="s1_r3_e" type="text"></td><td><input class="num" name="s1_r3_f" type="text"></td><td><input class="num" name="s1_r3_g" type="text"></td><td><span class="small">mos:</span><input class="num" name="s1_r3_m" value="3" type="text" style="max-width:.35in;text-align:center"><input class="num calc" name="s1_r3_h" data-calc="n('s1_r3_g') ? n('s1_r3_e')/n('s1_r3_g')*n('s1_r3_m') : 0" readonly type="text"></td><td><input class="num calc" name="s1_r3_i" data-calc="n('s1_r3_e')-n('s1_r3_h')" readonly type="text"></td></tr>
+      <tr><td><input name="s1_r4_a" type="text"></td><td><input name="s1_r4_b" type="text"></td><td><input name="s1_r4_c" type="text"></td><td><input class="num" name="s1_r4_d" type="text"></td><td><input class="num" name="s1_r4_e" type="text"></td><td><input class="num" name="s1_r4_f" type="text"></td><td><input class="num" name="s1_r4_g" type="text"></td><td><span class="small">mos:</span><input class="num" name="s1_r4_m" value="3" type="text" style="max-width:.35in;text-align:center"><input class="num calc" name="s1_r4_h" data-calc="n('s1_r4_g') ? n('s1_r4_e')/n('s1_r4_g')*n('s1_r4_m') : 0" readonly type="text"></td><td><input class="num calc" name="s1_r4_i" data-calc="n('s1_r4_e')-n('s1_r4_h')" readonly type="text"></td></tr>
+      <tr><td><input name="s1_r5_a" type="text"></td><td><input name="s1_r5_b" type="text"></td><td><input name="s1_r5_c" type="text"></td><td><input class="num" name="s1_r5_d" type="text"></td><td><input class="num" name="s1_r5_e" type="text"></td><td><input class="num" name="s1_r5_f" type="text"></td><td><input class="num" name="s1_r5_g" type="text"></td><td><span class="small">mos:</span><input class="num" name="s1_r5_m" value="3" type="text" style="max-width:.35in;text-align:center"><input class="num calc" name="s1_r5_h" data-calc="n('s1_r5_g') ? n('s1_r5_e')/n('s1_r5_g')*n('s1_r5_m') : 0" readonly type="text"></td><td><input class="num calc" name="s1_r5_i" data-calc="n('s1_r5_e')-n('s1_r5_h')" readonly type="text"></td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Total (Column E - To Part IV, Item 39B)/(Column I - To Part IV, Item 52B)</td>
+        <td><input class="num calc" name="s1_total_e" data-calc="n('s1_r1_e')+n('s1_r2_e')+n('s1_r3_e')+n('s1_r4_e')+n('s1_r5_e')" readonly type="text"></td>
+        <td></td><td></td>
+        <td><input class="num calc" name="s1_total_h" data-calc="n('s1_r1_h')+n('s1_r2_h')+n('s1_r3_h')+n('s1_r4_h')+n('s1_r5_h')" readonly type="text"></td>
+        <td><input class="num calc" name="s1_total_i" data-calc="n('s1_r1_i')+n('s1_r2_i')+n('s1_r3_i')+n('s1_r4_i')+n('s1_r5_i')" readonly type="text"></td>
+      </tr>
+    </tfoot>
+  </table>
+  <div class="small">* D for Domestic Purchase; I for Importation &nbsp;&nbsp;&nbsp; **E divided by G multiplied by the Number of months in use during the quarter</div>
+
+  <div class="sub-title mt">Schedule 2 &ndash; Input Tax Attributable to VAT Exempt Sales</div>
+  <div class="grid">
+    <div class="item"><span class="no"></span><span class="lbl">Input Tax directly attributable to VAT Exempt Sale</span><span class="amt"><input class="num" name="s2_direct" type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl">Add: Ratable portion of Input Tax not directly attributable to any activity:</span><span class="amt"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;VAT Exempt Sale <input class="num short" name="s2_exempt_sale" type="text"> &divide; Total Sales <input class="num short" name="s2_total_sales" type="text"> &times; Amount of Input Tax not directly attributable <input class="num short" name="s2_input_not_attr" type="text"></span><span class="amt"><input class="num calc" name="s2_ratable" data-calc="n('s2_total_sales') ? n('s2_exempt_sale')/n('s2_total_sales')*n('s2_input_not_attr') : 0" readonly type="text"></span></div>
+    <div class="item total"><span class="no"></span><span class="lbl">Total Input Tax attributable to Exempt Sale <em>(To Part IV, Item 53)</em></span><span class="amt"><input class="num calc" name="s2_total" data-calc="n('s2_direct')+n('s2_ratable')" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title mt">Schedule 3 &ndash; Creditable VAT Withheld (Attach additional sheet/s, if necessary)</div>
+  <table class="sched">
+    <thead>
+      <tr><th>(A) Period Covered</th><th>(B) Name of Withholding Agent</th><th>(C) Income Payment</th><th>(D) Total Tax Withheld</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><input name="s3_r1_a" type="text"></td><td><input name="s3_r1_b" type="text"></td><td><input class="num" name="s3_r1_c" type="text"></td><td><input class="num" name="s3_r1_d" type="text"></td></tr>
+      <tr><td><input name="s3_r2_a" type="text"></td><td><input name="s3_r2_b" type="text"></td><td><input class="num" name="s3_r2_c" type="text"></td><td><input class="num" name="s3_r2_d" type="text"></td></tr>
+      <tr><td><input name="s3_r3_a" type="text"></td><td><input name="s3_r3_b" type="text"></td><td><input class="num" name="s3_r3_c" type="text"></td><td><input class="num" name="s3_r3_d" type="text"></td></tr>
+      <tr><td><input name="s3_r4_a" type="text"></td><td><input name="s3_r4_b" type="text"></td><td><input class="num" name="s3_r4_c" type="text"></td><td><input class="num" name="s3_r4_d" type="text"></td></tr>
+      <tr><td><input name="s3_r5_a" type="text"></td><td><input name="s3_r5_b" type="text"></td><td><input class="num" name="s3_r5_c" type="text"></td><td><input class="num" name="s3_r5_d" type="text"></td></tr>
+      <tr><td><input name="s3_r6_a" type="text"></td><td><input name="s3_r6_b" type="text"></td><td><input class="num" name="s3_r6_c" type="text"></td><td><input class="num" name="s3_r6_d" type="text"></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">Total (Column D - To Part II, Item 16)</td><td><input class="num calc" name="s3_total" data-calc="n('s3_r1_d')+n('s3_r2_d')+n('s3_r3_d')+n('s3_r4_d')+n('s3_r5_d')+n('s3_r6_d')" readonly type="text"></td></tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule 4 &ndash; Advance VAT Payment (Attach additional sheet/s, if necessary)</div>
+  <table class="sched">
+    <thead>
+      <tr><th>(A) Period Covered</th><th>(B) Name of Miller</th><th>(C) Name of Taxpayer</th><th>(D) Official Receipt Number</th><th>(E) Amount Paid</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><input name="s4_r1_a" type="text"></td><td><input name="s4_r1_b" type="text"></td><td><input name="s4_r1_c" type="text"></td><td><input name="s4_r1_d" type="text"></td><td><input class="num" name="s4_r1_e" type="text"></td></tr>
+      <tr><td><input name="s4_r2_a" type="text"></td><td><input name="s4_r2_b" type="text"></td><td><input name="s4_r2_c" type="text"></td><td><input name="s4_r2_d" type="text"></td><td><input class="num" name="s4_r2_e" type="text"></td></tr>
+      <tr><td><input name="s4_r3_a" type="text"></td><td><input name="s4_r3_b" type="text"></td><td><input name="s4_r3_c" type="text"></td><td><input name="s4_r3_d" type="text"></td><td><input class="num" name="s4_r3_e" type="text"></td></tr>
+      <tr><td><input name="s4_r4_a" type="text"></td><td><input name="s4_r4_b" type="text"></td><td><input name="s4_r4_c" type="text"></td><td><input name="s4_r4_d" type="text"></td><td><input class="num" name="s4_r4_e" type="text"></td></tr>
+      <tr><td><input name="s4_r5_a" type="text"></td><td><input name="s4_r5_b" type="text"></td><td><input name="s4_r5_c" type="text"></td><td><input name="s4_r5_d" type="text"></td><td><input class="num" name="s4_r5_e" type="text"></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="4">Total (To Part II, Item 17)</td><td><input class="num calc" name="s4_total" data-calc="n('s4_r1_e')+n('s4_r2_e')+n('s4_r3_e')+n('s4_r4_e')+n('s4_r5_e')" readonly type="text"></td></tr>
+    </tfoot>
+  </table>
+
+</div>
+
+</body>
+</html>

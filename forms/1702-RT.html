@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1702-RT — Annual Income Tax Return (Corporations, Regular Rate)</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1702-RT">
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span>For BIR Use Only &nbsp; BCS/Item:</span><span>1702-RT 01/18ENCS P1</span></div>
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Annual Income Tax Return</div>
+      <div class="fh-sub">Corporation, Partnership and Other Non-Individual Taxpayer Subject Only to REGULAR Income Tax Rate<br>
+      Enter all required information in CAPITAL LETTERS. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1702-RT</span><span class="ver">January 2018 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">For</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell"><span class="no">3</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">4</span><span class="lbl">Short Period Return?</span>
+        <label class="opt"><input type="radio" name="short_period" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="short_period" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">2</span><span class="lbl">Year Ended (MM/20YY)</span><input type="text" name="year_ended" class="short" placeholder="MM/20YY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">Alphanumeric Tax Code (ATC)</span><input type="text" name="atc" class="short" placeholder="IC 010">
+        <label class="opt"><input type="checkbox" name="atc_mcit"> IC 055 &nbsp;Minimum Corporate Income Tax (MCIT)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">7</span><span class="lbl">RDO Code</span><input type="text" name="rdo" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">8</span> <span class="lbl">Registered Name (Enter only 1 letter per box using CAPITAL LETTERS)</span></span><input type="text" name="reg_name" style="text-transform:uppercase"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">9</span> <span class="lbl">Registered Address (Indicate complete address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span></span><input type="text" name="reg_address" style="text-transform:uppercase"></div>
+      <div class="cell stack" style="flex:0 0 120px;"><span><span class="no">9A</span> <span class="lbl">ZIP Code</span></span><input type="text" name="zip"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">10</span><span class="lbl">Date of Incorporation/Organization (MM/DD/YYYY)</span><input type="text" name="date_incorporation" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="no">11</span><span class="lbl">Contact Number</span><input type="text" name="contact_no"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">12</span><span class="lbl">Email Address</span><input type="text" name="email"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">13</span><span class="lbl">Method of Deductions</span>
+        <label class="opt"><input type="radio" name="method" value="itemized"> Itemized Deductions [Section 34 (A-J), NIRC]</label>
+        <label class="opt"><input type="radio" name="method" value="osd"> Optional Standard Deduction (OSD) &ndash; 40% of Gross Income [Section 34(L) NIRC, as amended]</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Total Tax Payable <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <div class="grid">
+    <div class="item"><span class="no">14</span><span class="lbl">Tax Due <em>(From Part IV Item 43)</em></span><span class="amt"><input class="num calc" name="i14" data-calc="n('i43')" readonly type="text"></span></div>
+    <div class="item"><span class="no">15</span><span class="lbl">Less: Total Tax Credits/Payments <em>(From Part IV Item 55)</em></span><span class="amt"><input class="num calc" name="i15" data-calc="n('i55')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">16</span><span class="lbl">Net Tax Payable / (Overpayment) <em>(Item 14 Less Item 15) (From Part IV Item 56)</em></span><span class="amt"><input class="num calc" name="i16" data-calc="n('i14')-n('i15')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl">Surcharge</span><span class="amt"><input class="num" name="i17" type="text"></span></div>
+    <div class="item"><span class="no">18</span><span class="lbl">Interest</span><span class="amt"><input class="num" name="i18" type="text"></span></div>
+    <div class="item"><span class="no">19</span><span class="lbl">Compromise</span><span class="amt"><input class="num" name="i19" type="text"></span></div>
+    <div class="item total"><span class="no">20</span><span class="lbl">Total Penalties <em>(Sum of Items 17 to 19)</em></span><span class="amt"><input class="num calc" name="i20" data-calc="n('i17')+n('i18')+n('i19')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">21</span><span class="lbl">TOTAL AMOUNT PAYABLE / (Overpayment) <em>(Sum of Items 16 and 20)</em></span><span class="amt"><input class="num calc" name="i21" data-calc="n('i16')+n('i20')" readonly type="text"></span></div>
+    <div class="row">
+      <div class="cell"><span class="lbl">If overpayment, mark one (1) box only. <em>(Once the choice is made, the same is irrevocable)</em></span>
+        <label class="opt"><input type="radio" name="overpayment_option" value="refund"> To be refunded</label>
+        <label class="opt"><input type="radio" name="overpayment_option" value="tcc"> To be issued a Tax Credit Certificate (TCC)</label>
+        <label class="opt"><input type="radio" name="overpayment_option" value="carryover"> To be carried over as tax credit for next year/quarter</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell small" style="border-right:none;">We declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by us, and to the best of our knowledge and belief, are true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. <em>(If signed by an Authorized Representative, indicate TIN and attach authorization letter)</em></div>
+      <div class="cell stack" style="flex:0 0 110px;"><span><span class="no">22</span> <span class="lbl">Number of Attachments</span></span><input type="text" name="attachments_no" class="num"></div>
+    </div>
+  </div>
+  <div class="sig-block">
+    <div class="sig"><div class="line"><input type="text" name="sig1_name"></div><div class="cap">Signature over Printed Name of President/Principal Officer/Authorized Representative</div>
+      <div class="row" style="border:none;"><div class="cell"><span class="lbl">Title of Signatory</span><input type="text" name="sig1_title"></div><div class="cell"><span class="lbl">TIN</span><input type="text" name="sig1_tin"></div></div></div>
+    <div class="sig"><div class="line"><input type="text" name="sig2_name"></div><div class="cap">Signature over Printed Name of Treasurer/Assistant Treasurer</div>
+      <div class="row" style="border:none;"><div class="cell"><span class="lbl">Title of Signatory</span><input type="text" name="sig2_title"></div><div class="cell"><span class="lbl">TIN</span><input type="text" name="sig2_tin"></div></div></div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <tr><th style="width:22%">Particulars</th><th style="width:24%">Drawee Bank/Agency</th><th style="width:18%">Number</th><th style="width:16%">Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    <tr><td><span class="no">23</span> Cash/Bank Debit Memo</td><td><input type="text" name="pay23_bank"></td><td><input type="text" name="pay23_number"></td><td><input type="text" name="pay23_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay23_amount"></td></tr>
+    <tr><td><span class="no">24</span> Check</td><td><input type="text" name="pay24_bank"></td><td><input type="text" name="pay24_number"></td><td><input type="text" name="pay24_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay24_amount"></td></tr>
+    <tr><td><span class="no">25</span> Tax Debit Memo</td><td><input type="text" name="pay25_bank"></td><td><input type="text" name="pay25_number"></td><td><input type="text" name="pay25_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay25_amount"></td></tr>
+    <tr><td><span class="no">26</span> Others (specify) <input type="text" name="pay26_specify"></td><td><input type="text" name="pay26_bank"></td><td><input type="text" name="pay26_number"></td><td><input type="text" name="pay26_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay26_amount"></td></tr>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl">Machine Validation/Revenue Official Receipt Details [if not filed with an Authorized Agent Bank (AAB)]</span><textarea name="machine_validation" rows="2"></textarea></div>
+      <div class="cell stack" style="flex:0 0 220px;"><span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="2"></textarea></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span class="bold">BIR Form No. 1702-RT &mdash; January 2018 (ENCS) &mdash; Page 2</span><span>1702-RT 01/18ENCS P2</span></div>
+  <div class="grid" style="border-top:2px solid var(--ink);">
+    <div class="row">
+      <div class="cell"><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin_p2" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="lbl">Registered Name</span><input type="text" name="reg_name_p2" style="text-transform:uppercase"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part IV &ndash; Computation of Tax <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <div class="grid">
+    <div class="item"><span class="no">27</span><span class="lbl">Sales/Receipts/Revenues/Fees</span><span class="amt"><input class="num" name="i27" type="text"></span></div>
+    <div class="item"><span class="no">28</span><span class="lbl">Less: Sales Returns, Allowances and Discounts</span><span class="amt"><input class="num" name="i28" type="text"></span></div>
+    <div class="item total"><span class="no">29</span><span class="lbl">Net Sales/Receipts/Revenues/Fees <em>(Item 27 Less Item 28)</em></span><span class="amt"><input class="num calc" name="i29" data-calc="n('i27')-n('i28')" readonly type="text"></span></div>
+    <div class="item"><span class="no">30</span><span class="lbl">Less: Cost of Sales/Services</span><span class="amt"><input class="num" name="i30" type="text"></span></div>
+    <div class="item total"><span class="no">31</span><span class="lbl">Gross Income from Operation <em>(Item 29 Less Item 30)</em></span><span class="amt"><input class="num calc" name="i31" data-calc="n('i29')-n('i30')" readonly type="text"></span></div>
+    <div class="item"><span class="no">32</span><span class="lbl">Add: Other Taxable Income Not Subjected to Final Tax</span><span class="amt"><input class="num" name="i32" type="text"></span></div>
+    <div class="item total"><span class="no">33</span><span class="lbl">Total Taxable Income <em>(Sum of Items 31 and 32)</em></span><span class="amt"><input class="num calc" name="i33" data-calc="n('i31')+n('i32')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Less: Deductions Allowable under Existing Law</span><span class="amt"></span></div>
+    <div class="item"><span class="no">34</span><span class="lbl">Ordinary Allowable Itemized Deductions <em>(From Part VI Schedule I Item 18)</em></span><span class="amt"><input class="num calc" name="i34" data-calc="n('s1_18')" readonly type="text"></span></div>
+    <div class="item"><span class="no">35</span><span class="lbl">Special Allowable Itemized Deductions <em>(From Part VI Schedule II Item 5)</em></span><span class="amt"><input class="num calc" name="i35" data-calc="n('s2_5')" readonly type="text"></span></div>
+    <div class="item"><span class="no">36</span><span class="lbl">NOLCO <em>[Only for those taxable under Sec. 27 (A to C); Sec. 28(A)(1)(A)(6)(b) of the Tax Code, as amended] (From Part VI Schedule III Item 8)</em></span><span class="amt"><input class="num calc" name="i36" data-calc="n('s3a_8')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">37</span><span class="lbl">Total Deductions <em>(Sum of Items 34 to 36)</em></span><span class="amt"><input class="num calc" name="i37" data-calc="n('i34')+n('i35')+n('i36')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">OR [in case taxable under Sec 27(A) &amp; 28(A)(1)]</span><span class="amt"></span></div>
+    <div class="item"><span class="no">38</span><span class="lbl">Optional Standard Deduction (OSD) <em>(40% of Item 33)</em></span><span class="amt"><input class="num calc" name="i38" data-calc="0.40*n('i33')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">39</span><span class="lbl">Net Taxable Income/(Loss) <em>(If Itemized: Item 33 Less Item 37; If OSD: Item 33 Less Item 38)</em></span><span class="amt"><input class="num calc" name="i39" data-calc="v('method')==='osd'?n('i33')-n('i38'):n('i33')-n('i37')" readonly type="text"></span></div>
+    <div class="item"><span class="no">40</span><span class="lbl">Applicable Income Tax Rate <span class="small" style="font-style:italic;font-weight:400">(printed 2018 form said 30%; CREATE &mdash; RA 11534 &mdash; rate is 25%, or 20% for qualifying MSMEs)</span></span><span class="amt"><input class="num short" name="i40" type="text" value="25"> <span class="lbl">%</span></span></div>
+    <div class="item"><span class="no">41</span><span class="lbl">Income Tax Due other than Minimum Corporate Income Tax (MCIT) <em>(Item 39 x Item 40)</em></span><span class="amt"><input class="num calc" name="i41" data-calc="n('i39')*(n('i40')||25)/100" readonly type="text"></span></div>
+    <div class="item"><span class="no">42</span><span class="lbl">MCIT Due <em>(2% of Item 33)</em> &mdash; rate <input class="num short" name="mcit_rate" type="text" value="2" style="width:3em;text-align:center"> %</span><span class="amt"><input class="num calc" name="i42" data-calc="(n('mcit_rate')||2)/100*n('i33')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">43</span><span class="lbl">Tax Due <em>(Normal Income Tax Due in Item 41 OR the MCIT Due in Item 42, whichever is higher) (To Part II Item 14)</em></span><span class="amt"><input class="num calc" name="i43" data-calc="Math.max(n('i41'),n('i42'))" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Less: Tax Credits/Payments (attach proof)</span><span class="amt"></span></div>
+    <div class="item"><span class="no">44</span><span class="lbl">Prior Year&rsquo;s Excess Credits other than MCIT</span><span class="amt"><input class="num" name="i44" type="text"></span></div>
+    <div class="item"><span class="no">45</span><span class="lbl">Income Tax Payment under MCIT from Previous Quarter/s</span><span class="amt"><input class="num" name="i45" type="text"></span></div>
+    <div class="item"><span class="no">46</span><span class="lbl">Income Tax Payment under Regular/Normal Rate from Previous Quarter/s</span><span class="amt"><input class="num" name="i46" type="text"></span></div>
+    <div class="item"><span class="no">47</span><span class="lbl">Excess MCIT Applied this Current Taxable Year <em>(From Part VI Schedule IV Item 4)</em></span><span class="amt"><input class="num calc" name="i47" data-calc="n('s4_4')" readonly type="text"></span></div>
+    <div class="item"><span class="no">48</span><span class="lbl">Creditable Tax Withheld from Previous Quarter/s per BIR Form No. 2307</span><span class="amt"><input class="num" name="i48" type="text"></span></div>
+    <div class="item"><span class="no">49</span><span class="lbl">Creditable Tax Withheld per BIR Form No. 2307 for the 4th Quarter</span><span class="amt"><input class="num" name="i49" type="text"></span></div>
+    <div class="item"><span class="no">50</span><span class="lbl">Foreign Tax Credits, if applicable</span><span class="amt"><input class="num" name="i50" type="text"></span></div>
+    <div class="item"><span class="no">51</span><span class="lbl">Tax Paid in Return Previously Filed, if this is an Amended Return</span><span class="amt"><input class="num" name="i51" type="text"></span></div>
+    <div class="item"><span class="no">52</span><span class="lbl">Special Tax Credits <em>(To Part V Item 58)</em></span><span class="amt"><input class="num" name="i52" type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Other Tax Credits/Payments (specify)</span><span class="amt"></span></div>
+    <div class="item"><span class="no">53</span><span class="lbl"><input type="text" name="i53_desc"></span><span class="amt"><input class="num" name="i53" type="text"></span></div>
+    <div class="item"><span class="no">54</span><span class="lbl"><input type="text" name="i54_desc"></span><span class="amt"><input class="num" name="i54" type="text"></span></div>
+    <div class="item total"><span class="no">55</span><span class="lbl">Total Tax Credits/Payments <em>(Sum of Items 44 to 54) (To Part II Item 15)</em></span><span class="amt"><input class="num calc" name="i55" data-calc="n('i44')+n('i45')+n('i46')+n('i47')+n('i48')+n('i49')+n('i50')+n('i51')+n('i52')+n('i53')+n('i54')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">56</span><span class="lbl">Net Tax Payable / (Overpayment) <em>(Item 43 Less Item 55) (To Part II Item 16)</em></span><span class="amt"><input class="num calc" name="i56" data-calc="n('i43')-n('i55')" readonly type="text"></span></div>
+  </div>
+
+  <div class="part-title">Part V &ndash; Tax Relief Availment</div>
+  <div class="grid">
+    <div class="item"><span class="no">57</span><span class="lbl">Special Allowable Itemized Deductions <em>(Item 35 of Part IV x Applicable Income Tax Rate)</em></span><span class="amt"><input class="num calc" name="i57" data-calc="n('i35')*(n('i40')||25)/100" readonly type="text"></span></div>
+    <div class="item"><span class="no">58</span><span class="lbl">Add: Special Tax Credits <em>(From Part IV Item 52)</em></span><span class="amt"><input class="num calc" name="i58" data-calc="n('i52')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">59</span><span class="lbl">Total Tax Relief Availment <em>(Sum of Items 57 and 58)</em></span><span class="amt"><input class="num calc" name="i59" data-calc="n('i57')+n('i58')" readonly type="text"></span></div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3 ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span class="bold">BIR Form No. 1702-RT &mdash; January 2018 (ENCS) &mdash; Page 3</span><span>1702-RT 01/18ENCS P3</span></div>
+  <div class="grid" style="border-top:2px solid var(--ink);">
+    <div class="row">
+      <div class="cell"><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin_p3" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="lbl">Registered Name</span><input type="text" name="reg_name_p3" style="text-transform:uppercase"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part VI &ndash; Schedules <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <div class="sub-title">Schedule I &ndash; Ordinary Allowable Itemized Deductions (attach additional sheet/s, if necessary)</div>
+  <div class="grid">
+    <div class="item"><span class="no">1</span><span class="lbl">Amortizations</span><span class="amt"><input class="num" name="s1_1" type="text"></span></div>
+    <div class="item"><span class="no">2</span><span class="lbl">Bad Debts</span><span class="amt"><input class="num" name="s1_2" type="text"></span></div>
+    <div class="item"><span class="no">3</span><span class="lbl">Charitable and Other Contributions</span><span class="amt"><input class="num" name="s1_3" type="text"></span></div>
+    <div class="item"><span class="no">4</span><span class="lbl">Depletion</span><span class="amt"><input class="num" name="s1_4" type="text"></span></div>
+    <div class="item"><span class="no">5</span><span class="lbl">Depreciation</span><span class="amt"><input class="num" name="s1_5" type="text"></span></div>
+    <div class="item"><span class="no">6</span><span class="lbl">Entertainment, Amusement and Recreation</span><span class="amt"><input class="num" name="s1_6" type="text"></span></div>
+    <div class="item"><span class="no">7</span><span class="lbl">Fringe Benefits</span><span class="amt"><input class="num" name="s1_7" type="text"></span></div>
+    <div class="item"><span class="no">8</span><span class="lbl">Interest</span><span class="amt"><input class="num" name="s1_8" type="text"></span></div>
+    <div class="item"><span class="no">9</span><span class="lbl">Losses</span><span class="amt"><input class="num" name="s1_9" type="text"></span></div>
+    <div class="item"><span class="no">10</span><span class="lbl">Pension Trusts</span><span class="amt"><input class="num" name="s1_10" type="text"></span></div>
+    <div class="item"><span class="no">11</span><span class="lbl">Rental</span><span class="amt"><input class="num" name="s1_11" type="text"></span></div>
+    <div class="item"><span class="no">12</span><span class="lbl">Research and Development</span><span class="amt"><input class="num" name="s1_12" type="text"></span></div>
+    <div class="item"><span class="no">13</span><span class="lbl">Salaries, Wages and Allowances</span><span class="amt"><input class="num" name="s1_13" type="text"></span></div>
+    <div class="item"><span class="no">14</span><span class="lbl">SSS, GSIS, Philhealth, HDMF and Other Contributions</span><span class="amt"><input class="num" name="s1_14" type="text"></span></div>
+    <div class="item"><span class="no">15</span><span class="lbl">Taxes and Licenses</span><span class="amt"><input class="num" name="s1_15" type="text"></span></div>
+    <div class="item"><span class="no">16</span><span class="lbl">Transportation and Travel</span><span class="amt"><input class="num" name="s1_16" type="text"></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl">Others (Deductions Subject to Withholding Tax and Other Expenses) [Specify below; Add additional sheet(s), if necessary]</span><span class="amt"></span></div>
+    <div class="item"><span class="no">a</span><span class="lbl">Janitorial and Messengerial Services</span><span class="amt"><input class="num" name="s1_17a" type="text"></span></div>
+    <div class="item"><span class="no">b</span><span class="lbl">Professional Fees</span><span class="amt"><input class="num" name="s1_17b" type="text"></span></div>
+    <div class="item"><span class="no">c</span><span class="lbl">Security Services</span><span class="amt"><input class="num" name="s1_17c" type="text"></span></div>
+    <div class="item"><span class="no">d</span><span class="lbl"><input type="text" name="s1_17d_desc"></span><span class="amt"><input class="num" name="s1_17d" type="text"></span></div>
+    <div class="item"><span class="no">e</span><span class="lbl"><input type="text" name="s1_17e_desc"></span><span class="amt"><input class="num" name="s1_17e" type="text"></span></div>
+    <div class="item"><span class="no">f</span><span class="lbl"><input type="text" name="s1_17f_desc"></span><span class="amt"><input class="num" name="s1_17f" type="text"></span></div>
+    <div class="item"><span class="no">g</span><span class="lbl"><input type="text" name="s1_17g_desc"></span><span class="amt"><input class="num" name="s1_17g" type="text"></span></div>
+    <div class="item"><span class="no">h</span><span class="lbl"><input type="text" name="s1_17h_desc"></span><span class="amt"><input class="num" name="s1_17h" type="text"></span></div>
+    <div class="item"><span class="no">i</span><span class="lbl"><input type="text" name="s1_17i_desc"></span><span class="amt"><input class="num" name="s1_17i" type="text"></span></div>
+    <div class="item total"><span class="no">18</span><span class="lbl">Total Ordinary Allowable Itemized Deductions <em>(Sum of Items 1 to 17i) (To Part IV Item 34)</em></span><span class="amt"><input class="num calc" name="s1_18" data-calc="n('s1_1')+n('s1_2')+n('s1_3')+n('s1_4')+n('s1_5')+n('s1_6')+n('s1_7')+n('s1_8')+n('s1_9')+n('s1_10')+n('s1_11')+n('s1_12')+n('s1_13')+n('s1_14')+n('s1_15')+n('s1_16')+n('s1_17a')+n('s1_17b')+n('s1_17c')+n('s1_17d')+n('s1_17e')+n('s1_17f')+n('s1_17g')+n('s1_17h')+n('s1_17i')" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title mt">Schedule II &ndash; Special Allowable Itemized Deductions (attach additional sheet/s, if necessary)</div>
+  <table class="sched">
+    <tr><th style="width:6%"></th><th style="width:44%">Description</th><th style="width:25%">Legal Basis</th><th>Amount</th></tr>
+    <tr><td class="center"><span class="no">1</span></td><td><input type="text" name="s2_r1_desc"></td><td><input type="text" name="s2_r1_basis"></td><td><input class="num" type="text" name="s2_r1"></td></tr>
+    <tr><td class="center"><span class="no">2</span></td><td><input type="text" name="s2_r2_desc"></td><td><input type="text" name="s2_r2_basis"></td><td><input class="num" type="text" name="s2_r2"></td></tr>
+    <tr><td class="center"><span class="no">3</span></td><td><input type="text" name="s2_r3_desc"></td><td><input type="text" name="s2_r3_basis"></td><td><input class="num" type="text" name="s2_r3"></td></tr>
+    <tr><td class="center"><span class="no">4</span></td><td><input type="text" name="s2_r4_desc"></td><td><input type="text" name="s2_r4_basis"></td><td><input class="num" type="text" name="s2_r4"></td></tr>
+    <tfoot><tr><td class="center"><span class="no">5</span></td><td colspan="2">Total Special Allowable Itemized Deductions <em>(Sum of Items 1 to 4) (To Part IV Item 35)</em></td><td><input class="num calc" type="text" name="s2_5" data-calc="n('s2_r1')+n('s2_r2')+n('s2_r3')+n('s2_r4')" readonly></td></tr></tfoot>
+  </table>
+</div>
+
+<!-- ==================== PAGE 4 ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span class="bold">BIR Form No. 1702-RT &mdash; January 2018 (ENCS) &mdash; Page 4</span><span>1702-RT 01/18ENCS P4</span></div>
+  <div class="grid" style="border-top:2px solid var(--ink);">
+    <div class="row">
+      <div class="cell"><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin_p4" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="lbl">Registered Name</span><input type="text" name="reg_name_p4" style="text-transform:uppercase"></div>
+    </div>
+  </div>
+
+  <div class="sub-title mt">Schedule III &ndash; Computation of Net Operating Loss Carry Over (NOLCO)</div>
+  <div class="grid">
+    <div class="item"><span class="no">1</span><span class="lbl">Gross Income <em>(From Part IV Item 33)</em></span><span class="amt"><input class="num calc" name="s3_1" data-calc="n('i33')" readonly type="text"></span></div>
+    <div class="item"><span class="no">2</span><span class="lbl">Less: Ordinary Allowable Itemized Deductions <em>(From Part VI Schedule I Item 18)</em></span><span class="amt"><input class="num calc" name="s3_2" data-calc="n('s1_18')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">3</span><span class="lbl">Net Operating Loss <em>(Item 1 Less Item 2) (To Schedule IIIA, Item 7A)</em></span><span class="amt"><input class="num calc" name="s3_3" data-calc="n('s3_1')-n('s3_2')" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title mt">Schedule IIIA &ndash; Computation of Available Net Operating Loss Carry Over (NOLCO) <span style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <table class="sched">
+    <tr><th style="width:5%"></th><th style="width:12%">Year Incurred</th><th>A) Amount</th><th>B) NOLCO Applied Previous Year/s</th><th>C) NOLCO Expired</th><th>D) NOLCO Applied Current Year</th><th>E) Net Operating Loss (Unapplied) [E = A Less (B + C + D)]</th></tr>
+    <tr><td class="center"><span class="no">4</span></td><td><input type="text" name="s3a_r4_year"></td><td><input class="num" type="text" name="s3a_r4_a"></td><td><input class="num" type="text" name="s3a_r4_b"></td><td><input class="num" type="text" name="s3a_r4_c"></td><td><input class="num" type="text" name="s3a_r4_d"></td><td><input class="num calc" type="text" name="s3a_r4_e" data-calc="n('s3a_r4_a')-(n('s3a_r4_b')+n('s3a_r4_c')+n('s3a_r4_d'))" readonly></td></tr>
+    <tr><td class="center"><span class="no">5</span></td><td><input type="text" name="s3a_r5_year"></td><td><input class="num" type="text" name="s3a_r5_a"></td><td><input class="num" type="text" name="s3a_r5_b"></td><td><input class="num" type="text" name="s3a_r5_c"></td><td><input class="num" type="text" name="s3a_r5_d"></td><td><input class="num calc" type="text" name="s3a_r5_e" data-calc="n('s3a_r5_a')-(n('s3a_r5_b')+n('s3a_r5_c')+n('s3a_r5_d'))" readonly></td></tr>
+    <tr><td class="center"><span class="no">6</span></td><td><input type="text" name="s3a_r6_year"></td><td><input class="num" type="text" name="s3a_r6_a"></td><td><input class="num" type="text" name="s3a_r6_b"></td><td><input class="num" type="text" name="s3a_r6_c"></td><td><input class="num" type="text" name="s3a_r6_d"></td><td><input class="num calc" type="text" name="s3a_r6_e" data-calc="n('s3a_r6_a')-(n('s3a_r6_b')+n('s3a_r6_c')+n('s3a_r6_d'))" readonly></td></tr>
+    <tr><td class="center"><span class="no">7</span></td><td><input type="text" name="s3a_r7_year"></td><td><input class="num" type="text" name="s3a_r7_a"></td><td><input class="num" type="text" name="s3a_r7_b"></td><td><input class="num" type="text" name="s3a_r7_c"></td><td><input class="num" type="text" name="s3a_r7_d"></td><td><input class="num calc" type="text" name="s3a_r7_e" data-calc="n('s3a_r7_a')-(n('s3a_r7_b')+n('s3a_r7_c')+n('s3a_r7_d'))" readonly></td></tr>
+    <tfoot><tr><td class="center"><span class="no">8</span></td><td colspan="4">Total NOLCO <em>(Sum of Items 4D to 7D) (To Part IV, Item 36)</em></td><td colspan="2"><input class="num calc" type="text" name="s3a_8" data-calc="n('s3a_r4_d')+n('s3a_r5_d')+n('s3a_r6_d')+n('s3a_r7_d')" readonly></td></tr></tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule IV &ndash; Computation of Minimum Corporate Income Tax (MCIT)</div>
+  <table class="sched">
+    <tr><th style="width:5%"></th><th style="width:9%">Year</th><th>A) Normal Income Tax as Adjusted</th><th>B) MCIT</th><th>C) Excess MCIT over Normal Income Tax</th><th>D) Excess MCIT Applied/Used in Previous Years</th><th>E) Expired Portion of Excess MCIT</th><th>F) Excess MCIT Applied this Current Taxable Year</th><th>G) Balance of Excess MCIT Allowable as Tax Credit for Succeeding Year/s [G = C Less (D + E + F)]</th></tr>
+    <tr><td class="center"><span class="no">1</span></td><td><input type="text" name="s4_r1_year"></td><td><input class="num" type="text" name="s4_r1_a"></td><td><input class="num" type="text" name="s4_r1_b"></td><td><input class="num" type="text" name="s4_r1_c"></td><td><input class="num" type="text" name="s4_r1_d"></td><td><input class="num" type="text" name="s4_r1_e"></td><td><input class="num" type="text" name="s4_r1_f"></td><td><input class="num calc" type="text" name="s4_r1_g" data-calc="n('s4_r1_c')-(n('s4_r1_d')+n('s4_r1_e')+n('s4_r1_f'))" readonly></td></tr>
+    <tr><td class="center"><span class="no">2</span></td><td><input type="text" name="s4_r2_year"></td><td><input class="num" type="text" name="s4_r2_a"></td><td><input class="num" type="text" name="s4_r2_b"></td><td><input class="num" type="text" name="s4_r2_c"></td><td><input class="num" type="text" name="s4_r2_d"></td><td><input class="num" type="text" name="s4_r2_e"></td><td><input class="num" type="text" name="s4_r2_f"></td><td><input class="num calc" type="text" name="s4_r2_g" data-calc="n('s4_r2_c')-(n('s4_r2_d')+n('s4_r2_e')+n('s4_r2_f'))" readonly></td></tr>
+    <tr><td class="center"><span class="no">3</span></td><td><input type="text" name="s4_r3_year"></td><td><input class="num" type="text" name="s4_r3_a"></td><td><input class="num" type="text" name="s4_r3_b"></td><td><input class="num" type="text" name="s4_r3_c"></td><td><input class="num" type="text" name="s4_r3_d"></td><td><input class="num" type="text" name="s4_r3_e"></td><td><input class="num" type="text" name="s4_r3_f"></td><td><input class="num calc" type="text" name="s4_r3_g" data-calc="n('s4_r3_c')-(n('s4_r3_d')+n('s4_r3_e')+n('s4_r3_f'))" readonly></td></tr>
+    <tfoot><tr><td class="center"><span class="no">4</span></td><td colspan="6">Total Excess MCIT Applied <em>(Sum of Items 1F to 3F) (To Part IV Item 47)</em></td><td colspan="2"><input class="num calc" type="text" name="s4_4" data-calc="n('s4_r1_f')+n('s4_r2_f')+n('s4_r3_f')" readonly></td></tr></tfoot>
+  </table>
+
+  <div class="sub-title mt">Schedule V &ndash; Reconciliation of Net Income per Books Against Taxable Income (attach additional sheet/s, if necessary)</div>
+  <div class="grid">
+    <div class="item"><span class="no">1</span><span class="lbl">Net Income/(Loss) per Books</span><span class="amt"><input class="num" name="s5_1" type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Add: Non-Deductible Expenses/Taxable Other Income</span><span class="amt"></span></div>
+    <div class="item"><span class="no">2</span><span class="lbl"><input type="text" name="s5_2_desc"></span><span class="amt"><input class="num" name="s5_2" type="text"></span></div>
+    <div class="item"><span class="no">3</span><span class="lbl"><input type="text" name="s5_3_desc"></span><span class="amt"><input class="num" name="s5_3" type="text"></span></div>
+    <div class="item total"><span class="no">4</span><span class="lbl">Total <em>(Sum of Items 1 to 3)</em></span><span class="amt"><input class="num calc" name="s5_4" data-calc="n('s5_1')+n('s5_2')+n('s5_3')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Less: A) Non-Taxable Income and Income Subjected to Final Tax</span><span class="amt"></span></div>
+    <div class="item"><span class="no">5</span><span class="lbl"><input type="text" name="s5_5_desc"></span><span class="amt"><input class="num" name="s5_5" type="text"></span></div>
+    <div class="item"><span class="no">6</span><span class="lbl"><input type="text" name="s5_6_desc"></span><span class="amt"><input class="num" name="s5_6" type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">B) Special Deductions</span><span class="amt"></span></div>
+    <div class="item"><span class="no">7</span><span class="lbl"><input type="text" name="s5_7_desc"></span><span class="amt"><input class="num" name="s5_7" type="text"></span></div>
+    <div class="item"><span class="no">8</span><span class="lbl"><input type="text" name="s5_8_desc"></span><span class="amt"><input class="num" name="s5_8" type="text"></span></div>
+    <div class="item total"><span class="no">9</span><span class="lbl">Total <em>(Sum of Items 5 to 8)</em></span><span class="amt"><input class="num calc" name="s5_9" data-calc="n('s5_5')+n('s5_6')+n('s5_7')+n('s5_8')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">10</span><span class="lbl">Net Taxable Income/(Loss) <em>(Item 4 Less Item 9)</em></span><span class="amt"><input class="num calc" name="s5_10" data-calc="n('s5_4')-n('s5_9')" readonly type="text"></span></div>
+  </div>
+</div>
+
+</body>
+</html>

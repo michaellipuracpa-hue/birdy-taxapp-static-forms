@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1702Q — Quarterly Income Tax Return (Non-Individuals)</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1702Q">
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span>For BIR Use Only &nbsp; BCS/Item:</span><span>1702Q 01/18ENCS P1</span></div>
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Income Tax Return</div>
+      <div class="fh-sub">For Corporations, Partnerships and Other Non-Individual Taxpayers<br>
+      Enter all required information in CAPITAL LETTERS. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1702Q</span><span class="ver">January 2018 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">For</span>
+        <label class="opt"><input type="radio" name="period_type" value="calendar"> Calendar</label>
+        <label class="opt"><input type="radio" name="period_type" value="fiscal"> Fiscal</label>
+      </div>
+      <div class="cell"><span class="no">3</span><span class="lbl">Quarter</span>
+        <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+        <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+        <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+      </div>
+      <div class="cell"><span class="no">4</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">2</span><span class="lbl">Year Ended (MM/20YY)</span><input type="text" name="year_ended" class="short" placeholder="MM/20YY"></div>
+      <div class="cell"><span class="no">5</span><span class="lbl">Alphanumeric Tax Code (ATC)</span><input type="text" name="atc" class="short" placeholder="IC 055">
+        <label class="opt"><input type="checkbox" name="atc_mcit"> IC 055 &nbsp;Minimum Corporate Income Tax (MCIT)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">7</span><span class="lbl">RDO Code</span><input type="text" name="rdo" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">8</span> <span class="lbl">Registered Name (Enter only 1 letter per box using CAPITAL LETTERS)</span></span><input type="text" name="reg_name" style="text-transform:uppercase"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span><span class="no">9</span> <span class="lbl">Registered Address (Indicate complete address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span></span><input type="text" name="reg_address" style="text-transform:uppercase"></div>
+      <div class="cell stack" style="flex:0 0 120px;"><span><span class="no">9A</span> <span class="lbl">ZIP Code</span></span><input type="text" name="zip"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">10</span><span class="lbl">Contact Number (Landline/Cellphone No.)</span><input type="text" name="contact_no"></div>
+      <div class="cell"><span class="no">11</span><span class="lbl">Email Address</span><input type="text" name="email"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">12</span><span class="lbl">Method of Deductions</span>
+        <label class="opt"><input type="radio" name="method" value="itemized"> Itemized Deductions [Section 34 (A-J), NIRC]</label>
+        <label class="opt"><input type="radio" name="method" value="osd"> Optional Standard Deduction (OSD) &ndash; 40% of Gross Income [Section 34(L) NIRC, as amended]</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">13</span><span class="lbl">Are you availing of tax relief under Special Law/International Tax Treaty?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">13A</span><span class="lbl">If yes, specify</span><input type="text" name="tax_relief_specify"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Total Tax Payable <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+  <div class="grid">
+    <div class="item"><span class="no">14</span><span class="lbl">Income Tax Due &ndash; Regular/Normal Rate <em>(From Part IV - Schedule 2, Item 13)</em></span><span class="amt"><input class="num calc" name="i14" data-calc="n('s2_13')" readonly type="text"></span></div>
+    <div class="item"><span class="no">15</span><span class="lbl">Less: Unexpired Excess of Prior Year&rsquo;s MCIT over Regular/Normal Income Tax Rate <em>(deductible only if the quarterly&rsquo;s tax due is the regular/normal rate)</em></span><span class="amt"><input class="num" name="i15" type="text"></span></div>
+    <div class="item total"><span class="no">16</span><span class="lbl">Balance/Income Tax Still Due &ndash; Regular/Normal Rate <em>(Item 14 Less Item 15)</em></span><span class="amt"><input class="num calc" name="i16" data-calc="n('i14')-n('i15')" readonly type="text"></span></div>
+    <div class="item"><span class="no">17</span><span class="lbl">Add: Income Tax Due &ndash; Special Rate <em>(From Part IV - Schedule 1, Item 13)</em></span><span class="amt"><input class="num calc" name="i17" data-calc="n('s1_13b')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">18</span><span class="lbl">Aggregate Income Tax Due <em>(Sum of Items 16 and 17)</em></span><span class="amt"><input class="num calc" name="i18" data-calc="n('i16')+n('i17')" readonly type="text"></span></div>
+    <div class="item"><span class="no">19</span><span class="lbl">Less: Total Tax Credits/Payments <em>(From Part IV - Schedule 4, Item 7)</em></span><span class="amt"><input class="num calc" name="i19" data-calc="n('s4_7')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">20</span><span class="lbl">Net Tax Payable / (Overpayment) <em>(Item 18 Less Item 19)</em></span><span class="amt"><input class="num calc" name="i20" data-calc="n('i18')-n('i19')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">21</span><span class="lbl">Surcharge</span><span class="amt"><input class="num" name="i21" type="text"></span></div>
+    <div class="item"><span class="no">22</span><span class="lbl">Interest</span><span class="amt"><input class="num" name="i22" type="text"></span></div>
+    <div class="item"><span class="no">23</span><span class="lbl">Compromise</span><span class="amt"><input class="num" name="i23" type="text"></span></div>
+    <div class="item total"><span class="no">24</span><span class="lbl">Total Penalties <em>(Sum of Items 21 to 23)</em></span><span class="amt"><input class="num calc" name="i24" data-calc="n('i21')+n('i22')+n('i23')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">25</span><span class="lbl">TOTAL AMOUNT PAYABLE / (Overpayment) <em>(Sum of Items 20 and 24)</em></span><span class="amt"><input class="num calc" name="i25" data-calc="n('i20')+n('i24')" readonly type="text"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell small" style="border-right:none;">We declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by us, and to the best of our knowledge and belief, are true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. <em>(If signed by an Authorized Representative, indicate TIN and attach authorization letter)</em></div>
+      <div class="cell stack" style="flex:0 0 110px;"><span><span class="no">26</span> <span class="lbl">Number of Attachments</span></span><input type="text" name="attachments_no" class="num"></div>
+    </div>
+  </div>
+  <div class="sig-block">
+    <div class="sig"><div class="line"><input type="text" name="sig1_name"></div><div class="cap">Signature over Printed Name of President/Principal Officer/Authorized Representative</div>
+      <div class="row" style="border:none;"><div class="cell"><span class="lbl">Title of Signatory</span><input type="text" name="sig1_title"></div><div class="cell"><span class="lbl">TIN</span><input type="text" name="sig1_tin"></div></div></div>
+    <div class="sig"><div class="line"><input type="text" name="sig2_name"></div><div class="cap">Signature over Printed Name of Treasurer/Assistant Treasurer</div>
+      <div class="row" style="border:none;"><div class="cell"><span class="lbl">Title of Signatory</span><input type="text" name="sig2_title"></div><div class="cell"><span class="lbl">TIN</span><input type="text" name="sig2_tin"></div></div></div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <tr><th style="width:22%">Particulars</th><th style="width:24%">Drawee Bank/Agency</th><th style="width:18%">Number</th><th style="width:16%">Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    <tr><td><span class="no">27</span> Cash/Bank Debit Memo</td><td><input type="text" name="pay27_bank"></td><td><input type="text" name="pay27_number"></td><td><input type="text" name="pay27_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay27_amount"></td></tr>
+    <tr><td><span class="no">28</span> Check</td><td><input type="text" name="pay28_bank"></td><td><input type="text" name="pay28_number"></td><td><input type="text" name="pay28_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay28_amount"></td></tr>
+    <tr><td><span class="no">29</span> Tax Debit Memo</td><td><input type="text" name="pay29_bank"></td><td><input type="text" name="pay29_number"></td><td><input type="text" name="pay29_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay29_amount"></td></tr>
+    <tr><td><span class="no">30</span> Others (specify) <input type="text" name="pay30_specify"></td><td><input type="text" name="pay30_bank"></td><td><input type="text" name="pay30_number"></td><td><input type="text" name="pay30_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay30_amount"></td></tr>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack"><span class="lbl">Machine Validation/Revenue Official Receipt Details [if not filed with an Authorized Agent Bank (AAB)]</span><textarea name="machine_validation" rows="2"></textarea></div>
+      <div class="cell stack" style="flex:0 0 220px;"><span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="2"></textarea></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span class="bold">BIR Form No. 1702Q &mdash; January 2018 (ENCS) &mdash; Page 2</span><span>1702Q 01/18ENCS P2</span></div>
+  <div class="grid" style="border-top:2px solid var(--ink);">
+    <div class="row">
+      <div class="cell"><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin_p2" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="lbl">Registered Name</span><input type="text" name="reg_name_p2" style="text-transform:uppercase"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part IV &ndash; Schedules <span class="small" style="font-weight:400">(DO NOT enter Centavos; 49 Centavos or Less drop down; 50 or more round up)</span></div>
+
+  <div class="sub-title">Schedule 1 &ndash; Declaration this Quarter</div>
+  <table class="sched">
+    <tr><th style="width:4%"></th><th style="width:48%">Description</th><th style="width:24%">A. EXEMPT</th><th>B. SPECIAL</th></tr>
+    <tr><td class="center"><span class="no">1</span></td><td>Sales/Receipts/Revenues/Fees</td><td><input class="num" type="text" name="s1_1a"></td><td><input class="num" type="text" name="s1_1b"></td></tr>
+    <tr><td class="center"><span class="no">2</span></td><td>Less: Cost of Sales/Services</td><td><input class="num" type="text" name="s1_2a"></td><td><input class="num" type="text" name="s1_2b"></td></tr>
+    <tr><td class="center"><span class="no">3</span></td><td class="bold">Gross Income from Operation <em class="small">(Item 1 Less Item 2)</em></td><td><input class="num calc" type="text" name="s1_3a" data-calc="n('s1_1a')-n('s1_2a')" readonly></td><td><input class="num calc" type="text" name="s1_3b" data-calc="n('s1_1b')-n('s1_2b')" readonly></td></tr>
+    <tr><td class="center"><span class="no">4</span></td><td>Add: Non-Operating and Other Taxable Income</td><td><input class="num" type="text" name="s1_4a"></td><td><input class="num" type="text" name="s1_4b"></td></tr>
+    <tr><td class="center"><span class="no">5</span></td><td class="bold">Total Gross Income <em class="small">(Sum of Items 3 and 4)</em></td><td><input class="num calc" type="text" name="s1_5a" data-calc="n('s1_3a')+n('s1_4a')" readonly></td><td><input class="num calc" type="text" name="s1_5b" data-calc="n('s1_3b')+n('s1_4b')" readonly></td></tr>
+    <tr><td class="center"><span class="no">6</span></td><td>Less: Deductions <span class="small">(if OSD is marked in Item 12, 40% of Item 5 is applied automatically in Item 7)</span></td><td><input class="num" type="text" name="s1_6a"></td><td><input class="num" type="text" name="s1_6b"></td></tr>
+    <tr><td class="center"><span class="no">7</span></td><td class="bold">Taxable Income this Quarter <em class="small">(Item 5 Less Item 6)</em></td><td><input class="num calc" type="text" name="s1_7a" data-calc="n('s1_5a')-(v('method')==='osd'?0.40*n('s1_5a'):n('s1_6a'))" readonly></td><td><input class="num calc" type="text" name="s1_7b" data-calc="n('s1_5b')-(v('method')==='osd'?0.40*n('s1_5b'):n('s1_6b'))" readonly></td></tr>
+    <tr><td class="center"><span class="no">8</span></td><td>Add: Taxable Income Previous Quarter/s</td><td><input class="num" type="text" name="s1_8a"></td><td><input class="num" type="text" name="s1_8b"></td></tr>
+    <tr><td class="center"><span class="no">9</span></td><td class="bold">Total Taxable Income to Date <em class="small">(Sum of Items 7 &amp; 8)</em></td><td><input class="num calc" type="text" name="s1_9a" data-calc="n('s1_7a')+n('s1_8a')" readonly></td><td><input class="num calc" type="text" name="s1_9b" data-calc="n('s1_7b')+n('s1_8b')" readonly></td></tr>
+    <tr><td class="center"><span class="no">10</span></td><td>Applicable Income Tax Rate <em class="small">[except minimum corporate income tax (MCIT) rate]</em></td><td class="center" style="background:var(--shade)">0 %</td><td><input class="num" type="text" name="s1_10b"> <span class="small">%</span></td></tr>
+    <tr><td class="center"><span class="no">11</span></td><td>Income Tax Due Other than MCIT <em class="small">(Item 9 x Item 10)</em></td><td class="center" style="background:var(--shade)">0.00</td><td><input class="num calc" type="text" name="s1_11b" data-calc="n('s1_9b')*n('s1_10b')/100" readonly></td></tr>
+    <tr><td class="center"><span class="no">12</span></td><td>Less: Share of Other Agencies, if remitted directly</td><td style="background:var(--shade)"></td><td><input class="num" type="text" name="s1_12b"></td></tr>
+    <tr><td class="center"><span class="no">13</span></td><td class="bold">Net Income Tax Due to National Government <em class="small">(Item 11 Less Item 12) (To Part II Item 17)</em></td><td style="background:var(--shade)"></td><td><input class="num calc" type="text" name="s1_13b" data-calc="n('s1_11b')-n('s1_12b')" readonly></td></tr>
+  </table>
+
+  <div class="sub-title mt">Schedule 2 &ndash; Declaration this Quarter &ndash; REGULAR/NORMAL RATE</div>
+  <div class="grid">
+    <div class="item"><span class="no">1</span><span class="lbl">Sales/Receipts/Revenues/Fees</span><span class="amt"><input class="num" name="s2_1" type="text"></span></div>
+    <div class="item"><span class="no">2</span><span class="lbl">Less: Cost of Sales/Services</span><span class="amt"><input class="num" name="s2_2" type="text"></span></div>
+    <div class="item total"><span class="no">3</span><span class="lbl">Gross Income from Operation <em>(Item 1 Less Item 2)</em></span><span class="amt"><input class="num calc" name="s2_3" data-calc="n('s2_1')-n('s2_2')" readonly type="text"></span></div>
+    <div class="item"><span class="no">4</span><span class="lbl">Add: Non-Operating and Other Taxable Income</span><span class="amt"><input class="num" name="s2_4" type="text"></span></div>
+    <div class="item total"><span class="no">5</span><span class="lbl">Total Gross Income <em>(Sum of Items 3 and 4)</em></span><span class="amt"><input class="num calc" name="s2_5" data-calc="n('s2_3')+n('s2_4')" readonly type="text"></span></div>
+    <div class="item"><span class="no">6</span><span class="lbl">Less: Deductions <span class="small">(if OSD is marked in Item 12, 40% of Item 5 is applied automatically in Item 7)</span></span><span class="amt"><input class="num" name="s2_6" type="text"></span></div>
+    <div class="item total"><span class="no">7</span><span class="lbl">Taxable Income this Quarter <em>(Item 5 Less Item 6)</em></span><span class="amt"><input class="num calc" name="s2_7" data-calc="n('s2_5')-(v('method')==='osd'?0.40*n('s2_5'):n('s2_6'))" readonly type="text"></span></div>
+    <div class="item"><span class="no">8</span><span class="lbl">Add: Taxable Income Previous Quarter/s</span><span class="amt"><input class="num" name="s2_8" type="text"></span></div>
+    <div class="item total"><span class="no">9</span><span class="lbl">Total Taxable Income to Date <em>(Sum of Items 7 and 8)</em></span><span class="amt"><input class="num calc" name="s2_9" data-calc="n('s2_7')+n('s2_8')" readonly type="text"></span></div>
+    <div class="item"><span class="no">10</span><span class="lbl">Applicable Income Tax Rate <em>(except MCIT rate)</em> <span class="small">(printed 2018 form: 30%; CREATE: 25%, or 20% for qualifying MSMEs)</span></span><span class="amt"><input class="num" name="s2_10" type="text" value="25"> <span class="lbl">%</span></span></div>
+    <div class="item"><span class="no">11</span><span class="lbl">Income Tax Due Other than MCIT <em>(Item 9 multiply by Item 10)</em></span><span class="amt"><input class="num calc" name="s2_11" data-calc="n('s2_9')*n('s2_10')/100" readonly type="text"></span></div>
+    <div class="item"><span class="no">12</span><span class="lbl">Minimum Corporate Income Tax (MCIT) <em>(From Schedule 3 Item 6)</em></span><span class="amt"><input class="num calc" name="s2_12" data-calc="n('s3_6')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">13</span><span class="lbl">Income Tax Due <em>(Normal Income Tax in Item 11 or MCIT in Item 12 whichever is higher) (To Part II Item 14)</em></span><span class="amt"><input class="num calc" name="s2_13" data-calc="Math.max(n('s2_11'),n('s2_12'))" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title mt">Schedule 3 &ndash; Computation of Minimum Corporate Income Tax (MCIT) for the Quarter/s</div>
+  <div class="grid">
+    <div class="item"><span class="no">1</span><span class="lbl">Gross Income Regular/Normal Rate &ndash; 1st Quarter</span><span class="amt"><input class="num" name="s3_1" type="text"></span></div>
+    <div class="item"><span class="no">2</span><span class="lbl">Gross Income Regular/Normal Rate &ndash; 2nd Quarter</span><span class="amt"><input class="num" name="s3_2" type="text"></span></div>
+    <div class="item"><span class="no">3</span><span class="lbl">Gross Income Regular/Normal Rate &ndash; 3rd Quarter</span><span class="amt"><input class="num" name="s3_3" type="text"></span></div>
+    <div class="item total"><span class="no">4</span><span class="lbl">Total Gross Income <em>(Sum of Items 1 to 3)</em></span><span class="amt"><input class="num calc" name="s3_4" data-calc="n('s3_1')+n('s3_2')+n('s3_3')" readonly type="text"></span></div>
+    <div class="item"><span class="no">5</span><span class="lbl">MCIT Rate <span class="small">(printed 2018 form: 2%; CREATE: 1% from 07/01/2020 to 06/30/2023)</span></span><span class="amt"><input class="num" name="s3_5" type="text" value="2"> <span class="lbl">%</span></span></div>
+    <div class="item total"><span class="no">6</span><span class="lbl">Minimum Corporate Income Tax <em>(Item 4 x Item 5) (To Schedule 2 Item 12)</em></span><span class="amt"><input class="num calc" name="s3_6" data-calc="n('s3_4')*n('s3_5')/100" readonly type="text"></span></div>
+  </div>
+
+  <div class="sub-title mt">Schedule 4 &ndash; Tax Credits/Payments (attach additional sheet/s, if necessary)</div>
+  <div class="grid">
+    <div class="item"><span class="no">1</span><span class="lbl">Prior Year&rsquo;s Excess Credits</span><span class="amt"><input class="num" name="s4_1" type="text"></span></div>
+    <div class="item"><span class="no">2</span><span class="lbl">Tax payment/s for the previous quarter/s of the same taxable year other than MCIT</span><span class="amt"><input class="num" name="s4_2" type="text"></span></div>
+    <div class="item"><span class="no">3</span><span class="lbl">MCIT payment/s for the previous quarter/s of the same taxable year</span><span class="amt"><input class="num" name="s4_3" type="text"></span></div>
+    <div class="item"><span class="no">4</span><span class="lbl">Creditable Tax Withheld for the previous quarter/s</span><span class="amt"><input class="num" name="s4_4" type="text"></span></div>
+    <div class="item"><span class="no">5</span><span class="lbl">Creditable Tax Withheld per BIR Form No. 2307 for this quarter</span><span class="amt"><input class="num" name="s4_5" type="text"></span></div>
+    <div class="item"><span class="no">6</span><span class="lbl">Tax paid in return previously filed if this is an amended return</span><span class="amt"><input class="num" name="s4_6" type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Other Tax Credits/Payments (specify below)</span><span class="amt"></span></div>
+    <div class="item"><span class="no">a</span><span class="lbl"><input type="text" name="s4_6a_desc"></span><span class="amt"><input class="num" name="s4_6a" type="text"></span></div>
+    <div class="item"><span class="no">b</span><span class="lbl"><input type="text" name="s4_6b_desc"></span><span class="amt"><input class="num" name="s4_6b" type="text"></span></div>
+    <div class="item total"><span class="no">7</span><span class="lbl">Total Tax Credits/Payments <em>(Sum of Items 1 to 6b) (To Part II Item 19)</em></span><span class="amt"><input class="num calc" name="s4_7" data-calc="n('s4_1')+n('s4_2')+n('s4_3')+n('s4_4')+n('s4_5')+n('s4_6')+n('s4_6a')+n('s4_6b')" readonly type="text"></span></div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3 (ATC table) ==================== -->
+<div class="sheet">
+  <div class="small" style="display:flex;justify-content:space-between;"><span class="bold">BIR Form No. 1702Q &mdash; January 2018 (ENCS) &mdash; Page 3</span><span>1702Q 01/18ENCS P3</span></div>
+
+  <div class="part-title">Alphanumeric Tax Codes (ATC)</div>
+  <table class="sched">
+    <tr><th style="width:8%">ATC</th><th style="width:42%">Description</th><th style="width:10%">Tax Rate</th><th>Tax Base</th></tr>
+    <tr><td colspan="4" class="bold" style="background:var(--shade)">DOMESTIC CORPORATION</td></tr>
+    <tr><td class="center">IC 010</td><td>1. a. In General</td><td class="center">30%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 030</td><td>2. Proprietary Educational Institutions</td><td class="center">10%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;a. Proprietary Educational Institutions whose gross income from unrelated trade, business or other activity exceeds fifty percent (50%) of the total gross income from all sources.</td><td class="center">30%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 031</td><td>3. Non-Stock, Non-Profit Hospitals</td><td class="center">10%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;a. Non-Stock, Non-Profit Hospitals whose gross income from unrelated trade, business or other activity exceeds fifty percent (50%) of the total gross income from all sources.</td><td class="center">30%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 040</td><td>4. a. GOCC, Agencies &amp; Instrumentalities</td><td class="center">30%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 041</td><td>5. a. National Gov&rsquo;t &amp; LGU&rsquo;s</td><td class="center">30%</td><td>Taxable Income from Proprietary Activities</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 020</td><td>6. a. Taxable Partnership</td><td class="center">30%</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 011</td><td>7. Exempt Corporation &ndash; a. On Exempt Activities</td><td class="center">0%</td><td></td></tr>
+    <tr><td class="center">IC 010</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. On Taxable Activities</td><td class="center">*same rate as in 1a</td><td>Taxable Income from All Sources</td></tr>
+    <tr><td class="center">IC 021</td><td>8. General Professional Partnership</td><td class="center">exempt</td><td></td></tr>
+    <tr><td class="center"></td><td>9. Corporation covered by Special Law*</td><td class="center"></td><td></td></tr>
+    <tr><td class="center">IC 200</td><td>&nbsp;&nbsp;&nbsp;&nbsp;a. PEZA Free Port Zones</td><td class="center">0% / 5%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 210</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Microfinance Non-government Organizations (NGOs)</td><td class="center">2%</td><td>Gross Receipts</td></tr>
+    <tr><td colspan="4" class="bold" style="background:var(--shade)">RESIDENT FOREIGN CORPORATION</td></tr>
+    <tr><td class="center">IC 070</td><td>1. a. In General</td><td class="center">30%</td><td>Taxable Income from within the Philippines</td></tr>
+    <tr><td class="center">IC 055</td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Minimum Corporate Income Tax</td><td class="center">2%</td><td>Gross Income</td></tr>
+    <tr><td class="center">IC 080</td><td>2. International Carriers</td><td class="center">2.5%</td><td>Gross Philippine Billing</td></tr>
+    <tr><td class="center">IC 101</td><td>3. Regional Operating Headquarters*</td><td class="center">10%</td><td>Taxable Income</td></tr>
+    <tr><td class="center"></td><td>4. Corporation Covered by Special Law*</td><td class="center"></td><td></td></tr>
+    <tr><td class="center">IC 190</td><td>5. Offshore Banking Units (OBU&rsquo;s) &ndash; a. Foreign Currency Transaction not subjected to Final Tax</td><td class="center">10%</td><td>Gross Taxable Income on Foreign Currency Transaction not subjected to Final Tax</td></tr>
+    <tr><td class="center"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Other Than Foreign Currency Transaction</td><td class="center">30%</td><td>Taxable Income Other Than Foreign Currency Transaction</td></tr>
+    <tr><td class="center">IC 191</td><td>6. Foreign Currency Deposit Units (FCDU&rsquo;s) &ndash; a. Foreign Currency Transaction not subjected to Final Tax</td><td class="center">10%</td><td>Gross Taxable Income on Foreign Currency Transaction not subjected to Final Tax</td></tr>
+    <tr><td class="center"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;b. Other Than Foreign Currency Transaction</td><td class="center">30%</td><td>Taxable Income Other Than Foreign Currency Transaction</td></tr>
+  </table>
+  <div class="small mt">*PLEASE REFER TO REVENUE DISTRICT OFFICES</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1600-PT — Monthly Remittance Return of Other Percentage Taxes Withheld</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1600-PT">
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Monthly Remittance Return of Other Percentage Taxes Withheld</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1600-PT</span><span class="ver">January 2018<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="no">1</span><span class="lbl">For the month (MM/20YY)</span><input type="text" name="for_month" class="short" placeholder="MM/20YY"></div>
+      <div class="cell">
+        <span class="no">2</span><span class="lbl">Amended Return?</span>
+        <label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label>
+      </div>
+      <div class="cell">
+        <span class="no">3</span><span class="lbl">Any Tax Withheld?</span>
+        <label class="opt"><input type="radio" name="any_tax_withheld" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="any_tax_withheld" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">4</span><span class="lbl">Number of Sheet/s Attached</span><input type="text" name="sheets_attached" class="short"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I – Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2"><span class="no">5</span><span class="lbl">Taxpayer Identification Number (TIN)</span><input type="text" name="tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell"><span class="no">6</span><span class="lbl">RDO Code</span><input type="text" name="rdo_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack"><span class="lbl"><span class="no">7</span> Withholding Agent&rsquo;s Name (Last Name, First Name, Middle Name for Individuals OR Registered Name for Non-Individuals)</span><input type="text" name="agent_name"></div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3"><span class="lbl"><span class="no">8</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span><input type="text" name="registered_address"></div>
+      <div class="cell"><span class="no">8A</span><span class="lbl">ZIP Code</span><input type="text" name="zip_code" class="short"></div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">9</span><span class="lbl">Contact Number</span><input type="text" name="contact_number"></div>
+      <div class="cell">
+        <span class="no">10</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="agent_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="agent_category" value="government"> Government</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell"><span class="no">11</span><span class="lbl">Email Address</span><input type="text" name="email_address"></div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:2">
+        <span class="no">12</span><span class="lbl">Are you availing of tax relief under Special Law or International Tax Treaty?</span>
+        <label class="opt"><input type="radio" name="tax_relief" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="tax_relief" value="no"> No</label>
+      </div>
+      <div class="cell"><span class="no">12A</span><span class="lbl">If Yes, specify</span><input type="text" name="tax_relief_specify"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II – Computation of Tax</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:26px"></th><th style="width:140px">ATC</th><th>Tax Base</th><th style="width:70px">Tax Rate (%)</th><th style="width:170px">Tax Withheld</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="center"><span class="no">13</span></td><td><input type="text" name="p2_row13_atc"></td><td><input class="num" type="text" name="p2_row13_base"></td><td><input class="num" type="text" name="p2_row13_rate"></td><td><input class="num calc" type="text" name="p2_row13_withheld" data-calc="n('p2_row13_base')*n('p2_row13_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">14</span></td><td><input type="text" name="p2_row14_atc"></td><td><input class="num" type="text" name="p2_row14_base"></td><td><input class="num" type="text" name="p2_row14_rate"></td><td><input class="num calc" type="text" name="p2_row14_withheld" data-calc="n('p2_row14_base')*n('p2_row14_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">15</span></td><td><input type="text" name="p2_row15_atc"></td><td><input class="num" type="text" name="p2_row15_base"></td><td><input class="num" type="text" name="p2_row15_rate"></td><td><input class="num calc" type="text" name="p2_row15_withheld" data-calc="n('p2_row15_base')*n('p2_row15_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">16</span></td><td><input type="text" name="p2_row16_atc"></td><td><input class="num" type="text" name="p2_row16_base"></td><td><input class="num" type="text" name="p2_row16_rate"></td><td><input class="num calc" type="text" name="p2_row16_withheld" data-calc="n('p2_row16_base')*n('p2_row16_rate')/100" readonly></td></tr>
+      <tr><td class="center"><span class="no">17</span></td><td><input type="text" name="p2_row17_atc"></td><td><input class="num" type="text" name="p2_row17_base"></td><td><input class="num" type="text" name="p2_row17_rate"></td><td><input class="num calc" type="text" name="p2_row17_withheld" data-calc="n('p2_row17_base')*n('p2_row17_rate')/100" readonly></td></tr>
+    </tbody>
+  </table>
+  <div class="grid" style="border-top:none">
+    <div class="item total"><span class="no">18</span><span class="lbl">Total Taxes Withheld <em>(Sum of Items 13 to 17)</em></span><span class="amt"><input class="num calc" name="total_taxes_withheld" data-calc="n('p2_row13_withheld')+n('p2_row14_withheld')+n('p2_row15_withheld')+n('p2_row16_withheld')+n('p2_row17_withheld')" readonly type="text"></span></div>
+    <div class="item"><span class="no">19</span><span class="lbl">Less: Taxes Remitted in Return Previously Filed, if this is an Amended Return</span><span class="amt"><input class="num" name="taxes_remitted_previous" type="text"></span></div>
+    <div class="item"><span class="no">20</span><span class="lbl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other Payments Made (attach proof)</span><span class="amt"><input class="num" name="other_payments" type="text"></span></div>
+    <div class="item total"><span class="no">21</span><span class="lbl">Total Tax Payments Made <em>(Sum of Items 19 &amp; 20)</em></span><span class="amt"><input class="num calc" name="total_payments" data-calc="n('taxes_remitted_previous')+n('other_payments')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">22</span><span class="lbl">Tax Still Due/(Overremittance) <em>(Item 18 Less Item 21)</em></span><span class="amt"><input class="num calc" name="tax_still_due" data-calc="n('total_taxes_withheld')-n('total_payments')" readonly type="text"></span></div>
+    <div class="item"><span class="no"></span><span class="lbl bold">Add: Penalties</span><span class="amt"></span></div>
+    <div class="item"><span class="no">23</span><span class="lbl">Surcharge</span><span class="amt"><input class="num" name="surcharge" type="text"></span></div>
+    <div class="item"><span class="no">24</span><span class="lbl">Interest</span><span class="amt"><input class="num" name="interest" type="text"></span></div>
+    <div class="item"><span class="no">25</span><span class="lbl">Compromise</span><span class="amt"><input class="num" name="compromise" type="text"></span></div>
+    <div class="item total"><span class="no">26</span><span class="lbl">Total Penalties <em>(Sum of Items 23 to 25)</em></span><span class="amt"><input class="num calc" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly type="text"></span></div>
+    <div class="item total"><span class="no">27</span><span class="lbl">TOTAL AMOUNT STILL DUE/(Overremittance) <em>(Sum of Items 22 and 26)</em></span><span class="amt"><input class="num calc" name="total_amount_due" data-calc="n('tax_still_due')+n('total_penalties')" readonly type="text"></span></div>
+    <div class="row"><div class="cell small">If overremittance, apply for tax refund using BIR Form No. 1914 (Application for Tax Credits / Refunds).</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell small">
+      I/We declare under the penalties of perjury that this return, and all its attachments, have been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach authorization letter)
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold">For Individual:</div>
+      <input type="text" name="sig_individual">
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate title/designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold">For Non-Individual:</div>
+      <input type="text" name="sig_nonindividual">
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent<br>(Indicate title/designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">Tax Agent Accreditation No. / Attorney&rsquo;s Roll No. (If applicable)</span><input type="text" name="tax_agent_no"></div>
+      <div class="cell"><span class="lbl">Date of Issue (MM/DD/YYYY)</span><input type="text" name="tax_agent_issue_date" class="short" placeholder="MM/DD/YYYY"></div>
+      <div class="cell"><span class="lbl">Expiry Date (MM/DD/YYYY)</span><input type="text" name="tax_agent_expiry_date" class="short" placeholder="MM/DD/YYYY"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III – Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Particulars</th><th>Drawee Bank/Bank Code/Agency</th><th>Number</th><th>Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">28</span> Cash/Bank Debit Memo</td><td><input type="text" name="pay_cash_bank"></td><td><input type="text" name="pay_cash_number"></td><td><input type="text" name="pay_cash_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_cash_amount"></td></tr>
+      <tr><td><span class="no">29</span> Check</td><td><input type="text" name="pay_check_bank"></td><td><input type="text" name="pay_check_number"></td><td><input type="text" name="pay_check_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_check_amount"></td></tr>
+      <tr><td><span class="no">30</span> Tax Debit Memo</td><td><input type="text" name="pay_tdm_bank"></td><td><input type="text" name="pay_tdm_number"></td><td><input type="text" name="pay_tdm_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_tdm_amount"></td></tr>
+      <tr><td><span class="no">31</span> Others (Specify below)<br><input type="text" name="pay_others_specify"></td><td><input type="text" name="pay_others_bank"></td><td><input type="text" name="pay_others_number"></td><td><input type="text" name="pay_others_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay_others_amount"></td></tr>
+    </tbody>
+  </table>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2"><span class="lbl">Machine Validation/Revenue Official Receipt (ROR) Details (if not filed with an Authorized Agent Bank)</span><textarea name="machine_validation" rows="3"></textarea></div>
+      <div class="cell stack"><span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span><textarea name="stamp_receipt" rows="3"></textarea></div>
+    </div>
+  </div>
+  <div class="small mt">*NOTE: The BIR Data Privacy is in the BIR website (www.bir.gov.ph)</div>
+</div>
+
+<div class="sheet">
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Monthly Remittance Return of Other Percentage Taxes Withheld</div>
+      <div class="fh-sub">1600-PT 01/18 P2</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1600-PT</span><span class="ver">January 2018<br>Page 2</span></div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell"><span class="lbl">TIN</span><input type="text" name="p2_tin" class="mid" placeholder="000-000-000-00000"></div>
+      <div class="cell" style="flex:2"><span class="lbl">Withholding Agent&rsquo;s Name</span><input type="text" name="p2_agent_name"></div>
+    </div>
+  </div>
+
+  <div class="part-title">Schedule 1 – Monthly Alphalist of Payees from Whom Taxes were Withheld (format only) (Submit in electronic attachment for eFPS or email to esubmission@bir.gov.ph)</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:44px">Seq. No.<br>(1)</th>
+        <th style="width:120px">TIN<br>(2)</th>
+        <th>Name of Payees (Last Name, First Name, Middle Name for Individual)/(Registered Name for Non-Individual)<br>(3)</th>
+        <th style="width:80px">ATC<br>(4)</th>
+        <th style="width:120px">Amount of Income Payment<br>(5)</th>
+        <th style="width:64px">Tax Rate (%)<br>(6)</th>
+        <th style="width:140px">Amount of Tax Withheld<br>(7) = (5x6)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="center">1</td><td><input type="text" name="sched1_row1_tin"></td><td><input type="text" name="sched1_row1_payee"></td><td><input type="text" name="sched1_row1_atc"></td><td><input class="num" type="text" name="sched1_row1_income"></td><td><input class="num" type="text" name="sched1_row1_rate"></td><td><input class="num calc" type="text" name="sched1_row1_withheld" data-calc="n('sched1_row1_income')*n('sched1_row1_rate')/100" readonly></td></tr>
+      <tr><td class="center">2</td><td><input type="text" name="sched1_row2_tin"></td><td><input type="text" name="sched1_row2_payee"></td><td><input type="text" name="sched1_row2_atc"></td><td><input class="num" type="text" name="sched1_row2_income"></td><td><input class="num" type="text" name="sched1_row2_rate"></td><td><input class="num calc" type="text" name="sched1_row2_withheld" data-calc="n('sched1_row2_income')*n('sched1_row2_rate')/100" readonly></td></tr>
+      <tr><td class="center">3</td><td><input type="text" name="sched1_row3_tin"></td><td><input type="text" name="sched1_row3_payee"></td><td><input type="text" name="sched1_row3_atc"></td><td><input class="num" type="text" name="sched1_row3_income"></td><td><input class="num" type="text" name="sched1_row3_rate"></td><td><input class="num calc" type="text" name="sched1_row3_withheld" data-calc="n('sched1_row3_income')*n('sched1_row3_rate')/100" readonly></td></tr>
+      <tr><td class="center">4</td><td><input type="text" name="sched1_row4_tin"></td><td><input type="text" name="sched1_row4_payee"></td><td><input type="text" name="sched1_row4_atc"></td><td><input class="num" type="text" name="sched1_row4_income"></td><td><input class="num" type="text" name="sched1_row4_rate"></td><td><input class="num calc" type="text" name="sched1_row4_withheld" data-calc="n('sched1_row4_income')*n('sched1_row4_rate')/100" readonly></td></tr>
+      <tr><td class="center">5</td><td><input type="text" name="sched1_row5_tin"></td><td><input type="text" name="sched1_row5_payee"></td><td><input type="text" name="sched1_row5_atc"></td><td><input class="num" type="text" name="sched1_row5_income"></td><td><input class="num" type="text" name="sched1_row5_rate"></td><td><input class="num calc" type="text" name="sched1_row5_withheld" data-calc="n('sched1_row5_income')*n('sched1_row5_rate')/100" readonly></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="6">Total Taxes Withheld and Remitted</td><td><input class="num calc" type="text" name="sched1_total_withheld" data-calc="n('sched1_row1_withheld')+n('sched1_row2_withheld')+n('sched1_row3_withheld')+n('sched1_row4_withheld')+n('sched1_row5_withheld')" readonly></td></tr>
+    </tfoot>
+  </table>
+
+  <div class="sub-title mt" style="border:2px solid var(--ink); border-bottom:none;">Table 1 – Alphanumeric Tax Code (ATC)</div>
+  <table class="sched">
+    <thead>
+      <tr><th>NATURE OF PAYMENT</th><th style="width:80px">TAX RATE</th><th style="width:70px">ATC</th></tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="3" class="bold">APPLICABLE TO GOVERNMENT WITHHOLDING AGENTS ONLY:</td></tr>
+      <tr><td>Tax on Carriers and Keepers of Garages</td><td class="center">3%</td><td class="center">WB 030</td></tr>
+      <tr><td>Franchise Tax on Gas and Utilities</td><td class="center">2%</td><td class="center">WB 040</td></tr>
+      <tr><td>Franchise Tax on radio &amp; TV broadcasting companies whose annual gross receipts do not exceed P10M &amp; who are not VAT-registered taxpayers</td><td class="center">3%</td><td class="center">WB 050</td></tr>
+      <tr><td>Tax on Life Insurance Premiums</td><td class="center">2%</td><td class="center">WB 070</td></tr>
+      <tr><td>Tax on Overseas Dispatch, Message or Conversation from the Philippines</td><td class="center">10%</td><td class="center">WB 090</td></tr>
+      <tr><td>Business tax on Agents of Foreign Insurance Companies – Insurance Agents</td><td class="center">4%</td><td class="center">WB 120</td></tr>
+      <tr><td>Business tax on Agents of Foreign Insurance Companies – Owner of the Property</td><td class="center">5%</td><td class="center">WB 121</td></tr>
+      <tr><td>Tax on International Carriers</td><td class="center">3%</td><td class="center">WB 130</td></tr>
+      <tr><td>Tax on Cockpits</td><td class="center">18%</td><td class="center">WB 140</td></tr>
+      <tr><td>Tax on amusement places, such as cabarets, night and day clubs, videoke bars, karaoke bars, karaoke television, karaoke boxes, music lounges and other similar establishments</td><td class="center">18%</td><td class="center">WB 150</td></tr>
+      <tr><td>Tax on Boxing exhibitions</td><td class="center">10%</td><td class="center">WB 160</td></tr>
+      <tr><td>Tax on Professional basketball games</td><td class="center">15%</td><td class="center">WB 170</td></tr>
+      <tr><td>Tax on jai-alai and race tracks</td><td class="center">30%</td><td class="center">WB 180</td></tr>
+      <tr><td>Tax on sale, barter or exchange of stocks listed and traded through Local Stock exchange</td><td class="center">6/10 of 1%</td><td class="center">WB 200</td></tr>
+      <tr><td colspan="3">Tax on shares of stock sold or exchanged through initial and secondary public offering:</td></tr>
+      <tr><td>&nbsp;&nbsp;- Not over 25%</td><td class="center">4%</td><td class="center">WB 201</td></tr>
+      <tr><td>&nbsp;&nbsp;- Over 25% but not exceeding 33 1/3%</td><td class="center">2%</td><td class="center">WB 202</td></tr>
+      <tr><td>&nbsp;&nbsp;- Over 33 1/3%</td><td class="center">1%</td><td class="center">WB 203</td></tr>
+      <tr><td colspan="3" class="bold">Tax on Banks and Non-Bank Financial Intermediaries Performing Quasi Banking Functions</td></tr>
+      <tr><td colspan="3">A. On interest, commissions and discounts from lending activities as well as income from financial leasing, on the basis of the remaining maturities of instrument from which such receipts are derived</td></tr>
+      <tr><td>&nbsp;&nbsp;- Maturity period is five years or less</td><td class="center">5%</td><td class="center">WB 301</td></tr>
+      <tr><td>&nbsp;&nbsp;- Maturity period is more than five years</td><td class="center">1%</td><td class="center">WB 303</td></tr>
+      <tr><td>B. On dividends and equity shares and net income of subsidiaries</td><td class="center">0%</td><td class="center">WB 102</td></tr>
+      <tr><td>C. On royalties, rentals of property, real or personal, profits from exchange and all other items treated as gross income under the Code</td><td class="center">7%</td><td class="center">WB 103</td></tr>
+      <tr><td>D. On net trading gains within the taxable year on foreign currency, debt securities, derivatives and other similar financial instruments</td><td class="center">7%</td><td class="center">WB 104</td></tr>
+      <tr><td colspan="3" class="bold">Tax on Other Non-Banks Financial Intermediaries not Performing Quasi-Banking Functions</td></tr>
+      <tr><td colspan="3">A. On interest, commissions and discounts from lending activities as well as Income from financial leasing, on the basis of the remaining maturities of Instrument from which such receipts are derived</td></tr>
+      <tr><td>&nbsp;&nbsp;- Maturity period is five years or less</td><td class="center">5%</td><td class="center">WB 108</td></tr>
+      <tr><td>&nbsp;&nbsp;- Maturity period is more than five years</td><td class="center">1%</td><td class="center">WB 109</td></tr>
+      <tr><td>B. On all other items treated as gross income under the code</td><td class="center">5%</td><td class="center">WB 110</td></tr>
+      <tr><td colspan="3" class="bold">APPLICABLE TO BOTH GOVERNMENT AND PRIVATE WITHHOLDING AGENTS:</td></tr>
+      <tr><td>Persons Exempt from VAT under Sec. 109BB (creditable) – Government Withholding Agent</td><td class="center">3%</td><td class="center">WB 080</td></tr>
+      <tr><td>Persons Exempt from VAT under Sec. 109BB (creditable) – Private Withholding Agent</td><td class="center">3%</td><td class="center">WB 082</td></tr>
+      <tr><td>Persons Exempt from VAT under Section 109BB (final) (Section 116 applies)</td><td class="center">3%</td><td class="center">WB 084</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2316 — Certificate of Compensation Payment / Tax Withheld</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+<style>
+  /* unique to 2316: the official certificate is a two-column page */
+  .twocol { display: flex; align-items: stretch; }
+  .twocol > .col { flex: 1; min-width: 0; }
+  .twocol > .col + .col { margin-left: -2px; }
+</style>
+</head>
+<body data-form="2316">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Certificate of Compensation Payment/Tax Withheld</div>
+      <div class="fh-sub">For Compensation Payment With or Without Tax Withheld. Fill in all applicable spaces. Mark all appropriate boxes with an &ldquo;X&rdquo;.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2316</span><span class="ver">September 2021 (ENCS)</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the Year (YYYY)</span>
+        <input class="short" type="text" name="p0_year" placeholder="YYYY">
+      </div>
+      <div class="cell" style="flex:1.5">
+        <span class="no">2</span><span class="lbl">For the Period&emsp;From (MM/DD)</span>
+        <input class="short" type="text" name="p0_period_from" placeholder="MM/DD">
+        <span class="lbl">To (MM/DD)</span>
+        <input class="short" type="text" name="p0_period_to" placeholder="MM/DD">
+      </div>
+    </div>
+  </div>
+
+  <div class="twocol">
+    <div class="col">
+
+      <div class="part-title">Part I &ndash; Employee Information</div>
+      <div class="grid">
+        <div class="row">
+          <div class="cell">
+            <span class="no">3</span><span class="lbl">TIN</span>
+            <input class="mid" type="text" name="p1_3_tin" placeholder="000-000-000-00000">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack" style="flex:2.5">
+            <span class="lbl"><span class="no">4</span> Employee&rsquo;s Name (Last Name, First Name, Middle Name)</span>
+            <input type="text" name="p1_4_employee_name">
+          </div>
+          <div class="cell stack">
+            <span class="lbl"><span class="no">5</span> RDO Code</span>
+            <input type="text" name="p1_5_rdo">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack" style="flex:2.5">
+            <span class="lbl"><span class="no">6</span> Registered Address</span>
+            <input type="text" name="p1_6_registered_address">
+          </div>
+          <div class="cell stack">
+            <span class="lbl"><span class="no">6A</span> ZIP Code</span>
+            <input type="text" name="p1_6a_zip">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack" style="flex:2.5">
+            <span class="lbl"><span class="no">6B</span> Local Home Address</span>
+            <input type="text" name="p1_6b_local_address">
+          </div>
+          <div class="cell stack">
+            <span class="lbl"><span class="no">6C</span> ZIP Code</span>
+            <input type="text" name="p1_6c_zip">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack">
+            <span class="lbl"><span class="no">6D</span> Foreign Address</span>
+            <input type="text" name="p1_6d_foreign_address">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack">
+            <span class="lbl"><span class="no">7</span> Date of Birth (MM/DD/YYYY)</span>
+            <input type="text" name="p1_7_birth_date" placeholder="MM/DD/YYYY">
+          </div>
+          <div class="cell stack">
+            <span class="lbl"><span class="no">8</span> Contact Number</span>
+            <input type="text" name="p1_8_contact">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <span class="no">9</span><span class="lbl">Statutory Minimum Wage rate per day</span>
+            <input class="num" type="text" name="p1_9_smw_day">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <span class="no">10</span><span class="lbl">Statutory Minimum Wage rate per month</span>
+            <input class="num" type="text" name="p1_10_smw_month">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <span class="no">11</span>
+            <label class="opt" style="white-space:normal"><input type="checkbox" name="p1_11_mwe"> Minimum Wage Earner (MWE) whose compensation is exempt from withholding tax and not subject to income tax</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-title">Part II &ndash; Employer Information (Present)</div>
+      <div class="grid">
+        <div class="row">
+          <div class="cell">
+            <span class="no">12</span><span class="lbl">TIN</span>
+            <input class="mid" type="text" name="p2_12_tin" placeholder="000-000-000-00000">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack">
+            <span class="lbl"><span class="no">13</span> Employer&rsquo;s Name</span>
+            <input type="text" name="p2_13_employer_name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack" style="flex:2.5">
+            <span class="lbl"><span class="no">14</span> Registered Address</span>
+            <input type="text" name="p2_14_address">
+          </div>
+          <div class="cell stack">
+            <span class="lbl"><span class="no">14A</span> ZIP Code</span>
+            <input type="text" name="p2_14a_zip">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <span class="no">15</span><span class="lbl">Type of Employer</span>
+            <label class="opt"><input type="radio" name="p2_15_employer_type" value="main"> Main Employer</label>
+            <label class="opt"><input type="radio" name="p2_15_employer_type" value="secondary"> Secondary Employer</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-title">Part III &ndash; Employer Information (Previous)</div>
+      <div class="grid">
+        <div class="row">
+          <div class="cell">
+            <span class="no">16</span><span class="lbl">TIN</span>
+            <input class="mid" type="text" name="p3_16_tin" placeholder="000-000-000-00000">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack">
+            <span class="lbl"><span class="no">17</span> Employer&rsquo;s Name</span>
+            <input type="text" name="p3_17_employer_name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell stack" style="flex:2.5">
+            <span class="lbl"><span class="no">18</span> Registered Address</span>
+            <input type="text" name="p3_18_address">
+          </div>
+          <div class="cell stack">
+            <span class="lbl"><span class="no">18A</span> ZIP Code</span>
+            <input type="text" name="p3_18a_zip">
+          </div>
+        </div>
+      </div>
+
+      <div class="part-title">Part IV-A &ndash; Summary</div>
+      <div class="grid">
+        <div class="item"><span class="no">19</span><span class="lbl">Gross Compensation Income from Present Employer (Sum of Items 38 and 52)</span><span class="amt2"><input class="num calc" name="p4a_19_gross_present" data-calc="n('p4b_38_total_nontax')+n('p4b_52_total_taxable')" readonly type="text"></span></div>
+        <div class="item"><span class="no">20</span><span class="lbl">Less: Total Non-Taxable/Exempt Compensation Income from Present Employer (From Item 38)</span><span class="amt2"><input class="num calc" name="p4a_20_less_nontax" data-calc="n('p4b_38_total_nontax')" readonly type="text"></span></div>
+        <div class="item"><span class="no">21</span><span class="lbl">Taxable Compensation Income from Present Employer (Item 19 Less Item 20) (From Item 52)</span><span class="amt2"><input class="num calc" name="p4a_21_taxable_present" data-calc="n('p4a_19_gross_present')-n('p4a_20_less_nontax')" readonly type="text"></span></div>
+        <div class="item"><span class="no">22</span><span class="lbl">Add: Taxable Compensation Income from Previous Employer, if applicable</span><span class="amt2"><input class="num" name="p4a_22_taxable_previous" type="text"></span></div>
+        <div class="item total"><span class="no">23</span><span class="lbl">Gross Taxable Compensation Income (Sum of Items 21 and 22)</span><span class="amt2"><input class="num calc" name="p4a_23_gross_taxable" data-calc="n('p4a_21_taxable_present')+n('p4a_22_taxable_previous')" readonly type="text"></span></div>
+        <div class="item"><span class="no">24</span><span class="lbl">Tax Due</span><span class="amt2"><input class="num calc" name="p4a_24_tax_due" data-calc="gradTax(n('p4a_23_gross_taxable'), n('p0_year'))" readonly type="text"></span></div>
+        <div class="item"><span class="no">25</span><span class="lbl bold">Amount of Taxes Withheld</span><span class="amt2"></span></div>
+        <div class="item"><span class="no">25A</span><span class="lbl">&emsp;Present Employer</span><span class="amt2"><input class="num" name="p4a_25a_withheld_present" type="text"></span></div>
+        <div class="item"><span class="no">25B</span><span class="lbl">&emsp;Previous Employer, if applicable</span><span class="amt2"><input class="num" name="p4a_25b_withheld_previous" type="text"></span></div>
+        <div class="item total"><span class="no">26</span><span class="lbl">Total Amount of Taxes Withheld as adjusted (Sum of Items 25A and 25B)</span><span class="amt2"><input class="num calc" name="p4a_26_total_withheld" data-calc="n('p4a_25a_withheld_present')+n('p4a_25b_withheld_previous')" readonly type="text"></span></div>
+        <div class="item"><span class="no">27</span><span class="lbl">5% Tax Credit (PERA Act of 2008)</span><span class="amt2"><input class="num" name="p4a_27_pera_credit" type="text"></span></div>
+        <div class="item total"><span class="no">28</span><span class="lbl">Total Taxes Withheld (Sum of Items 26 and 27)</span><span class="amt2"><input class="num calc" name="p4a_28_total_taxes_withheld" data-calc="n('p4a_26_total_withheld')+n('p4a_27_pera_credit')" readonly type="text"></span></div>
+      </div>
+
+    </div><!-- /left col -->
+    <div class="col">
+
+      <div class="part-title">Part IV-B &ndash; Details of Compensation Income &amp; Tax Withheld from Present Employer</div>
+      <div class="sub-title">A. Non-Taxable/Exempt Compensation Income&emsp;&mdash;&emsp;Amount</div>
+      <div class="grid">
+        <div class="item"><span class="no">29</span><span class="lbl">Basic Salary (including the exempt P250,000 &amp; below) or the Statutory Minimum Wage of the MWE</span><span class="amt2"><input class="num" name="p4b_29_basic_salary_nt" type="text"></span></div>
+        <div class="item"><span class="no">30</span><span class="lbl">Holiday Pay (MWE)</span><span class="amt2"><input class="num" name="p4b_30_holiday_mwe" type="text"></span></div>
+        <div class="item"><span class="no">31</span><span class="lbl">Overtime Pay (MWE)</span><span class="amt2"><input class="num" name="p4b_31_overtime_mwe" type="text"></span></div>
+        <div class="item"><span class="no">32</span><span class="lbl">Night Shift Differential (MWE)</span><span class="amt2"><input class="num" name="p4b_32_nsd_mwe" type="text"></span></div>
+        <div class="item"><span class="no">33</span><span class="lbl">Hazard Pay (MWE)</span><span class="amt2"><input class="num" name="p4b_33_hazard_mwe" type="text"></span></div>
+        <div class="item"><span class="no">34</span><span class="lbl">13th Month Pay and Other Benefits (maximum of P90,000)</span><span class="amt2"><input class="num" name="p4b_34_13th_month" type="text"></span></div>
+        <div class="item"><span class="no">35</span><span class="lbl">De Minimis Benefits</span><span class="amt2"><input class="num" name="p4b_35_de_minimis" type="text"></span></div>
+        <div class="item"><span class="no">36</span><span class="lbl">SSS, GSIS, PHIC &amp; PAG-IBIG Contributions and Union Dues (Employee share only)</span><span class="amt2"><input class="num" name="p4b_36_contributions" type="text"></span></div>
+        <div class="item"><span class="no">37</span><span class="lbl">Salaries and Other Forms of Compensation</span><span class="amt2"><input class="num" name="p4b_37_other_salaries" type="text"></span></div>
+        <div class="item total"><span class="no">38</span><span class="lbl">Total Non-Taxable/Exempt Compensation Income (Sum of Items 29 to 37)</span><span class="amt2"><input class="num calc" name="p4b_38_total_nontax" data-calc="n('p4b_29_basic_salary_nt')+n('p4b_30_holiday_mwe')+n('p4b_31_overtime_mwe')+n('p4b_32_nsd_mwe')+n('p4b_33_hazard_mwe')+n('p4b_34_13th_month')+n('p4b_35_de_minimis')+n('p4b_36_contributions')+n('p4b_37_other_salaries')" readonly type="text"></span></div>
+      </div>
+      <div class="sub-title">B. Taxable Compensation Income &mdash; REGULAR</div>
+      <div class="grid">
+        <div class="item"><span class="no">39</span><span class="lbl">Basic Salary</span><span class="amt2"><input class="num" name="p4b_39_basic_salary" type="text"></span></div>
+        <div class="item"><span class="no">40</span><span class="lbl">Representation</span><span class="amt2"><input class="num" name="p4b_40_representation" type="text"></span></div>
+        <div class="item"><span class="no">41</span><span class="lbl">Transportation</span><span class="amt2"><input class="num" name="p4b_41_transportation" type="text"></span></div>
+        <div class="item"><span class="no">42</span><span class="lbl">Cost of Living Allowance (COLA)</span><span class="amt2"><input class="num" name="p4b_42_cola" type="text"></span></div>
+        <div class="item"><span class="no">43</span><span class="lbl">Fixed Housing Allowance</span><span class="amt2"><input class="num" name="p4b_43_housing" type="text"></span></div>
+        <div class="item"><span class="no">44</span><span class="lbl bold">Others (specify)</span><span class="amt2"></span></div>
+        <div class="item"><span class="no">44A</span><span class="lbl"><input type="text" name="p4b_44a_specify" style="max-width:150px"></span><span class="amt2"><input class="num" name="p4b_44a_amount" type="text"></span></div>
+        <div class="item"><span class="no">44B</span><span class="lbl"><input type="text" name="p4b_44b_specify" style="max-width:150px"></span><span class="amt2"><input class="num" name="p4b_44b_amount" type="text"></span></div>
+      </div>
+      <div class="sub-title">SUPPLEMENTARY</div>
+      <div class="grid">
+        <div class="item"><span class="no">45</span><span class="lbl">Commission</span><span class="amt2"><input class="num" name="p4b_45_commission" type="text"></span></div>
+        <div class="item"><span class="no">46</span><span class="lbl">Profit Sharing</span><span class="amt2"><input class="num" name="p4b_46_profit_sharing" type="text"></span></div>
+        <div class="item"><span class="no">47</span><span class="lbl">Fees Including Director&rsquo;s Fees</span><span class="amt2"><input class="num" name="p4b_47_fees" type="text"></span></div>
+        <div class="item"><span class="no">48</span><span class="lbl">Taxable 13th Month Benefits</span><span class="amt2"><input class="num" name="p4b_48_taxable_13th" type="text"></span></div>
+        <div class="item"><span class="no">49</span><span class="lbl">Hazard Pay</span><span class="amt2"><input class="num" name="p4b_49_hazard" type="text"></span></div>
+        <div class="item"><span class="no">50</span><span class="lbl">Overtime Pay</span><span class="amt2"><input class="num" name="p4b_50_overtime" type="text"></span></div>
+        <div class="item"><span class="no">51</span><span class="lbl bold">Others (specify)</span><span class="amt2"></span></div>
+        <div class="item"><span class="no">51A</span><span class="lbl"><input type="text" name="p4b_51a_specify" style="max-width:150px"></span><span class="amt2"><input class="num" name="p4b_51a_amount" type="text"></span></div>
+        <div class="item"><span class="no">51B</span><span class="lbl"><input type="text" name="p4b_51b_specify" style="max-width:150px"></span><span class="amt2"><input class="num" name="p4b_51b_amount" type="text"></span></div>
+        <div class="item total"><span class="no">52</span><span class="lbl">Total Taxable Compensation Income (Sum of Items 39 to 51B)</span><span class="amt2"><input class="num calc" name="p4b_52_total_taxable" data-calc="n('p4b_39_basic_salary')+n('p4b_40_representation')+n('p4b_41_transportation')+n('p4b_42_cola')+n('p4b_43_housing')+n('p4b_44a_amount')+n('p4b_44b_amount')+n('p4b_45_commission')+n('p4b_46_profit_sharing')+n('p4b_47_fees')+n('p4b_48_taxable_13th')+n('p4b_49_hazard')+n('p4b_50_overtime')+n('p4b_51a_amount')+n('p4b_51b_amount')" readonly type="text"></span></div>
+      </div>
+
+    </div><!-- /right col -->
+  </div><!-- /twocol -->
+
+  <div class="grid mt">
+    <div class="row"><div class="cell small">
+      I/We declare, under the penalties of perjury that this certificate has been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.
+    </div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sig_53_employer"></div>
+      <div class="cap"><span class="no">53</span> Present Employer/Authorized Agent Signature over Printed Name</div>
+    </div>
+    <div class="sig" style="flex:0 0 180px">
+      <div class="line"><input type="text" name="sig_53_date" placeholder="MM/DD/YYYY"></div>
+      <div class="cap">Date Signed</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row"><div class="cell shade bold small">CONFORME:</div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sig_54_employee"></div>
+      <div class="cap"><span class="no">54</span> Employee Signature over Printed Name</div>
+    </div>
+    <div class="sig" style="flex:0 0 180px">
+      <div class="line"><input type="text" name="sig_54_date" placeholder="MM/DD/YYYY"></div>
+      <div class="cap">Date Signed</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl">CTC/Valid ID No. of Employee</span>
+        <input type="text" name="ctc_id_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Place of Issue</span>
+        <input type="text" name="ctc_place_issue">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date Issued</span>
+        <input type="text" name="ctc_date_issued" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Amount paid, if CTC</span>
+        <input class="num" type="text" name="ctc_amount_paid">
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title mt">To be accomplished under substituted filing</div>
+  <div class="twocol">
+    <div class="col">
+      <div class="grid">
+        <div class="row"><div class="cell small" style="min-height:74px">
+          I declare, under the penalties of perjury that the information herein stated are reported under BIR Form No. 1604-C which has been filed with the Bureau of Internal Revenue.
+        </div></div>
+      </div>
+      <div class="sig-block">
+        <div class="sig">
+          <div class="line"><input type="text" name="sig_55_employer"></div>
+          <div class="cap"><span class="no">55</span> Present Employer/Authorized Agent Signature over Printed Name (Head of Accounting/Human Resource or Authorized Representative)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="grid">
+        <div class="row"><div class="cell small" style="min-height:74px">
+          I declare, under the penalties of perjury that I am qualified under substituted filing of Income Tax Return (BIR Form No. 1700), since I received purely compensation income from only one employer in the Philippines for the calendar year; that taxes have been correctly withheld by my employer (tax due equals tax withheld); that the BIR Form No. 1604-C filed by my employer to the BIR shall constitute as my income tax return; and that BIR Form No. 2316 shall serve the same purpose as if BIR Form No. 1700 has been filed pursuant to the provisions of Revenue Regulations (RR) No. 3-2002, as amended.
+        </div></div>
+      </div>
+      <div class="sig-block">
+        <div class="sig">
+          <div class="line"><input type="text" name="sig_56_employee"></div>
+          <div class="cap"><span class="no">56</span> Employee Signature over Printed Name</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="small mt">*NOTE: The BIR Data Privacy is in the BIR website (www.bir.gov.ph)</div>
+
+</div><!-- /sheet -->
+
+</body>
+</html>

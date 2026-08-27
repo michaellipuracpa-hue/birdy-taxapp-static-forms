@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 1601-EQ — Quarterly Remittance Return of Creditable Income Taxes Withheld (Expanded)</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="1601-EQ">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Quarterly Remittance Return of Creditable Income Taxes Withheld (Expanded)</div>
+      <div class="fh-sub">Enter all required information in CAPITAL LETTERS using BLACK ink. Mark all applicable boxes with an &ldquo;X&rdquo;. Two copies MUST be filed with the BIR and one held by the Taxpayer.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1601-EQ</span><span class="ver">January 2019 (ENCS)<br>Page 1</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:.8">
+        <span class="lbl"><span class="no">1</span> For the Year</span>
+        <input type="text" name="year" placeholder="YYYY">
+      </div>
+      <div class="cell stack" style="flex:1.5">
+        <span class="lbl"><span class="no">2</span> Quarter</span>
+        <span>
+          <label class="opt"><input type="radio" name="quarter" value="1"> 1st</label>
+          <label class="opt"><input type="radio" name="quarter" value="2"> 2nd</label>
+          <label class="opt"><input type="radio" name="quarter" value="3"> 3rd</label>
+          <label class="opt"><input type="radio" name="quarter" value="4"> 4th</label>
+        </span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> Amended Return?</span>
+        <span><label class="opt"><input type="radio" name="amended" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="amended" value="no"> No</label></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4</span> Any Taxes Withheld?</span>
+        <span><label class="opt"><input type="radio" name="taxes_withheld" value="yes"> Yes</label>
+        <label class="opt"><input type="radio" name="taxes_withheld" value="no"> No</label></span>
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">5</span> No. of Sheet/s Attached</span>
+        <input class="short" type="text" name="sheets_attached">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Background Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell" style="flex:2.4">
+        <span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell">
+        <span class="no">7</span><span class="lbl">RDO Code</span>
+        <input class="short" type="text" name="rdo_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">8</span> Withholding Agent&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="agent_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3.2">
+        <span class="lbl"><span class="no">9</span> Registered Address (Indicate complete address. If branch, indicate the branch address. If the registered address is different from the current address, go to the RDO to update registered address by using BIR Form No. 1905)</span>
+        <input type="text" name="reg_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">9A</span> ZIP Code</span>
+        <input type="text" name="zip_code">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" style="flex:1.4">
+        <span class="no">10</span><span class="lbl">Contact Number</span>
+        <input type="text" name="contact_no">
+      </div>
+      <div class="cell" style="flex:1.6">
+        <span class="no">11</span><span class="lbl">Category of Withholding Agent</span>
+        <label class="opt"><input type="radio" name="agent_category" value="private"> Private</label>
+        <label class="opt"><input type="radio" name="agent_category" value="government"> Government</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <span class="no">12</span><span class="lbl">Email Address</span>
+        <input type="text" name="email">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Computation of Tax</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:4%"></th><th style="width:14%">ATC</th><th>Tax Base (Consolidated for the Quarter)</th><th style="width:10%">Tax Rate</th><th style="width:26%">Tax Withheld (Consolidated for the Quarter)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">13</span></td><td><input type="text" name="atc_13"></td><td><input class="num" type="text" name="base_13"></td><td><input class="num" type="text" name="rate_13" placeholder="%"></td><td><input class="num calc" type="text" name="wtax_13" data-calc="n('base_13')*n('rate_13')/100" readonly></td></tr>
+      <tr><td><span class="no">14</span></td><td><input type="text" name="atc_14"></td><td><input class="num" type="text" name="base_14"></td><td><input class="num" type="text" name="rate_14" placeholder="%"></td><td><input class="num calc" type="text" name="wtax_14" data-calc="n('base_14')*n('rate_14')/100" readonly></td></tr>
+      <tr><td><span class="no">15</span></td><td><input type="text" name="atc_15"></td><td><input class="num" type="text" name="base_15"></td><td><input class="num" type="text" name="rate_15" placeholder="%"></td><td><input class="num calc" type="text" name="wtax_15" data-calc="n('base_15')*n('rate_15')/100" readonly></td></tr>
+      <tr><td><span class="no">16</span></td><td><input type="text" name="atc_16"></td><td><input class="num" type="text" name="base_16"></td><td><input class="num" type="text" name="rate_16" placeholder="%"></td><td><input class="num calc" type="text" name="wtax_16" data-calc="n('base_16')*n('rate_16')/100" readonly></td></tr>
+      <tr><td><span class="no">17</span></td><td><input type="text" name="atc_17"></td><td><input class="num" type="text" name="base_17"></td><td><input class="num" type="text" name="rate_17" placeholder="%"></td><td><input class="num calc" type="text" name="wtax_17" data-calc="n('base_17')*n('rate_17')/100" readonly></td></tr>
+      <tr><td><span class="no">18</span></td><td><input type="text" name="atc_18"></td><td><input class="num" type="text" name="base_18"></td><td><input class="num" type="text" name="rate_18" placeholder="%"></td><td><input class="num calc" type="text" name="wtax_18" data-calc="n('base_18')*n('rate_18')/100" readonly></td></tr>
+    </tbody>
+  </table>
+  <div class="grid" style="border-top:none">
+    <div class="item total"><span class="no">19</span><span class="lbl">Total Taxes Withheld for the Quarter (Sum of Items 13 to 18)</span><span class="amt"><input class="num calc" type="text" name="total_wtax" data-calc="n('wtax_13')+n('wtax_14')+n('wtax_15')+n('wtax_16')+n('wtax_17')+n('wtax_18')" readonly></span></div>
+    <div class="item"><span class="no">20</span><span class="lbl">Less: Remittances Made: 1st Month of the Quarter</span><span class="amt"><input class="num" type="text" name="remit_month1"></span></div>
+    <div class="item"><span class="no">21</span><span class="lbl" style="padding-left:96px">2nd Month of the Quarter</span><span class="amt"><input class="num" type="text" name="remit_month2"></span></div>
+    <div class="item"><span class="no">22</span><span class="lbl" style="padding-left:44px">Tax Remitted in Return Previously Filed, if this is an amended return</span><span class="amt"><input class="num" type="text" name="prev_remitted"></span></div>
+    <div class="item"><span class="no">23</span><span class="lbl" style="padding-left:44px">Over-remittance from Previous Quarter of the same taxable year</span><span class="amt"><input class="num" type="text" name="over_prev_qtr"></span></div>
+    <div class="item"><span class="no">24</span><span class="lbl" style="padding-left:44px">Other Payments Made (please attach proof of payments &ndash; BIR Form No. 0605)</span><span class="amt"><input class="num" type="text" name="other_payments"></span></div>
+    <div class="item total"><span class="no">25</span><span class="lbl">Total Remittances Made (Sum of Items 20 to 24)</span><span class="amt"><input class="num calc" type="text" name="total_remittances" data-calc="n('remit_month1')+n('remit_month2')+n('prev_remitted')+n('over_prev_qtr')+n('other_payments')" readonly></span></div>
+    <div class="item total"><span class="no">26</span><span class="lbl">Tax Still Due/(Over-remittance) (Item 19 Less Item 25)</span><span class="amt"><input class="num calc" type="text" name="tax_still_due" data-calc="n('total_wtax')-n('total_remittances')" readonly></span></div>
+    <div class="item"><span class="lbl bold" style="padding-left:8px">Add: Penalties</span><span class="no">27</span><span class="lbl">Surcharge</span><span class="amt"><input class="num" type="text" name="surcharge"></span></div>
+    <div class="item"><span class="no">28</span><span class="lbl" style="padding-left:96px">Interest</span><span class="amt"><input class="num" type="text" name="interest"></span></div>
+    <div class="item"><span class="no">29</span><span class="lbl" style="padding-left:96px">Compromise</span><span class="amt"><input class="num" type="text" name="compromise"></span></div>
+    <div class="item total"><span class="no">30</span><span class="lbl" style="padding-left:96px">Total Penalties (Sum of Items 27 to 29)</span><span class="amt"><input class="num calc" type="text" name="total_penalties" data-calc="n('surcharge')+n('interest')+n('compromise')" readonly></span></div>
+    <div class="item total"><span class="no">31</span><span class="lbl">TOTAL AMOUNT STILL DUE/(Over-remittance) (Sum of Items 26 and 30)</span><span class="amt"><input class="num calc" type="text" name="total_amount_due" data-calc="n('tax_still_due')+n('total_penalties')" readonly></span></div>
+    <div class="row">
+      <div class="cell">
+        <span class="lbl bold">If over-remittance, mark one (1) box only</span>
+        <label class="opt"><input type="radio" name="over_remit_option" value="refund"> To be refunded</label>
+        <label class="opt"><input type="radio" name="over_remit_option" value="tcc"> To be issued Tax Credit Certificate</label>
+        <label class="opt" style="white-space:normal"><input type="radio" name="over_remit_option" value="carryover"> To be carried over to the next quarter within the same calendar year (not applicable for succeeding year)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="row"><div class="cell"><p class="small" style="margin:2px 0">I/We declare under the penalties of perjury that this remittance form, and all its attachments, has been made in good faith, verified by me/us, and to the best of my/our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, I/we give my/our consent to the processing of my/our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes. (If Authorized Representative, attach authorization letter)</p></div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Individual:</div>
+      <div class="line"><input type="text" name="sig_individual" style="background:transparent;border:none;text-align:center"></div>
+      <div class="cap">Signature over Printed Name of Taxpayer/Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+    <div class="sig">
+      <div class="small bold" style="text-align:left">For Non-Individual:</div>
+      <div class="line"><input type="text" name="sig_nonindividual" style="background:transparent;border:none;text-align:center"></div>
+      <div class="cap">Signature over Printed Name of President/Vice President/Authorized Officer or Representative/Tax Agent (Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:1.6">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="tax_agent_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="agent_issue_date" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="agent_expiry_date" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Payment</div>
+  <table class="sched">
+    <thead>
+      <tr><th style="width:22%">Particulars</th><th style="width:22%">Drawee Bank/Agency</th><th style="width:16%">Number</th><th style="width:16%">Date (MM/DD/YYYY)</th><th>Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="no">32</span>Cash/Bank Debit Memo</td><td><input type="text" name="pay32_bank"></td><td><input type="text" name="pay32_number"></td><td><input type="text" name="pay32_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay32_amount"></td></tr>
+      <tr><td><span class="no">33</span>Check</td><td><input type="text" name="pay33_bank"></td><td><input type="text" name="pay33_number"></td><td><input type="text" name="pay33_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay33_amount"></td></tr>
+      <tr><td><span class="no">34</span>Tax Debit Memo</td><td><input type="text" name="pay34_bank"></td><td><input type="text" name="pay34_number"></td><td><input type="text" name="pay34_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay34_amount"></td></tr>
+      <tr><td><span class="no">35</span>Others (specify below)<br><input type="text" name="pay35_specify"></td><td><input type="text" name="pay35_bank"></td><td><input type="text" name="pay35_number"></td><td><input type="text" name="pay35_date" placeholder="MM/DD/YYYY"></td><td><input class="num" type="text" name="pay35_amount"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid">
+    <div class="row" style="min-height:70px">
+      <div class="cell stack" style="flex:1.4">
+        <span class="lbl">Machine Validation/Revenue Official Receipt Details (if not filed with an Authorized Agent Bank)</span>
+        <textarea name="machine_validation" rows="3"></textarea>
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Stamp of Receiving Office/AAB and Date of Receipt (RO&rsquo;s Signature/Bank Teller&rsquo;s Initial)</span>
+      </div>
+    </div>
+  </div>
+  <p class="small">*NOTE: The BIR Data Privacy Policy is in the BIR website (www.bir.gov.ph)</p>
+
+</div>
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">&nbsp;</div>
+      <div class="fh-title">Quarterly Remittance Return of Creditable Income Taxes Withheld (Expanded)</div>
+      <div class="fh-sub">&nbsp;</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">1601-EQ</span><span class="ver">January 2019 (ENCS)<br>Page 2</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="lbl">TIN</span>
+        <input class="mid" type="text" name="p2_tin" placeholder="000-000-000-00000">
+      </div>
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Withholding Agent&rsquo;s Name (Last Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p2_agent_name">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Schedule of Alphanumeric Tax Codes (ATC)</div>
+  <table class="sched">
+    <thead>
+      <tr><th>Nature of Income Payment</th><th style="width:8%">Tax Rate</th><th style="width:10%">ATC Individual</th><th style="width:10%">ATC Corporation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Professional (Lawyers, CPAs, Engineers, etc.) &ndash; gross income for the current year did not exceed P 3M</td><td class="center">5%</td><td class="center">WI010</td><td class="center"></td></tr>
+      <tr><td>&nbsp;&nbsp;If gross income is more than P 3M or VAT Registered regardless of amount</td><td class="center">10%</td><td class="center">WI011</td><td class="center"></td></tr>
+      <tr><td>Professional (Lawyers, CPAs, Engineers, etc.) &ndash; gross income did not exceed P 720,000</td><td class="center">10%</td><td class="center"></td><td class="center">WC010</td></tr>
+      <tr><td>&nbsp;&nbsp;If gross income exceeds P 720,000</td><td class="center">15%</td><td class="center"></td><td class="center">WC011</td></tr>
+      <tr><td>Professional entertainers (actors, actresses, singers, lyricists, composers, emcees) &ndash; gross income did not exceed P 3M</td><td class="center">5%</td><td class="center">WI020</td><td class="center"></td></tr>
+      <tr><td>&nbsp;&nbsp;If gross income is more than P 3M or VAT Registered regardless of amount</td><td class="center">10%</td><td class="center">WI021</td><td class="center"></td></tr>
+      <tr><td>Professional entertainers &ndash; gross income did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC020 / WC021</td></tr>
+      <tr><td>Professional athletes (basketball players, pelotaris, jockeys) &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI030 / WI031</td><td class="center"></td></tr>
+      <tr><td>Professional athletes &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC030 / WC031</td></tr>
+      <tr><td>All directors and producers involved in movies, stage, radio, television and musical productions &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI040 / WI041</td><td class="center"></td></tr>
+      <tr><td>All directors and producers &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC040 / WC041</td></tr>
+      <tr><td>Management and technical consultants &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI050 / WI051</td><td class="center"></td></tr>
+      <tr><td>Management and technical consultants &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC050 / WC051</td></tr>
+      <tr><td>Business and bookkeeping agents and agencies &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI060 / WI061</td><td class="center"></td></tr>
+      <tr><td>Business and bookkeeping agents and agencies &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC060 / WC061</td></tr>
+      <tr><td>Insurance agents and insurance adjusters &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI070 / WI071</td><td class="center"></td></tr>
+      <tr><td>Insurance agents and insurance adjusters &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC070 / WC071</td></tr>
+      <tr><td>Other recipients of talent fees &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI080 / WI081</td><td class="center"></td></tr>
+      <tr><td>Other recipients of talent fees &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC080 / WC081</td></tr>
+      <tr><td>Fees of directors who are not employees of the company &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI090 / WI091</td><td class="center"></td></tr>
+      <tr><td>Rentals: gross rental or lease for the continued use or possession of personal property in excess of P 10,000 annually and real property used in business which the payor or obligor has not taken title or is not taking title, or in which has no equity; poles, satellites, transmission facilities and billboards</td><td class="center">5%</td><td class="center">WI100</td><td class="center">WC100</td></tr>
+      <tr><td>Cinematographic film rentals and other payments to resident individuals and corporate cinematographic film owners, lessors or distributors</td><td class="center">5%</td><td class="center">WI110</td><td class="center">WC110</td></tr>
+      <tr><td>Income payments to certain contractors</td><td class="center">2%</td><td class="center">WI120</td><td class="center">WC120</td></tr>
+      <tr><td>Income distribution to the beneficiaries of estates and trusts</td><td class="center">15%</td><td class="center">WI130</td><td class="center"></td></tr>
+      <tr><td>Gross commissions or service fees of customs, insurance, stock, immigration and commercial brokers, fees of agents of professional entertainers and real estate service practitioners (RESPs) &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI139 / WI140</td><td class="center"></td></tr>
+      <tr><td>Gross commissions or service fees of brokers/agents/RESPs &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC139 / WC140</td></tr>
+      <tr><td>Professional fees paid to medical practitioners by hospitals &amp; clinics or paid directly by HMOs and/or similar establishments &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI151 / WI150</td><td class="center"></td></tr>
+      <tr><td>Professional fees paid to medical practitioners by hospitals &amp; clinics or HMOs &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC151 / WC150</td></tr>
+      <tr><td>Payment by the General Professional Partnerships (GPPs) to its partners &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center">WI152 / WI153</td><td class="center"></td></tr>
+      <tr><td>Income payments made by credit card companies</td><td class="center">&frac12; of 1%</td><td class="center">WI156</td><td class="center">WC156</td></tr>
+      <tr><td>Additional income payments to government personnel from importers, shipping and airline companies or their agents for overtime services</td><td class="center">15%</td><td class="center">WI159</td><td class="center"></td></tr>
+      <tr><td>Income payments made by the government and GOCCs to its local/resident suppliers of goods other than those covered by other rates of withholding tax</td><td class="center">1%</td><td class="center">WI640</td><td class="center">WC640</td></tr>
+      <tr><td>Income payments made by the government and GOCCs to its local/resident suppliers of services other than those covered by other rates of withholding tax</td><td class="center">2%</td><td class="center">WI157</td><td class="center">WC157</td></tr>
+      <tr><td>Income payment made by top withholding agents to their local/resident supplier of goods other than those covered by other rates of withholding tax</td><td class="center">1%</td><td class="center">WI158</td><td class="center">WC158</td></tr>
+      <tr><td>Income payment made by top withholding agents to their local/resident supplier of services other than those covered by other rates of withholding tax</td><td class="center">2%</td><td class="center">WI160</td><td class="center">WC160</td></tr>
+      <tr><td>Commissions, rebates, discounts and other similar considerations paid/granted to independent and/or exclusive sales representatives and marketing agents and sub-agents of companies, including multi-level marketing companies &ndash; did not exceed P 3M / more than P 3M or VAT Registered</td><td class="center">5% / 10%</td><td class="center">WI515 / WI516</td><td class="center"></td></tr>
+      <tr><td>Commissions, rebates, discounts paid/granted to independent/exclusive sales representatives and marketing agents (corporate) &ndash; did not exceed P 720,000 / exceeds P 720,000</td><td class="center">10% / 15%</td><td class="center"></td><td class="center">WC515 / WC516</td></tr>
+      <tr><td>Gross payments to embalmers by funeral parlors</td><td class="center">1%</td><td class="center">WI530</td><td class="center"></td></tr>
+      <tr><td>Payments made by pre-need companies to funeral parlors</td><td class="center">1%</td><td class="center">WI535</td><td class="center">WC535</td></tr>
+      <tr><td>Tolling fees paid to refineries</td><td class="center">5%</td><td class="center">WI540</td><td class="center">WC540</td></tr>
+      <tr><td>Income payments made to suppliers of agricultural products in excess of cumulative amount of P 300,000 within the same taxable year</td><td class="center">1%</td><td class="center">WI610</td><td class="center">WC610</td></tr>
+      <tr><td>Income payments on purchases of minerals, mineral products and quarry resources (e.g. silver, gold, marble, granite, gravel, sand, boulders) except purchases by Bangko Sentral ng Pilipinas</td><td class="center">5%</td><td class="center">WI630</td><td class="center">WC630</td></tr>
+      <tr><td>Income payments on purchases of minerals, mineral products and quarry resources by Bangko Sentral ng Pilipinas (BSP) from gold miners/suppliers under PD 1899, as amended by RA No. 7076</td><td class="center">1%</td><td class="center">WI632</td><td class="center">WC632</td></tr>
+      <tr><td>On gross amount of refund given by MERALCO to customers with active contracts as classified by MERALCO</td><td class="center">15%</td><td class="center">WI650</td><td class="center">WC650</td></tr>
+      <tr><td>On gross amount of refund given by MERALCO to customers with terminated contracts as classified by MERALCO</td><td class="center">15%</td><td class="center">WI651</td><td class="center">WC651</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &ndash; Residential and General Service customers whose monthly electricity consumption exceeds 200 kwh as classified by MERALCO</td><td class="center">10%</td><td class="center">WI660</td><td class="center">WC660</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &ndash; Non-Residential customers whose monthly electricity consumption exceeds 200 kwh as classified by MERALCO</td><td class="center">15%</td><td class="center">WI661</td><td class="center">WC661</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &ndash; Residential and General Service customers whose monthly electricity consumption exceeds 200 kwh as classified by other electric Distribution Utilities (DU)</td><td class="center">10%</td><td class="center">WI662</td><td class="center">WC662</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &ndash; Non-Residential customers whose monthly electricity consumption exceeds 200 kwh as classified by other electric Distribution Utilities (DU)</td><td class="center">15%</td><td class="center">WI663</td><td class="center">WC663</td></tr>
+      <tr><td>Income payments made by political parties and candidates of local and national elections on all their purchases of goods and services related to campaign expenditures, and income payments made by individuals or juridical persons for their purchases of goods and services intended to be given as campaign contributions to political parties and candidates</td><td class="center">5%</td><td class="center">WI680</td><td class="center">WC680</td></tr>
+      <tr><td>Income payments received by Real Estate Investment Trust (REIT)</td><td class="center">1%</td><td class="center"></td><td class="center">WC690</td></tr>
+      <tr><td>Interest income derived from any other debt instruments not within the coverage of deposit substitutes and Revenue Regulations No. 14-2012</td><td class="center">15%</td><td class="center">WI710</td><td class="center">WC710</td></tr>
+      <tr><td>Income payments on locally produced raw sugar</td><td class="center">1%</td><td class="center">WI720</td><td class="center">WC720</td></tr>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>

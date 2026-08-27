@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BIR 2307 — Certificate of Creditable Tax Withheld at Source</title>
+<link rel="stylesheet" href="../assets/bir.css">
+<script src="../assets/bir.js" defer></script>
+</head>
+<body data-form="2307">
+
+<div class="sheet">
+
+  <div class="form-head">
+    <div class="fh-left">
+      <div class="fh-agency">Republic of the Philippines<br>Department of Finance<br>Bureau of Internal Revenue</div>
+      <div class="fh-title">Certificate of Creditable Tax Withheld at Source</div>
+      <div class="fh-sub">Fill in all applicable spaces. Mark all appropriate boxes with an &ldquo;X&rdquo;.</div>
+    </div>
+    <div class="fh-no"><span class="lbl">BIR Form No.</span><span class="num">2307</span><span class="ver">January 2018 (ENCS)</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">1</span><span class="lbl">For the Period&emsp;From (MM/DD/YYYY)</span>
+        <input class="mid" type="text" name="p0_1_period_from" placeholder="MM/DD/YYYY">
+        <span class="lbl">To (MM/DD/YYYY)</span>
+        <input class="mid" type="text" name="p0_1_period_to" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part I &ndash; Payee Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">2</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="p1_2_tin" placeholder="000-000-000-00000">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">3</span> Payee&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p1_3_payee_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">4</span> Registered Address</span>
+        <input type="text" name="p1_4_registered_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">4A</span> ZIP Code</span>
+        <input type="text" name="p1_4a_zip">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">5</span> Foreign Address, if applicable</span>
+        <input type="text" name="p1_5_foreign_address">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part II &ndash; Payor Information</div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell">
+        <span class="no">6</span><span class="lbl">Taxpayer Identification Number (TIN)</span>
+        <input class="mid" type="text" name="p2_6_tin" placeholder="000-000-000-00000">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack">
+        <span class="lbl"><span class="no">7</span> Payor&rsquo;s Name (Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual)</span>
+        <input type="text" name="p2_7_payor_name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell stack" style="flex:3">
+        <span class="lbl"><span class="no">8</span> Registered Address</span>
+        <input type="text" name="p2_8_registered_address">
+      </div>
+      <div class="cell stack">
+        <span class="lbl"><span class="no">8A</span> ZIP Code</span>
+        <input type="text" name="p2_8a_zip">
+      </div>
+    </div>
+  </div>
+
+  <div class="part-title">Part III &ndash; Details of Monthly Income Payments and Taxes Withheld</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th rowspan="2" style="width:26%">Income Payments Subject to Expanded Withholding Tax</th>
+        <th rowspan="2" style="width:9%">ATC</th>
+        <th colspan="4">AMOUNT OF INCOME PAYMENTS</th>
+        <th rowspan="2" style="width:13%">Tax Withheld for the Quarter</th>
+      </tr>
+      <tr>
+        <th>1st Month of the Quarter</th>
+        <th>2nd Month of the Quarter</th>
+        <th>3rd Month of the Quarter</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="ewt1_nature"></td>
+        <td><input type="text" name="ewt1_atc"></td>
+        <td><input class="num" type="text" name="ewt1_m1"></td>
+        <td><input class="num" type="text" name="ewt1_m2"></td>
+        <td><input class="num" type="text" name="ewt1_m3"></td>
+        <td><input class="num calc" type="text" name="ewt1_total" data-calc="n('ewt1_m1')+n('ewt1_m2')+n('ewt1_m3')" readonly></td>
+        <td><input class="num" type="text" name="ewt1_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="ewt2_nature"></td>
+        <td><input type="text" name="ewt2_atc"></td>
+        <td><input class="num" type="text" name="ewt2_m1"></td>
+        <td><input class="num" type="text" name="ewt2_m2"></td>
+        <td><input class="num" type="text" name="ewt2_m3"></td>
+        <td><input class="num calc" type="text" name="ewt2_total" data-calc="n('ewt2_m1')+n('ewt2_m2')+n('ewt2_m3')" readonly></td>
+        <td><input class="num" type="text" name="ewt2_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="ewt3_nature"></td>
+        <td><input type="text" name="ewt3_atc"></td>
+        <td><input class="num" type="text" name="ewt3_m1"></td>
+        <td><input class="num" type="text" name="ewt3_m2"></td>
+        <td><input class="num" type="text" name="ewt3_m3"></td>
+        <td><input class="num calc" type="text" name="ewt3_total" data-calc="n('ewt3_m1')+n('ewt3_m2')+n('ewt3_m3')" readonly></td>
+        <td><input class="num" type="text" name="ewt3_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="ewt4_nature"></td>
+        <td><input type="text" name="ewt4_atc"></td>
+        <td><input class="num" type="text" name="ewt4_m1"></td>
+        <td><input class="num" type="text" name="ewt4_m2"></td>
+        <td><input class="num" type="text" name="ewt4_m3"></td>
+        <td><input class="num calc" type="text" name="ewt4_total" data-calc="n('ewt4_m1')+n('ewt4_m2')+n('ewt4_m3')" readonly></td>
+        <td><input class="num" type="text" name="ewt4_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="ewt5_nature"></td>
+        <td><input type="text" name="ewt5_atc"></td>
+        <td><input class="num" type="text" name="ewt5_m1"></td>
+        <td><input class="num" type="text" name="ewt5_m2"></td>
+        <td><input class="num" type="text" name="ewt5_m3"></td>
+        <td><input class="num calc" type="text" name="ewt5_total" data-calc="n('ewt5_m1')+n('ewt5_m2')+n('ewt5_m3')" readonly></td>
+        <td><input class="num" type="text" name="ewt5_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="ewt6_nature"></td>
+        <td><input type="text" name="ewt6_atc"></td>
+        <td><input class="num" type="text" name="ewt6_m1"></td>
+        <td><input class="num" type="text" name="ewt6_m2"></td>
+        <td><input class="num" type="text" name="ewt6_m3"></td>
+        <td><input class="num calc" type="text" name="ewt6_total" data-calc="n('ewt6_m1')+n('ewt6_m2')+n('ewt6_m3')" readonly></td>
+        <td><input class="num" type="text" name="ewt6_tax"></td>
+      </tr>
+      <tr>
+        <td class="bold">Total</td>
+        <td></td>
+        <td><input class="num calc" type="text" name="ewt_total_m1" data-calc="n('ewt1_m1')+n('ewt2_m1')+n('ewt3_m1')+n('ewt4_m1')+n('ewt5_m1')+n('ewt6_m1')" readonly></td>
+        <td><input class="num calc" type="text" name="ewt_total_m2" data-calc="n('ewt1_m2')+n('ewt2_m2')+n('ewt3_m2')+n('ewt4_m2')+n('ewt5_m2')+n('ewt6_m2')" readonly></td>
+        <td><input class="num calc" type="text" name="ewt_total_m3" data-calc="n('ewt1_m3')+n('ewt2_m3')+n('ewt3_m3')+n('ewt4_m3')+n('ewt5_m3')+n('ewt6_m3')" readonly></td>
+        <td><input class="num calc" type="text" name="ewt_total_total" data-calc="n('ewt1_total')+n('ewt2_total')+n('ewt3_total')+n('ewt4_total')+n('ewt5_total')+n('ewt6_total')" readonly></td>
+        <td><input class="num calc" type="text" name="ewt_total_tax" data-calc="n('ewt1_tax')+n('ewt2_tax')+n('ewt3_tax')+n('ewt4_tax')+n('ewt5_tax')+n('ewt6_tax')" readonly></td>
+      </tr>
+      <tr>
+        <td colspan="7" class="bold center" style="background:var(--shade)">Money Payments Subject to Withholding of Business Tax (Government &amp; Private)</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="bt1_nature"></td>
+        <td><input type="text" name="bt1_atc"></td>
+        <td><input class="num" type="text" name="bt1_m1"></td>
+        <td><input class="num" type="text" name="bt1_m2"></td>
+        <td><input class="num" type="text" name="bt1_m3"></td>
+        <td><input class="num calc" type="text" name="bt1_total" data-calc="n('bt1_m1')+n('bt1_m2')+n('bt1_m3')" readonly></td>
+        <td><input class="num" type="text" name="bt1_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="bt2_nature"></td>
+        <td><input type="text" name="bt2_atc"></td>
+        <td><input class="num" type="text" name="bt2_m1"></td>
+        <td><input class="num" type="text" name="bt2_m2"></td>
+        <td><input class="num" type="text" name="bt2_m3"></td>
+        <td><input class="num calc" type="text" name="bt2_total" data-calc="n('bt2_m1')+n('bt2_m2')+n('bt2_m3')" readonly></td>
+        <td><input class="num" type="text" name="bt2_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="bt3_nature"></td>
+        <td><input type="text" name="bt3_atc"></td>
+        <td><input class="num" type="text" name="bt3_m1"></td>
+        <td><input class="num" type="text" name="bt3_m2"></td>
+        <td><input class="num" type="text" name="bt3_m3"></td>
+        <td><input class="num calc" type="text" name="bt3_total" data-calc="n('bt3_m1')+n('bt3_m2')+n('bt3_m3')" readonly></td>
+        <td><input class="num" type="text" name="bt3_tax"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="bt4_nature"></td>
+        <td><input type="text" name="bt4_atc"></td>
+        <td><input class="num" type="text" name="bt4_m1"></td>
+        <td><input class="num" type="text" name="bt4_m2"></td>
+        <td><input class="num" type="text" name="bt4_m3"></td>
+        <td><input class="num calc" type="text" name="bt4_total" data-calc="n('bt4_m1')+n('bt4_m2')+n('bt4_m3')" readonly></td>
+        <td><input class="num" type="text" name="bt4_tax"></td>
+      </tr>
+      <tr>
+        <td class="bold">Total</td>
+        <td></td>
+        <td><input class="num calc" type="text" name="bt_total_m1" data-calc="n('bt1_m1')+n('bt2_m1')+n('bt3_m1')+n('bt4_m1')" readonly></td>
+        <td><input class="num calc" type="text" name="bt_total_m2" data-calc="n('bt1_m2')+n('bt2_m2')+n('bt3_m2')+n('bt4_m2')" readonly></td>
+        <td><input class="num calc" type="text" name="bt_total_m3" data-calc="n('bt1_m3')+n('bt2_m3')+n('bt3_m3')+n('bt4_m3')" readonly></td>
+        <td><input class="num calc" type="text" name="bt_total_total" data-calc="n('bt1_total')+n('bt2_total')+n('bt3_total')+n('bt4_total')" readonly></td>
+        <td><input class="num calc" type="text" name="bt_total_tax" data-calc="n('bt1_tax')+n('bt2_tax')+n('bt3_tax')+n('bt4_tax')" readonly></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid mt">
+    <div class="row"><div class="cell small">
+      We declare under the penalties of perjury that this certificate has been made in good faith, verified by us, and to the best of our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, we give our consent to the processing of our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.
+    </div></div>
+  </div>
+
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sig_payor_name"></div>
+      <div class="cap">Signature over Printed Name of Payor/Payor&rsquo;s Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="payor_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="payor_accred_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="payor_accred_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="grid mt">
+    <div class="row"><div class="cell shade bold small center">CONFORME:</div></div>
+  </div>
+  <div class="sig-block">
+    <div class="sig">
+      <div class="line"><input type="text" name="sig_payee_name"></div>
+      <div class="cap">Signature over Printed Name of Payee/Payee&rsquo;s Authorized Representative/Tax Agent<br>(Indicate Title/Designation and TIN)</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell stack" style="flex:2">
+        <span class="lbl">Tax Agent Accreditation No./Attorney&rsquo;s Roll No. (if applicable)</span>
+        <input type="text" name="payee_accred_no">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Issue (MM/DD/YYYY)</span>
+        <input type="text" name="payee_accred_issue" placeholder="MM/DD/YYYY">
+      </div>
+      <div class="cell stack">
+        <span class="lbl">Date of Expiry (MM/DD/YYYY)</span>
+        <input type="text" name="payee_accred_expiry" placeholder="MM/DD/YYYY">
+      </div>
+    </div>
+  </div>
+
+  <div class="small mt">*NOTE: The BIR Data Privacy is in the BIR website (www.bir.gov.ph)</div>
+
+</div><!-- /sheet 1 -->
+
+<div class="sheet">
+
+  <div class="part-title">Schedules of Alphanumeric Tax Codes</div>
+  <div class="sub-title">A. Income Payments subject to Expanded Withholding Tax</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:70%">Nature of Income Payment</th>
+        <th>ATC &mdash; Individual</th>
+        <th>ATC &mdash; Corporation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Professional (Lawyers, CPAs, Engineers, etc.) &mdash; gross income for the current year did not exceed P3M</td><td class="center">WI010</td><td class="center"></td></tr>
+      <tr><td>Professional (Lawyers, CPAs, Engineers, etc.) &mdash; gross income is more than P3M or VAT Registered regardless of amount</td><td class="center">WI011</td><td class="center"></td></tr>
+      <tr><td>Professional (Lawyers, CPAs, Engineers, etc.) &mdash; gross income did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC010 / WC011</td></tr>
+      <tr><td>Professional entertainers (actors, actresses, singers, lyricists, composers, emcees) &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI020 / WI021</td><td class="center"></td></tr>
+      <tr><td>Professional entertainers &mdash; gross income did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC020 / WC021</td></tr>
+      <tr><td>Professional athletes (basketball players, pelotaris, jockeys) &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI030 / WI031</td><td class="center"></td></tr>
+      <tr><td>Professional athletes &mdash; gross income did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC030 / WC031</td></tr>
+      <tr><td>All directors and producers involved in movies, stage, radio, television and musical productions &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI040 / WI041</td><td class="center"></td></tr>
+      <tr><td>All directors and producers &mdash; gross income did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC040 / WC041</td></tr>
+      <tr><td>Management and technical consultants &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI050 / WI051</td><td class="center"></td></tr>
+      <tr><td>Management and technical consultants &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC050 / WC051</td></tr>
+      <tr><td>Business and bookkeeping agents and agencies &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI060 / WI061</td><td class="center"></td></tr>
+      <tr><td>Business and bookkeeping agents and agencies &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC060 / WC061</td></tr>
+      <tr><td>Insurance agents and insurance adjusters &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI070 / WI071</td><td class="center"></td></tr>
+      <tr><td>Insurance agents and insurance adjusters &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC070 / WC071</td></tr>
+      <tr><td>Other recipients of talent fees &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI080 / WI081</td><td class="center"></td></tr>
+      <tr><td>Other recipients of talent fees &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC080 / WC081</td></tr>
+      <tr><td>Fees of directors who are not employees of the company &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI090 / WI091</td><td class="center"></td></tr>
+      <tr><td>Rentals: gross rental or lease of personal property in excess of P10,000 annually and real property used in business; poles, satellites, transmission facilities and billboards</td><td class="center">WI100</td><td class="center">WC100</td></tr>
+      <tr><td>Cinematographic film rentals and other payments to resident individuals and corporate cinematographic film owners, lessors or distributors</td><td class="center">WI110</td><td class="center">WC110</td></tr>
+      <tr><td>Income payments to certain contractors</td><td class="center">WI120</td><td class="center">WC120</td></tr>
+      <tr><td>Income distribution to the beneficiaries of estates and trusts</td><td class="center">WI130</td><td class="center"></td></tr>
+      <tr><td>Gross commissions or service fees of customs, insurance, stock, immigration and commercial brokers, fees of agents of professional entertainers and real estate service practitioners (RESPs) &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI139 / WI140</td><td class="center"></td></tr>
+      <tr><td>Gross commissions or service fees of brokers, agents and RESPs &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC139 / WC140</td></tr>
+      <tr><td>Professional fees paid to medical practitioners by hospitals &amp; clinics or paid directly by HMOs &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI151 / WI150</td><td class="center"></td></tr>
+      <tr><td>Professional fees paid to medical practitioners &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC151 / WC150</td></tr>
+      <tr><td>Payment by the General Professional Partnerships (GPPs) to its partners &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center">WI152 / WI153</td><td class="center"></td></tr>
+      <tr><td>Income payments made by credit card companies</td><td class="center">WI156</td><td class="center">WC156</td></tr>
+      <tr><td>Additional income payments to government personnel from importers, shipping and airline companies or their agents for overtime services</td><td class="center">WI159</td><td class="center"></td></tr>
+      <tr><td>Income payments made by the government and GOCCs to its local/resident suppliers of goods other than those covered by other rates of withholding tax</td><td class="center">WI640</td><td class="center">WC640</td></tr>
+      <tr><td>Income payments made by the government and GOCCs to its local/resident suppliers of services other than those covered by other rates of withholding tax</td><td class="center">WI157</td><td class="center">WC157</td></tr>
+      <tr><td>Income payment made by top withholding agents to their local/resident supplier of goods other than those covered by other rates of withholding tax</td><td class="center">WI158</td><td class="center">WC158</td></tr>
+      <tr><td>Income payment made by top withholding agents to their local/resident supplier of services other than those covered by other rates of withholding tax</td><td class="center">WI160</td><td class="center">WC160</td></tr>
+      <tr><td>Commissions, rebates, discounts and other similar considerations paid/granted to independent and/or exclusive sales representatives and marketing agents and sub-agents of companies, including multi-level marketing companies &mdash; not over P3M / over P3M or VAT Registered</td><td class="center">WI515 / WI516</td><td class="center"></td></tr>
+      <tr><td>Commissions, rebates, discounts paid/granted to independent and/or exclusive sales representatives and marketing agents &mdash; did not exceed P720,000 / exceeds P720,000</td><td class="center"></td><td class="center">WC515 / WC516</td></tr>
+      <tr><td>Gross payments to embalmers by funeral parlors</td><td class="center">WI530</td><td class="center"></td></tr>
+      <tr><td>Payments made by pre-need companies to funeral parlors</td><td class="center">WI535</td><td class="center">WC535</td></tr>
+      <tr><td>Tolling fees paid to refineries</td><td class="center">WI540</td><td class="center">WC540</td></tr>
+      <tr><td>Income payments made to suppliers of agricultural products in excess of cumulative amount of P300,000 within the same taxable year</td><td class="center">WI610</td><td class="center">WC610</td></tr>
+      <tr><td>Income payments on purchases of minerals, mineral products and quarry resources (silver, gold, marble, granite, gravel, sand, boulders, etc.) except purchases by Bangko Sentral ng Pilipinas</td><td class="center">WI630</td><td class="center">WC630</td></tr>
+      <tr><td>Income payments on purchases of minerals, mineral products and quarry resources by Bangko Sentral ng Pilipinas (BSP) from gold miners/suppliers under PD 1899, as amended by RA No. 7076</td><td class="center">WI632</td><td class="center">WC632</td></tr>
+      <tr><td>On gross amount of refund given by MERALCO to customers with active contracts as classified by MERALCO</td><td class="center">WI650</td><td class="center">WC650</td></tr>
+      <tr><td>On gross amount of refund given by MERALCO to customers with terminated contracts as classified by MERALCO</td><td class="center">WI651</td><td class="center">WC651</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &mdash; Residential and General Service customers whose monthly electricity consumption exceeds 200 kwh as classified by MERALCO</td><td class="center">WI660</td><td class="center">WC660</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &mdash; Non-Residential customers whose monthly electricity consumption exceeds 200 kwh as classified by MERALCO</td><td class="center">WI661</td><td class="center">WC661</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &mdash; Residential and General Service customers whose monthly electricity consumption exceeds 200 kwh as classified by other electric Distribution Utilities (DU)</td><td class="center">WI662</td><td class="center">WC662</td></tr>
+      <tr><td>On gross amount of interest on the refund of meter deposit &mdash; Non-Residential customers whose monthly electricity consumption exceeds 200 kwh as classified by other electric Distribution Utilities (DU)</td><td class="center">WI663</td><td class="center">WC663</td></tr>
+      <tr><td>Income payments made by political parties and candidates of local and national elections on all their purchases of goods and services related to campaign expenditures, and income payments made by individuals or juridical persons for their purchases of goods and services intended to be given as campaign contributions to political parties and candidates</td><td class="center">WI680</td><td class="center">WC680</td></tr>
+      <tr><td>Income payments received by Real Estate Investment Trust (REIT)</td><td class="center"></td><td class="center">WC690</td></tr>
+      <tr><td>Interest income derived from any other debt instruments not within the coverage of deposit substitutes and Revenue Regulations No. 14-2012</td><td class="center">WI710</td><td class="center">WC710</td></tr>
+      <tr><td>Income payments on locally produced raw sugar</td><td class="center">WI720</td><td class="center">WC720</td></tr>
+      <tr><td>Sale of Real Property (Ordinary Asset) &mdash; 1.50%</td><td class="center">WI555</td><td class="center">WC555</td></tr>
+      <tr><td>Sale of Real Property (Ordinary Asset) &mdash; 3%</td><td class="center">WI556</td><td class="center">WC556</td></tr>
+      <tr><td>Sale of Real Property (Ordinary Asset) &mdash; 5%</td><td class="center">WI557</td><td class="center">WC557</td></tr>
+      <tr><td>Sale of Real Property (Ordinary Asset) &mdash; 6%</td><td class="center">WI558</td><td class="center">WC558</td></tr>
+    </tbody>
+  </table>
+
+</div><!-- /sheet 2 -->
+
+<div class="sheet">
+
+  <div class="sub-title">B. Money Payments Subject to Withholding of Business Tax by Government or Private Payor (Individual &amp; Corporate)</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:85%">Nature of Income Payment</th>
+        <th>ATC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Persons Exempt from VAT under Sec. 109BB (creditable) &mdash; Government Withholding Agent</td><td class="center">WB080</td></tr>
+      <tr><td>Persons Exempt from VAT under Sec. 109BB (creditable) &mdash; Private Withholding Agent</td><td class="center">WB082</td></tr>
+      <tr><td>VAT Withholding on Purchases of Goods (with waiver of privilege to claim input tax credit) (creditable)</td><td class="center">WV012</td></tr>
+      <tr><td>VAT Withholding on Purchases of Services (with waiver of privilege to claim input tax credit) (creditable)</td><td class="center">WV022</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title mt">C. Money Payments Subject to Withholding of Business Tax by Government Payor Only</div>
+  <table class="sched">
+    <thead>
+      <tr>
+        <th style="width:85%">Nature of Income Payment</th>
+        <th>ATC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Tax on Carriers and Keepers of Garages</td><td class="center">WB030</td></tr>
+      <tr><td>Franchise Tax on Gas and Utilities</td><td class="center">WB040</td></tr>
+      <tr><td>Franchise Tax on radio &amp; TV broadcasting companies whose annual gross receipts do not exceed P10M &amp; who are not VAT-registered taxpayers</td><td class="center">WB050</td></tr>
+      <tr><td>Tax on Life Insurance Premiums</td><td class="center">WB070</td></tr>
+      <tr><td>Tax on Overseas Dispatch, Message or Conversation from the Philippines</td><td class="center">WB090</td></tr>
+      <tr><td>Tax on Banks and Non-Bank Financial Intermediaries Performing Quasi-Banking Functions &mdash; A. On interest, commissions and discounts from lending activities as well as income from financial leasing, on the basis of the remaining maturities of instrument from which such receipts are derived &mdash; Maturity period is five years or less (5%)</td><td class="center">WB301</td></tr>
+      <tr><td>&emsp;&mdash; Maturity period is more than five years (1%)</td><td class="center">WB303</td></tr>
+      <tr><td>&emsp;B. On dividends and equity shares and net income of subsidiaries (0%)</td><td class="center">WB102</td></tr>
+      <tr><td>&emsp;C. On royalties, rentals of property, real or personal, profits from exchange and all other items treated as gross income under the Code (7%)</td><td class="center">WB103</td></tr>
+      <tr><td>&emsp;D. On net trading gains within the taxable year on foreign currency, debt securities, derivatives and other similar financial instruments (7%)</td><td class="center">WB104</td></tr>
+      <tr><td>Business Tax on Agents of Foreign Insurance Companies &mdash; Insurance Agents</td><td class="center">WB120</td></tr>
+      <tr><td>Business Tax on Agents of Foreign Insurance Companies &mdash; Owner of the Property</td><td class="center">WB121</td></tr>
+      <tr><td>Tax on International Carriers</td><td class="center">WB130</td></tr>
+      <tr><td>Tax on Other Non-Bank Financial Intermediaries not Performing Quasi-Banking Functions &mdash; A. On interest, commissions and discounts from lending activities as well as income from financial leasing, on the basis of the remaining maturities of instrument from which such receipts are derived &mdash; Maturity period is five years or less (5%)</td><td class="center">WB108</td></tr>
+      <tr><td>&emsp;&mdash; Maturity period is more than five years (1%)</td><td class="center">WB109</td></tr>
+      <tr><td>&emsp;B. On all other items treated as gross income under the code (5%)</td><td class="center">WB110</td></tr>
+      <tr><td>Tax on Cockpits</td><td class="center">WB140</td></tr>
+      <tr><td>Tax on amusement places, such as cabarets, night and day clubs, videoke bars, karaoke bars, karaoke television, karaoke boxes, music lounges and other similar establishments</td><td class="center">WB150</td></tr>
+      <tr><td>Tax on Boxing exhibitions</td><td class="center">WB160</td></tr>
+      <tr><td>Tax on Professional basketball games</td><td class="center">WB170</td></tr>
+      <tr><td>Tax on jai-alai and race tracks</td><td class="center">WB180</td></tr>
+      <tr><td>Tax on sale, barter or exchange of stocks listed and traded through Local Stock Exchange</td><td class="center">WB200</td></tr>
+      <tr><td>Tax on shares of stock sold or exchanged through initial and secondary public offering &mdash; Not over 25% (4%)</td><td class="center">WB201</td></tr>
+      <tr><td>&emsp;&mdash; Over 25% but not exceeding 33 1/3% (2%)</td><td class="center">WB202</td></tr>
+      <tr><td>&emsp;&mdash; Over 33 1/3% (1%)</td><td class="center">WB203</td></tr>
+    </tbody>
+  </table>
+
+</div><!-- /sheet 3 -->
+
+</body>
+</html>
