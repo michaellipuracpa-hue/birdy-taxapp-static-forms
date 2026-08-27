@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birdy TaxApp Bridge</title>
+  <style>
+    html, body, #tax-form-frame { width: 100%; height: 100%; margin: 0; border: 0; display: block; }
+  </style>
+</head>
+<body>
+  <iframe id="tax-form-frame" title="BIR Tax Form"></iframe>
+  <script>
+    (function () {
+      'use strict';
+
+      var bridgeChannel = 'birdy-taxapp-bridge-v1';
+      var formId = new URLSearchParams(window.location.search).get('form') || '';
+      var parentOrigin = new URLSearchParams(window.location.search).get('parentOrigin') || '';
+      var validFormId = /^[A-Za-z0-9-]+$/.test(formId);
+      var validParentOrigin = /^https:\/\/[^/]+$/.test(parentOrigin) || /^http:\/\/localhost(?::\d+)?$/.test(parentOrigin);
+      var formFrame = document.getElementById('tax-form-frame');
+
+      function reply(requestId, action, payload, error) {
+        if (!validParentOrigin) return;
+        window.parent.postMessage({
+          channel: bridgeChannel,
+          requestId: requestId || null,
+          action: action,
+          payload: payload || null,
+          error: error || null,
+        }, parentOrigin);
+      }
+
+      if (!validFormId || !validParentOrigin || window.parent === window) {
+        document.body.textContent = 'This TaxApp bridge requires a permitted Birdy parent and form identifier.';
+        return;
+      }
+
+      formFrame.src = 'forms/' + encodeURIComponent(formId) + '.html';
+
+      function nativeFormApi() {
+        try {
+          var api = formFrame.contentWindow && formFrame.contentWindow.BIRForm;
+          return api && api.formId === formId ? api : null;
+        } catch (_) {
+          return null;
+        }
+      }
+
+      formFrame.addEventListener('load', function () {
+        var attempts = 0;
+        var readyCheck = window.setInterval(function () {
+          var api = nativeFormApi();
+          attempts += 1;
+          if (api) {
+            window.clearInterval(readyCheck);
+            reply(null, 'ready', { formId: api.formId });
+          } else if (attempts >= 40) {
+            window.clearInterval(readyCheck);
+            reply(null, 'error', null, 'The native BIRForm API did not become available.');
+          }
+        }, 100);
+      });
+
+      window.addEventListener('message', function (event) {
+        if (event.source !== window.parent || event.origin !== parentOrigin) return;
+        var message = event.data || {};
+        if (message.channel !== bridgeChannel) return;
+        var api = nativeFormApi();
+        if (!api) {
+          reply(message.requestId, 'error', null, 'The native BIRForm API is not ready.');
+          return;
+        }
+        try {
+          if (message.action === 'setData') {
+            api.setData(message.payload || {});
+            reply(message.requestId, 'setData', { formId: api.formId, data: api.getData() });
+          } else if (message.action === 'getData') {
+            reply(message.requestId, 'getData', { formId: api.formId, data: api.getData() });
+          } else if (message.action === 'getRecord') {
+            reply(message.requestId, 'getRecord', { formId: api.formId, record: api.getRecord() });
+          } else {
+            reply(message.requestId, 'error', null, 'Unsupported bridge action.');
+          }
+        } catch (error) {
+          reply(message.requestId, 'error', null, error instanceof Error ? error.message : String(error));
+        }
+      });
+    }());
+  </script>
+</body>
+</html>
