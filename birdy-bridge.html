@@ -18,7 +18,14 @@
       var formId = new URLSearchParams(window.location.search).get('form') || '';
       var parentOrigin = new URLSearchParams(window.location.search).get('parentOrigin') || '';
       var validFormId = /^[A-Za-z0-9-]+$/.test(formId);
-      var validParentOrigin = /^https:\/\/[^/]+$/.test(parentOrigin) || /^http:\/\/localhost(?::\d+)?$/.test(parentOrigin);
+      var validParentOrigin = [
+        'https://birdytax.com',
+        'https://www.birdytax.com',
+        'https://birdyapp.manus.space',
+        'https://birdytax-6ol4wu72.manus.space'
+      ].indexOf(parentOrigin) !== -1
+        || /^https:\/\/3000-[a-z0-9-]+\.sg1\.manus\.computer$/.test(parentOrigin)
+        || /^http:\/\/localhost(?::\d+)?$/.test(parentOrigin);
       var formFrame = document.getElementById('tax-form-frame');
 
       function reply(requestId, action, payload, error) {
