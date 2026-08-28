@@ -17,7 +17,9 @@
       var bridgeChannel = 'birdy-taxapp-bridge-v1';
       var formId = new URLSearchParams(window.location.search).get('form') || '';
       var parentOrigin = new URLSearchParams(window.location.search).get('parentOrigin') || '';
+      var workspaceNamespace = new URLSearchParams(window.location.search).get('workspace') || '';
       var validFormId = /^[A-Za-z0-9-]+$/.test(formId);
+      var validWorkspaceNamespace = /^[A-Za-z0-9_-]{1,80}$/.test(workspaceNamespace);
       var validParentOrigin = [
         'https://birdytax.com',
         'https://www.birdytax.com',
@@ -39,12 +41,12 @@
         }, parentOrigin);
       }
 
-      if (!validFormId || !validParentOrigin || window.parent === window) {
+      if (!validFormId || !validParentOrigin || !validWorkspaceNamespace || window.parent === window) {
         document.body.textContent = 'This TaxApp bridge requires a permitted Birdy parent and form identifier.';
         return;
       }
 
-      formFrame.src = 'forms/' + encodeURIComponent(formId) + '.html';
+      formFrame.src = 'forms/' + encodeURIComponent(formId) + '.html?birdyNamespace=' + encodeURIComponent(workspaceNamespace);
 
       function nativeFormApi() {
         try {

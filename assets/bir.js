@@ -18,7 +18,9 @@
   "use strict";
 
   var FORM_ID = document.body.dataset.form || location.pathname.split("/").pop().replace(".html", "");
-  var KEY = "birtax:" + FORM_ID;
+  var requestedNamespace = new URLSearchParams(location.search).get("birdyNamespace") || "";
+  var STORAGE_NAMESPACE = /^[A-Za-z0-9_-]{1,80}$/.test(requestedNamespace) ? requestedNamespace : "";
+  var KEY = "birtax:" + FORM_ID + (STORAGE_NAMESPACE ? ":" + STORAGE_NAMESPACE : "");
   var state = load() || { current: "Record 1", records: { "Record 1": {} } };
   var saveTimer = null;
 
