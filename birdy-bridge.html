@@ -27,7 +27,7 @@
         'https://birdytax-6ol4wu72.manus.space'
       ].indexOf(parentOrigin) !== -1
         || /^https:\/\/3000-[a-z0-9-]+\.sg1\.manus\.computer$/.test(parentOrigin)
-        || /^http:\/\/localhost(?::\d+)?$/.test(parentOrigin);
+        || /^http:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?$/.test(parentOrigin);
       var formFrame = document.getElementById('tax-form-frame');
 
       function reply(requestId, action, payload, error) {
