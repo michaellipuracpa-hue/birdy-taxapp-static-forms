@@ -64,7 +64,7 @@
           attempts += 1;
           if (api) {
             window.clearInterval(readyCheck);
-            reply(null, 'ready', { formId: api.formId });
+            reply(null, 'ready', { formId: api.formId, capabilities: api.capabilities || [] });
           } else if (attempts >= 40) {
             window.clearInterval(readyCheck);
             reply(null, 'error', null, 'The native BIRForm API did not become available.');
@@ -89,6 +89,13 @@
             reply(message.requestId, 'getData', { formId: api.formId, data: api.getData() });
           } else if (message.action === 'getRecord') {
             reply(message.requestId, 'getRecord', { formId: api.formId, record: api.getRecord() });
+          } else if (message.action === 'invoke') {
+            if (typeof api.invoke !== 'function') {
+              reply(message.requestId, 'error', null, 'This form build does not support toolbar commands.');
+              return;
+            }
+            var outcome = api.invoke((message.payload && message.payload.command) || '');
+            reply(message.requestId, 'invoke', { formId: api.formId, record: outcome });
           } else {
             reply(message.requestId, 'error', null, 'Unsupported bridge action.');
           }

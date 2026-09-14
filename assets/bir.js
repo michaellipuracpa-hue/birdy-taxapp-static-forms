@@ -416,7 +416,36 @@
     bar.appendChild(btnPdf);
     bar.appendChild(statusEl);
     refreshSel();
+
+    /* Phone toolbar: the five record controls fold behind one button, and the bar is
+       fixed to the viewport so panning the sheet does not carry it off-screen. Its
+       height is measured rather than guessed — it wraps to a different number of lines
+       depending on how long the record name is. */
+    [btnNew, btnCopy, btnRen, btnDel, btnClear].forEach(function (button) {
+      button.className = (button.className ? button.className + " " : "") + "tb-secondary";
+    });
+    var btnMore = el("button", { class: "tb-more", "aria-expanded": "false", "aria-label": "More record actions", title: "More record actions" }, "\u22EF");
+    btnMore.addEventListener("click", function () {
+      var open = bar.classList.toggle("is-open");
+      btnMore.setAttribute("aria-expanded", open ? "true" : "false");
+      syncToolbarOffset();
+    });
+    bar.insertBefore(btnMore, badgeEl);
+
+    function syncToolbarOffset() {
+      var pinned = window.getComputedStyle(bar).position === "fixed";
+      document.body.style.paddingTop = pinned ? bar.offsetHeight + "px" : "";
+    }
+    window.addEventListener("resize", syncToolbarOffset);
+    if (window.ResizeObserver) new window.ResizeObserver(syncToolbarOffset).observe(bar);
+
+    toolbarCommands = {
+      save: btnSave, saveAndFile: btnFile, exportPdf: btnPdf, clearForm: btnClear,
+      newRecord: btnNew, duplicate: btnCopy, rename: btnRen, "delete": btnDel
+    };
+
     document.body.insertBefore(bar, document.body.firstChild);
+    syncToolbarOffset();
   }
 
   /* ---------------- PDF filename builder ----------------
@@ -573,6 +602,10 @@
     recalc();
   }
 
+  /* Set by the toolbar builder below. The buttons are local to it, but the integration
+     API is out here, so the commands a host can invoke are published through this. */
+  var toolbarCommands = null;
+
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 
@@ -580,6 +613,30 @@
      See HANDOVER-MANUS.md. All methods operate on the ACTIVE record. */
   window.BIRForm = {
     formId: FORM_ID,
+    /**
+     * The toolbar actions a host app may run, e.g. Birdy's phone action sheet.
+     *
+     * A getter, not a fixed array: the toolbar is built by init(), and a host that reads
+     * this before the DOM is ready should be told "none" rather than a list of buttons
+     * that do not exist yet.
+     */
+    get capabilities() { return toolbarCommands ? Object.keys(toolbarCommands) : []; },
+    /**
+     * Run one of the toolbar's own actions.
+     *
+     * Deliberately a click on the real button: every confirmation, the locked-record
+     * rule, and the amended-return flow keep working, and none of that is duplicated for
+     * callers. Throws for an unknown name so a host learns at once rather than silently
+     * doing nothing.
+     */
+    invoke: function (command) {
+      if (!toolbarCommands) throw new Error("The toolbar is not ready yet.");
+      var button = toolbarCommands[command];
+      if (!button) throw new Error("Unknown form command: " + command);
+      if (button.disabled) throw new Error("\u201C" + command + "\u201D is not available on this record.");
+      button.click();
+      return { command: command };
+    },
     /** all field values of the active record, {name: value} */
     getData: function () { return collect(); },
     /** merge values into the form (throws if the record is filed/locked unless opts.force) */

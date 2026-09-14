@@ -292,6 +292,43 @@ table.sched tfoot td { font-weight: 700; }
    In the print dialog: scale = 100% / Actual size (never shrink-to-fit),
    headers & footers OFF. */
 @page { size: 8.5in 13in; margin: 0.14in 0.148in 0.14in 0.146in; }
+/* Hidden by default; the phone block below reveals it. */
+.bir-toolbar .tb-more { display: none; }
+
+/* ---------- Phones ----------
+   The sheet is a BIR facsimile at a fixed 8.5in; it cannot reflow to a phone and should
+   not try — shrunk to fit it is unreadable. So the page pans horizontally at full size,
+   and the toolbar is pinned to the viewport instead of scrolling away sideways with the
+   sheet it controls. Its height is measured into body padding by bir.js, because it
+   wraps to a different number of lines depending on the record name. */
+@media (max-width: 719px) {
+  .bir-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 100vw, not right: 0. The sheet is wider than the screen, and a layout viewport
+       grows to fit its content: measured here, window.innerWidth reports 828 while
+       documentElement.clientWidth reports 375. A fixed box stretched between left and
+       right therefore spans 828 and pans off-screen with the sheet — the very thing
+       pinning it was meant to prevent. 100vw is the device width either way. */
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .bir-toolbar .tb-title { font-size: 12px; width: 100%; margin-right: 0; }
+  .bir-toolbar select { min-width: 0; flex: 1 1 120px; }
+  .bir-toolbar .tb-status { min-width: 0; }
+  .sheet { margin: 12px; }
+
+  /* Eight buttons do not fit across a phone. Save, Save and File and Export as PDF are
+     what a filer came for and stay out; the five record controls fold behind one. */
+  .bir-toolbar .tb-secondary { display: none; }
+  .bir-toolbar.is-open .tb-secondary { display: inline-flex; }
+  .bir-toolbar .tb-more { display: inline-flex; }
+}
+
 @media print {
   html, body { background: #fff; }
   .bir-toolbar, .no-print { display: none !important; }
